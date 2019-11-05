@@ -135,3 +135,49 @@ NO_SCRIPT = 'noscript' # Defines an alternate content for users that do not supp
 EMBED = 'embed' # Defines a container for an external (non-HTML) application
 OBJECT = 'object' # Defines an embedded object
 PARAM = 'param' # Defines a parameter for an object
+
+#Attributes
+DOWNLOAD = 'download' # Specifies that the target will be downloaded when a user clicks on the hyperlink
+HREF = 'href' # Specifies the URL of the page the link goes to
+HREFLANG = 'hreflang' # Specifies the language of the linked document
+MEDIA = 'media' # Specifies what media/device the linked document is optimized for
+PING = 'ping' # Specifies a space-separated list of URLs to which, when the link is followed, post requests with the body ping will be sent by the browser (in the background). Typically used for tracking.
+REFERRER_POLICY = 'referrerpolicy' # Specifies which referrer to send
+RELATIONSHIP = 'rel' # Specifies the relationship between the current document and the linked document
+TARGET = 'target' # Specifies where to open the linked document
+TYPE = 'type' # Specifies the media type of the linked document
+
+#Global Attributes
+ACCESS_KEY = 'accesskey' # Specifies a shortcut key to activate/focus an element
+CLASS = 'class' # Specifies one or more classnames for an element (refers to a class in a style sheet)
+CONTENT_EDITABLE = 'contenteditable' # Specifies whether the content of an element is editable or not
+CUSTOM_DATA = 'data-*' # Used to store custom data private to the page or application
+TEXT_DIRECTION = 'dir' # Specifies the text direction for the content in an element
+DRAGGABLE = 'draggable' # Specifies whether an element is draggable or not
+DROPZONE = 'dropzone' # Specifies whether the dragged data is copied, moved, or linked, when dropped
+HIDDEN = 'hidden' # Specifies that an element is not yet, or is no longer, relevant
+ID = 'id' # Specifies a unique id for an element
+LANG = 'lang' # Specifies the language of the element's content
+SPELLCHECK = 'spellcheck' # Specifies whether the element is to have its spelling and grammar checked or not
+STYLE = 'style' # Specifies an inline CSS style for an element
+TAB_INDEX = 'tabindex' # Specifies the tabbing order of an element
+TITLE = 'title' # Specifies extra information about an element
+TRANSLATE = 'translate' # Specifies whether the content of an element should be translated or not
+
+# Window Event Attributes
+ON_AFTER_PRINT = 'onafterprint' # Script to be run after the document is printed
+ON_BEFORE_PRINT = 'onbeforeprint' # Script to be run before the document is printed
+ON_BEFORE_UNLOAD = 'onbeforeunload' # Script to be run when the document is about to be unloaded
+ON_ERROR = 'onerror' # Script to be run when an error occurs
+ON_HASH_CHANGE = 'onhashchange' # Script to be run when there has been changes to the anchor part of the a URL
+ONLOAD = 'onload' # Fires after the page is finished loading
+ON_MESSAGE = 'onmessage' # Script to be run when the message is triggered
+ON_OFFLINE = 'onoffline' # Script to be run when the browser starts to work offline
+ON_ONLINE = 'ononline' # Script to be run when the browser starts to work online
+ON_PAGE_HIDE = 'onpagehide' # Script to be run when a user navigates away from a page
+ON_PAGE_SHOW = 'onpageshow' # Script to be run when a user navigates to a page
+ON_POP_STATE = 'onpopstate' # Script to be run when the window's history changes
+ON_RESIZE = 'onresize' # Fires when the browser window is resized
+ON_STORAGE = 'ontorage' # Script to be run when a Web Storage area is updated
+ON_UNLOAD = 'onunload' # Fires once a page has unloaded (or the browser window has been closed)
+

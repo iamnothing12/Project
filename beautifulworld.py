@@ -32,5 +32,12 @@ def querySite(url):
     else:
         print("Wrong URL Format: [ %s ]" % url)
 
-querySite("www.google.com")
-querySite("https://www.google.com/")
+
+def main():
+    querySite("www.google.com")
+    querySite("https://www.google.com/")
+    
+
+
+if __name__ == "__main__":
+    main()
