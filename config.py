@@ -181,3 +181,15 @@ ON_RESIZE = 'onresize' # Fires when the browser window is resized
 ON_STORAGE = 'ontorage' # Script to be run when a Web Storage area is updated
 ON_UNLOAD = 'onunload' # Fires once a page has unloaded (or the browser window has been closed)
 
+#USER AGENT
+ANDROID_CHROME = 'Mozilla/5.0 (Linux; Android 8.0.0;) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36'
+ANDROID_FIREFOX = 'Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0'
+APPLE_CHROME = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/77.0.3865.103 Mobile/15E148 Safari/605.1'
+APPLE_SAFARI = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_0 like Mac OS X) AppleWebKit/602.1.38 (KHTML, like Gecko) Version/10.0 Mobile/14A41DS1497c Safari/602.1'
+WINDOWS_CHROME = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36'
+WINDOWS_EDGE = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362'
+
+
+#Custom Parameters
+urlList = []
+defaultURL = ""

@@ -19,13 +19,14 @@ def deletePath(path):
         except OSError as e:
             print("Error Creating ",str(path),": [ %s ]"% e)
 
-def createFile(path,filename):
+def createFile(path,filename,content):
     path = str(path)
     if not checkPath(path):
         createPath(path)
     try:
-        with open(path, filename):
-            os.utime(path, None)
+        with open(path+"/"+filename, "w+") as f:
+            f.write(content)
+            # os.utime(path, None)
     except OSError as e:
         print("Error Creating ",str(path),": [ %s ]"% e)
 

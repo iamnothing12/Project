@@ -36,4 +36,4 @@ def get_robot(url):
 
 
 
-get_robot("http://www.google.com/robots.txt")
+# get_robot("http://www.google.com/robots.txt")
