@@ -6,3 +6,1337 @@ DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET / HTTP/1.1" 200 Non
 DEBUG:root:google
 DEBUG:root:None
 DEBUG:root:None
+ERROR:root:Wrong URL Format: [ www.google.com ]
+INFO:root:Correct URL Format: [ https://www.google.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:google
+DEBUG:root:None
+DEBUG:root:None
+ERROR:root:Wrong URL Format: [ www.google.com ]
+INFO:root:Correct URL Format: [ https://www.google.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:google
+DEBUG:root:None
+DEBUG:root:None
+ERROR:root:Wrong URL Format: [ www.google.com ]
+INFO:root:Correct URL Format: [ https://www.google.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:google
+DEBUG:root:None
+DEBUG:root:None
+ERROR:root:Wrong URL Format: [ www.google.com ]
+INFO:root:Correct URL Format: [ https://www.google.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:google
+DEBUG:root:None
+DEBUG:root:None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET / HTTP/1.1" 200 None
+ERROR:root:Wrong URL Format: [ www.google.com ]
+INFO:root:Correct URL Format: [ https://www.google.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:google
+DEBUG:root:None
+DEBUG:root:None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET / HTTP/1.1" 200 None
+ERROR:root:Wrong URL Format: [ www.google.com ]
+INFO:root:Correct URL Format: [ https://www.google.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:google
+DEBUG:root:None
+DEBUG:root:None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET / HTTP/1.1" 200 None
+ERROR:root:Wrong URL Format: [ www.google.com ]
+INFO:root:Correct URL Format: [ https://www.google.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.google.com:443
+DEBUG:urllib3.connectionpool:https://www.google.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:google
+DEBUG:root:None
+DEBUG:root:None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET / HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:Sitemap
+INFO:robot:http://www.google.com/robots.txt
+INFO:robot:User-agent: *
+INFO:robot:User-agent: AdsBot-Google
+INFO:robot:User-agent: Twitterbot
+INFO:robot:User-agent: facebookexternalhit
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:S
+INFO:robot:i
+INFO:robot:t
+INFO:robot:e
+INFO:robot:m
+INFO:robot:a
+INFO:robot:p
+INFO:robot:h
+INFO:robot:t
+INFO:robot:t
+INFO:robot:p
+INFO:robot::
+INFO:robot:/
+INFO:robot:/
+INFO:robot:w
+INFO:robot:w
+INFO:robot:w
+INFO:robot:.
+INFO:robot:g
+INFO:robot:o
+INFO:robot:o
+INFO:robot:g
+INFO:robot:l
+INFO:robot:e
+INFO:robot:.
+INFO:robot:c
+INFO:robot:o
+INFO:robot:m
+INFO:robot:/
+INFO:robot:r
+INFO:robot:o
+INFO:robot:b
+INFO:robot:o
+INFO:robot:t
+INFO:robot:s
+INFO:robot:.
+INFO:robot:t
+INFO:robot:x
+INFO:robot:t
+INFO:robot:U
+INFO:robot:s
+INFO:robot:e
+INFO:robot:r
+INFO:robot:-
+INFO:robot:a
+INFO:robot:g
+INFO:robot:e
+INFO:robot:n
+INFO:robot:t
+INFO:robot::
+INFO:robot: 
+INFO:robot:*
+INFO:robot:U
+INFO:robot:s
+INFO:robot:e
+INFO:robot:r
+INFO:robot:-
+INFO:robot:a
+INFO:robot:g
+INFO:robot:e
+INFO:robot:n
+INFO:robot:t
+INFO:robot::
+INFO:robot: 
+INFO:robot:A
+INFO:robot:d
+INFO:robot:s
+INFO:robot:B
+INFO:robot:o
+INFO:robot:t
+INFO:robot:-
+INFO:robot:G
+INFO:robot:o
+INFO:robot:o
+INFO:robot:g
+INFO:robot:l
+INFO:robot:e
+INFO:robot:U
+INFO:robot:s
+INFO:robot:e
+INFO:robot:r
+INFO:robot:-
+INFO:robot:a
+INFO:robot:g
+INFO:robot:e
+INFO:robot:n
+INFO:robot:t
+INFO:robot::
+INFO:robot: 
+INFO:robot:T
+INFO:robot:w
+INFO:robot:i
+INFO:robot:t
+INFO:robot:t
+INFO:robot:e
+INFO:robot:r
+INFO:robot:b
+INFO:robot:o
+INFO:robot:t
+INFO:robot:U
+INFO:robot:s
+INFO:robot:e
+INFO:robot:r
+INFO:robot:-
+INFO:robot:a
+INFO:robot:g
+INFO:robot:e
+INFO:robot:n
+INFO:robot:t
+INFO:robot::
+INFO:robot: 
+INFO:robot:f
+INFO:robot:a
+INFO:robot:c
+INFO:robot:e
+INFO:robot:b
+INFO:robot:o
+INFO:robot:o
+INFO:robot:k
+INFO:robot:e
+INFO:robot:x
+INFO:robot:t
+INFO:robot:e
+INFO:robot:r
+INFO:robot:n
+INFO:robot:a
+INFO:robot:l
+INFO:robot:h
+INFO:robot:i
+INFO:robot:t
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:https://www.google.com/sitemap.xml
+INFO:robot:Allow
+INFO:robot:Disallow
+INFO:robot:Crawl-Delay
+INFO:robot:Allow
+INFO:robot:Disallow
+INFO:robot:Crawl-Delay
+INFO:robot:Allow
+INFO:robot:Disallow
+INFO:robot:Crawl-Delay
+INFO:robot:Allow
+INFO:robot:Disallow
+INFO:robot:Crawl-Delay
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:Sitemap
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:Sitemap
+INFO:robot:http://www.google.com/robots.txt
+INFO:robot:User-agent: *
+INFO:robot:/search/about
+INFO:robot:/search/static
+INFO:robot:/search/howsearchworks
+INFO:robot:/?hl=
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:/?pt1=true$
+INFO:robot:/m/finance
+INFO:robot:/books?*q=related:*
+INFO:robot:/books?*q=editions:*
+INFO:robot:/books?*q=subject:*
+INFO:robot:/books/about
+INFO:robot:/booksrightsholders
+INFO:robot:/books?*zoom=1*
+INFO:robot:/books?*zoom=5*
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:/citations?user=
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:/scholar_share
+INFO:robot:/maps?*output=classic*
+INFO:robot:/maps?*file=
+INFO:robot:/maps/d/
+INFO:robot:/maps/api/js
+INFO:robot:/calendar$
+INFO:robot:/calendar/about/
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:/profiles
+INFO:robot:/s2/profiles
+INFO:robot:/s2/oz
+INFO:robot:/s2/photos
+INFO:robot:/s2/search/social
+INFO:robot:/s2/static
+INFO:robot:/accounts/o8/id
+INFO:robot:/alerts/manage
+INFO:robot:/alerts/remove
+INFO:robot:/alerts/$
+INFO:robot:/searchhistory/
+INFO:robot:/maps/reserve
+INFO:robot:/maps/reserve/partners
+INFO:robot:/finance
+INFO:robot:/js/
+INFO:robot:User-agent: AdsBot-Google
+INFO:robot:/maps/api/js
+INFO:robot:User-agent: Twitterbot
+INFO:robot:/imgres
+INFO:robot:User-agent: facebookexternalhit
+INFO:robot:/imgres
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:Sitemap
+INFO:robot:http://www.google.com/robots.txt
+INFO:robot:User-agent: *
+INFO:robot:/search/about
+INFO:robot:/search/static
+INFO:robot:/search/howsearchworks
+INFO:robot:/?hl=
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:/?pt1=true$
+INFO:robot:/m/finance
+INFO:robot:/books?*q=related:*
+INFO:robot:/books?*q=editions:*
+INFO:robot:/books?*q=subject:*
+INFO:robot:/books/about
+INFO:robot:/booksrightsholders
+INFO:robot:/books?*zoom=1*
+INFO:robot:/books?*zoom=5*
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:/citations?user=
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:/scholar_share
+INFO:robot:/maps?*output=classic*
+INFO:robot:/maps?*file=
+INFO:robot:/maps/d/
+INFO:robot:/maps/api/js
+INFO:robot:/calendar$
+INFO:robot:/calendar/about/
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:/profiles
+INFO:robot:/s2/profiles
+INFO:robot:/s2/oz
+INFO:robot:/s2/photos
+INFO:robot:/s2/search/social
+INFO:robot:/s2/static
+INFO:robot:/accounts/o8/id
+INFO:robot:/alerts/manage
+INFO:robot:/alerts/remove
+INFO:robot:/alerts/$
+INFO:robot:/searchhistory/
+INFO:robot:/maps/reserve
+INFO:robot:/maps/reserve/partners
+INFO:robot:/finance
+INFO:robot:/js/
+INFO:robot:User-agent: AdsBot-Google
+INFO:robot:/maps/api/js
+INFO:robot:User-agent: Twitterbot
+INFO:robot:/imgres
+INFO:robot:User-agent: facebookexternalhit
+INFO:robot:/imgres
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:/search/about
+INFO:robot:/search/static
+INFO:robot:/search/howsearchworks
+INFO:robot:/?hl=
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:/?pt1=true$
+INFO:robot:/m/finance
+INFO:robot:/books?*q=related:*
+INFO:robot:/books?*q=editions:*
+INFO:robot:/books?*q=subject:*
+INFO:robot:/books/about
+INFO:robot:/booksrightsholders
+INFO:robot:/books?*zoom=1*
+INFO:robot:/books?*zoom=5*
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:/citations?user=
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:/scholar_share
+INFO:robot:/maps?*output=classic*
+INFO:robot:/maps?*file=
+INFO:robot:/maps/d/
+INFO:robot:/maps/api/js
+INFO:robot:/calendar$
+INFO:robot:/calendar/about/
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:/profiles
+INFO:robot:/s2/profiles
+INFO:robot:/s2/oz
+INFO:robot:/s2/photos
+INFO:robot:/s2/search/social
+INFO:robot:/s2/static
+INFO:robot:/accounts/o8/id
+INFO:robot:/alerts/manage
+INFO:robot:/alerts/remove
+INFO:robot:/alerts/$
+INFO:robot:/searchhistory/
+INFO:robot:/maps/reserve
+INFO:robot:/maps/reserve/partners
+INFO:robot:/finance
+INFO:robot:/js/
+INFO:robot:/maps/api/js
+INFO:robot:/imgres
+INFO:robot:/imgres
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:/search/about
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:/search/about
+INFO:robot:http://www.google.com/
+INFO:robot:/search/static
+INFO:robot:http://www.google.com/
+INFO:robot:/search/howsearchworks
+INFO:robot:http://www.google.com/
+INFO:robot:/?hl=
+INFO:robot:http://www.google.com/
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:http://www.google.com/
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:http://www.google.com/
+INFO:robot:/?pt1=true$
+INFO:robot:http://www.google.com/
+INFO:robot:/m/finance
+INFO:robot:http://www.google.com/
+INFO:robot:/books?*q=related:*
+INFO:robot:http://www.google.com/
+INFO:robot:/books?*q=editions:*
+INFO:robot:http://www.google.com/
+INFO:robot:/books?*q=subject:*
+INFO:robot:http://www.google.com/
+INFO:robot:/books/about
+INFO:robot:http://www.google.com/
+INFO:robot:/booksrightsholders
+INFO:robot:http://www.google.com/
+INFO:robot:/books?*zoom=1*
+INFO:robot:http://www.google.com/
+INFO:robot:/books?*zoom=5*
+INFO:robot:http://www.google.com/
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:http://www.google.com/
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:http://www.google.com/
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:http://www.google.com/
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:http://www.google.com/
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:http://www.google.com/
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:http://www.google.com/
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:http://www.google.com/
+INFO:robot:/citations?user=
+INFO:robot:http://www.google.com/
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:http://www.google.com/
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:http://www.google.com/
+INFO:robot:/scholar_share
+INFO:robot:http://www.google.com/
+INFO:robot:/maps?*output=classic*
+INFO:robot:http://www.google.com/
+INFO:robot:/maps?*file=
+INFO:robot:http://www.google.com/
+INFO:robot:/maps/d/
+INFO:robot:http://www.google.com/
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/
+INFO:robot:/calendar$
+INFO:robot:http://www.google.com/
+INFO:robot:/calendar/about/
+INFO:robot:http://www.google.com/
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:http://www.google.com/
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:http://www.google.com/
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:http://www.google.com/
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:http://www.google.com/
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:http://www.google.com/
+INFO:robot:/profiles
+INFO:robot:http://www.google.com/
+INFO:robot:/s2/profiles
+INFO:robot:http://www.google.com/
+INFO:robot:/s2/oz
+INFO:robot:http://www.google.com/
+INFO:robot:/s2/photos
+INFO:robot:http://www.google.com/
+INFO:robot:/s2/search/social
+INFO:robot:http://www.google.com/
+INFO:robot:/s2/static
+INFO:robot:http://www.google.com/
+INFO:robot:/accounts/o8/id
+INFO:robot:http://www.google.com/
+INFO:robot:/alerts/manage
+INFO:robot:http://www.google.com/
+INFO:robot:/alerts/remove
+INFO:robot:http://www.google.com/
+INFO:robot:/alerts/$
+INFO:robot:http://www.google.com/
+INFO:robot:/searchhistory/
+INFO:robot:http://www.google.com/
+INFO:robot:/maps/reserve
+INFO:robot:http://www.google.com/
+INFO:robot:/maps/reserve/partners
+INFO:robot:http://www.google.com/
+INFO:robot:/finance
+INFO:robot:http://www.google.com/
+INFO:robot:/js/
+INFO:robot:http://www.google.com/
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/
+INFO:robot:/imgres
+INFO:robot:http://www.google.com/
+INFO:robot:/imgres
+INFO:robot:http://www.google.com/
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:/search/about
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/search/static
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/search/howsearchworks
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?hl=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?pt1=true$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/m/finance
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=related:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=editions:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=subject:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/about
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/booksrightsholders
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?user=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/scholar_share
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps?*output=classic*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps?*file=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/d/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/calendar$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/calendar/about/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/profiles
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/profiles
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/oz
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/photos
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/search/social
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/static
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/accounts/o8/id
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/manage
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/remove
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/searchhistory/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/reserve
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/reserve/partners
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/finance
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/js/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/imgres
+INFO:robot:http://www.google.com/imgres
+INFO:robot:URl Scrappable
+INFO:robot:/imgres
+INFO:robot:http://www.google.com/imgres
+INFO:robot:URl Scrappable
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:/search/about
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/search/static
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/search/howsearchworks
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?hl=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?pt1=true$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/m/finance
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=related:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=editions:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=subject:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/about
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/booksrightsholders
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?user=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/scholar_share
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps?*output=classic*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps?*file=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/d/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/calendar$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/calendar/about/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/profiles
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/profiles
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/oz
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/photos
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/search/social
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/static
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/accounts/o8/id
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/manage
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/remove
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/searchhistory/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/reserve
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/reserve/partners
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/finance
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/js/
+INFO:robot:http://www.google.com/imgres
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:User-agent: *
+INFO:robot:/search/about
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/search/static
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/search/howsearchworks
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?hl=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/?pt1=true$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/m/finance
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=related:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=editions:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*q=subject:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/about
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/booksrightsholders
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?user=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/scholar_share
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps?*output=classic*
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps?*file=
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/d/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/calendar$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/calendar/about/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/profiles
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/profiles
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/oz
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/photos
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/search/social
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/s2/static
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/accounts/o8/id
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/manage
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/remove
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/alerts/$
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/searchhistory/
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/reserve
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/maps/reserve/partners
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/finance
+INFO:robot:http://www.google.com/imgres
+INFO:robot:/js/
+INFO:robot:http://www.google.com/imgres
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:User-agent: *
+INFO:robot:/search/about
+INFO:robot:http://www.google.com/js
+INFO:robot:/search/static
+INFO:robot:http://www.google.com/js
+INFO:robot:/search/howsearchworks
+INFO:robot:http://www.google.com/js
+INFO:robot:/?hl=
+INFO:robot:http://www.google.com/js
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:http://www.google.com/js
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:http://www.google.com/js
+INFO:robot:/?pt1=true$
+INFO:robot:http://www.google.com/js
+INFO:robot:/m/finance
+INFO:robot:http://www.google.com/js
+INFO:robot:/books?*q=related:*
+INFO:robot:http://www.google.com/js
+INFO:robot:/books?*q=editions:*
+INFO:robot:http://www.google.com/js
+INFO:robot:/books?*q=subject:*
+INFO:robot:http://www.google.com/js
+INFO:robot:/books/about
+INFO:robot:http://www.google.com/js
+INFO:robot:/booksrightsholders
+INFO:robot:http://www.google.com/js
+INFO:robot:/books?*zoom=1*
+INFO:robot:http://www.google.com/js
+INFO:robot:/books?*zoom=5*
+INFO:robot:http://www.google.com/js
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:http://www.google.com/js
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:http://www.google.com/js
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:http://www.google.com/js
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:http://www.google.com/js
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:http://www.google.com/js
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:http://www.google.com/js
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:http://www.google.com/js
+INFO:robot:/citations?user=
+INFO:robot:http://www.google.com/js
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:http://www.google.com/js
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:http://www.google.com/js
+INFO:robot:/scholar_share
+INFO:robot:http://www.google.com/js
+INFO:robot:/maps?*output=classic*
+INFO:robot:http://www.google.com/js
+INFO:robot:/maps?*file=
+INFO:robot:http://www.google.com/js
+INFO:robot:/maps/d/
+INFO:robot:http://www.google.com/js
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/js
+INFO:robot:/calendar$
+INFO:robot:http://www.google.com/js
+INFO:robot:/calendar/about/
+INFO:robot:http://www.google.com/js
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:http://www.google.com/js
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:http://www.google.com/js
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:http://www.google.com/js
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:http://www.google.com/js
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:http://www.google.com/js
+INFO:robot:/profiles
+INFO:robot:http://www.google.com/js
+INFO:robot:/s2/profiles
+INFO:robot:http://www.google.com/js
+INFO:robot:/s2/oz
+INFO:robot:http://www.google.com/js
+INFO:robot:/s2/photos
+INFO:robot:http://www.google.com/js
+INFO:robot:/s2/search/social
+INFO:robot:http://www.google.com/js
+INFO:robot:/s2/static
+INFO:robot:http://www.google.com/js
+INFO:robot:/accounts/o8/id
+INFO:robot:http://www.google.com/js
+INFO:robot:/alerts/manage
+INFO:robot:http://www.google.com/js
+INFO:robot:/alerts/remove
+INFO:robot:http://www.google.com/js
+INFO:robot:/alerts/$
+INFO:robot:http://www.google.com/js
+INFO:robot:/searchhistory/
+INFO:robot:http://www.google.com/js
+INFO:robot:/maps/reserve
+INFO:robot:http://www.google.com/js
+INFO:robot:/maps/reserve/partners
+INFO:robot:http://www.google.com/js
+INFO:robot:/finance
+INFO:robot:http://www.google.com/js
+INFO:robot:/js/
+INFO:robot:http://www.google.com/js
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:User-agent: *
+INFO:robot:/search/about
+INFO:robot:http://www.google.com/js/
+INFO:robot:/search/static
+INFO:robot:http://www.google.com/js/
+INFO:robot:/search/howsearchworks
+INFO:robot:http://www.google.com/js/
+INFO:robot:/?hl=
+INFO:robot:http://www.google.com/js/
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:http://www.google.com/js/
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:http://www.google.com/js/
+INFO:robot:/?pt1=true$
+INFO:robot:http://www.google.com/js/
+INFO:robot:/m/finance
+INFO:robot:http://www.google.com/js/
+INFO:robot:/books?*q=related:*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/books?*q=editions:*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/books?*q=subject:*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/books/about
+INFO:robot:http://www.google.com/js/
+INFO:robot:/booksrightsholders
+INFO:robot:http://www.google.com/js/
+INFO:robot:/books?*zoom=1*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/books?*zoom=5*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/citations?user=
+INFO:robot:http://www.google.com/js/
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:http://www.google.com/js/
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:http://www.google.com/js/
+INFO:robot:/scholar_share
+INFO:robot:http://www.google.com/js/
+INFO:robot:/maps?*output=classic*
+INFO:robot:http://www.google.com/js/
+INFO:robot:/maps?*file=
+INFO:robot:http://www.google.com/js/
+INFO:robot:/maps/d/
+INFO:robot:http://www.google.com/js/
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/js/
+INFO:robot:/calendar$
+INFO:robot:http://www.google.com/js/
+INFO:robot:/calendar/about/
+INFO:robot:http://www.google.com/js/
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:http://www.google.com/js/
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:http://www.google.com/js/
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:http://www.google.com/js/
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:http://www.google.com/js/
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:http://www.google.com/js/
+INFO:robot:/profiles
+INFO:robot:http://www.google.com/js/
+INFO:robot:/s2/profiles
+INFO:robot:http://www.google.com/js/
+INFO:robot:/s2/oz
+INFO:robot:http://www.google.com/js/
+INFO:robot:/s2/photos
+INFO:robot:http://www.google.com/js/
+INFO:robot:/s2/search/social
+INFO:robot:http://www.google.com/js/
+INFO:robot:/s2/static
+INFO:robot:http://www.google.com/js/
+INFO:robot:/accounts/o8/id
+INFO:robot:http://www.google.com/js/
+INFO:robot:/alerts/manage
+INFO:robot:http://www.google.com/js/
+INFO:robot:/alerts/remove
+INFO:robot:http://www.google.com/js/
+INFO:robot:/alerts/$
+INFO:robot:http://www.google.com/js/
+INFO:robot:/searchhistory/
+INFO:robot:http://www.google.com/js/
+INFO:robot:/maps/reserve
+INFO:robot:http://www.google.com/js/
+INFO:robot:/maps/reserve/partners
+INFO:robot:http://www.google.com/js/
+INFO:robot:/finance
+INFO:robot:http://www.google.com/js/
+INFO:robot:/js/
+INFO:robot:http://www.google.com/js/
+INFO:robot:URl Scrappable@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:User-agent: *
+INFO:robot:/search/about
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/search/static
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/search/howsearchworks
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/?hl=
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/?pt1=true$
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/m/finance
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/books?*q=related:*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/books?*q=editions:*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/books?*q=subject:*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/books/about
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/booksrightsholders
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/books?*zoom=1*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/books?*zoom=5*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/citations?user=
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/scholar_share
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/maps?*output=classic*
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/maps?*file=
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/maps/d/
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/calendar$
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/calendar/about/
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/profiles
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/s2/profiles
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/s2/oz
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/s2/photos
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/s2/search/social
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/s2/static
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/accounts/o8/id
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/alerts/manage
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/alerts/remove
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/alerts/$
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/searchhistory/
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/maps/reserve
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/maps/reserve/partners
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/finance
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:/js/
+INFO:robot:http://www.google.com/js/qwertyui
+INFO:robot:URl Scrappable@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.google.com:80
+DEBUG:urllib3.connectionpool:http://www.google.com:80 "GET /robots.txt HTTP/1.1" 200 None
+INFO:robot:User-agent: *
+INFO:robot:/search/about
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/search/static
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/search/howsearchworks
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/?hl=
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/?hl=*&gws_rd=ssl$
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/?gws_rd=ssl$
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/?pt1=true$
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/m/finance
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/books?*q=related:*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/books?*q=editions:*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/books?*q=subject:*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/books/about
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/booksrightsholders
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/books?*zoom=1*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/books?*zoom=5*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/books/content?*zoom=1*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/books/content?*zoom=5*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/ebooks?*q=related:*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/ebooks?*q=editions:*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/ebooks?*q=subject:*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/ebooks?*zoom=1*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/ebooks?*zoom=5*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/citations?user=
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/citations?view_op=new_profile
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/citations?view_op=top_venues
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/scholar_share
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/maps?*output=classic*
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/maps?*file=
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/maps/d/
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/maps/api/js
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/calendar$
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/calendar/about/
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/safebrowsing/diagnostic
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/safebrowsing/report_badware/
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/safebrowsing/report_error/
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/safebrowsing/report_phish/
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/cbk?output=tile&cb_client=maps_sv
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/profiles
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/s2/profiles
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/s2/oz
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/s2/photos
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/s2/search/social
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/s2/static
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/accounts/o8/id
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/alerts/manage
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/alerts/remove
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/alerts/$
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/searchhistory/
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/maps/reserve
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/maps/reserve/partners
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/finance
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:/js/
+INFO:robot:http://www.google.com/js/qwertyuizxczxc123123
+INFO:robot:URl Scrappable@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

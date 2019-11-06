@@ -96,8 +96,8 @@ def querySite(con,url):
                         if not (str(link.get('src')[-1] == "/")):
                             ext = tldextract.extract(c.defaultURL)
                             logging.info("https://" + str(ext.registered_domain)+ str(link.get('src')))
-                            queryAdditionalSite(con,"https://"+ str(ext.registered_domain)+ str(link.get('src')),str(link.get('src').strip('/')))
-                    # c.urlList.append("https://"+ str(ext.registered_domain)+ str(link.get('href')))
+                            # queryAdditionalSite(con,"https://"+ str(ext.registered_domain)+ str(link.get('src')),str(link.get('src').strip('/')))
+                            c.urlList.append("https://"+ str(ext.registered_domain)+ str(link.get('href')))
         else:
             logging.info("This page [ %s ] cannot be crawled." % url)
             return False
@@ -115,12 +115,21 @@ def init_PoolManager():
 def main():
     logging.basicConfig(filename='logs/'+str(datetime.now().strftime("%d%m%Y")),level=logging.DEBUG)
     con = init_PoolManager()
-
-    c.defaultURL="https://www.google.com/qwertyuiop"
-    querySite(con, "www.google.com")
-    querySite(con, "https://www.google.com/")
+    r.get_robot("http://www.google.com/robots.txt")
+    r.check_robot('http://www.google.com/js/',headers=c.ANDROID_CHROME)
+    # c.defaultURL="https://www.google.com/qwertyuiop"
+    # querySite(con, "www.google.com")
+    # querySite(con, "https://www.google.com/")
     
-
+def get_module_logger(mod_name):
+  logger = logging.getLogger(mod_name)
+  handler = logging.StreamHandler()
+  formatter = logging.Formatter(
+        '%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+  handler.setFormatter(formatter)
+  logger.addHandler(handler)
+  logger.setLevel(logging.DEBUG)
+  return logger
 
 if __name__ == "__main__":
     main()
