@@ -1,0 +1,24 @@
+
+                # print(link.get('href'))
+                # if not (r.check_robot(link.get('href'),headers=c.ANDROID_CHROME)):
+                #     # print(link.get('href'))
+                #     logging.debug(link.get('href'))
+                #     if not (str(link.get('href')).startswith("None")):
+                #         # print(link.get('href'))
+                #         if not (str(link.get('href')).startswith("http")):
+                #             # print(link.get('href'))
+                #             print (str(link.get('href')))
+                #             logging.info("Checking in progress"+str(link.get('href')))
+                #             # if not (str(link.get('href')[-1] == "/")):
+                #             print(link.get('href'))
+                #             ext = tldextract.extract(c.defaultURL)
+                #             logging.info("All if Condition works"+"https://" + str(ext.registered_domain)+ str(link.get('href')))
+                            
+                #             print("https://"+str(ext.registered_domain)+str(link.get('href')))
+                #             queryAdditionalSite(con,"https://"+str(ext.registered_domain)+str(link.get('href')), str(link.get('href')))
+                                # queryAdditionalSite(con,"https://"+ str(ext.registered_domain)+ str(link.get('href'),str(link.get('href'))))
+                                # c.urlList.append("https://"+ str(ext.registered_domain)+ str(link.get('href')))
+        # else:
+        #     logging.info("This page [ %s ] cannot be crawled." % url)
+        #     return False
+        # return True

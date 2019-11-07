@@ -1,23 +1,25 @@
 import urllib3
-from beautifulworld import get_module_logger
-logger = get_module_logger(__name__)
+import urllib3.contrib.pyopenssl
+import certifi
+from beautifulworld import logging as logger
+# from beautifulworld import get_module_logger
+# logger = get_module_logger(__name__)
 
 robotDict = {"Sitemap":[]}
-http = urllib3.PoolManager()
+http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED',ca_certs=certifi.where())
 
 def check_robot(url,headers):
     for robot in robotDict:
         # logger.info(str(robot))
         if 'User-agent' in robot and (headers in robot or '*' in robot):
             logger.info(str(robot))
-            for useragent in robotDict[robot]['Allow']:
-                logger.info(str(useragent))
-                logger.info(str(url))
-                if useragent in url:
+            logger.info(str(url))
+            for allow in robotDict[robot]['Disallow']:
+                logger.info(str(allow))
+                if allow in str(url):
                     logger.info('URl Scrappable')
-
-        
-    
+                    return True
+    return False
 
 def get_robot(url):
     r =  http.request('GET',url)
@@ -26,7 +28,7 @@ def get_robot(url):
     if not (url in robotDict):
         robotDict[str(url)] = {}
     for line in str(r.data)[2:-1].split('\\n'):
-        if "User-agent" in line:
+        if "user-agent" in line.lower():
             # print(line.split(' ')[0])
             # print (line.split(' ')[-1])
             # robotDict[str(line)]= {"Allow":[],"Disallow":[],"Crawl-Delay":[]}

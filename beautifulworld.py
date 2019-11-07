@@ -35,6 +35,8 @@ except ImportError:
         # print converted.originalEncoding
         return converted.unicode
 
+aHrefList = []
+
 # http = urllib3.PoolManager()
 
 # url = "https://www.pythonforbeginners.com"
@@ -64,11 +66,17 @@ def queryAdditionalSite(con,url,filename):
         logging.info("Correct URL Format: [ %s ]" % url)
         # Disable retries to prevent flooding the site
         page = con.request('GET',url,headers={'User-agent':c.ANDROID_FIREFOX}, retries=False)
-        if page.status == 200:
+        # while page.status in c.REDIRECT_STATUS_LIST:
+        #     pageURL = page.geturl()
+        #     page = con.request('GET',pageURL,headers={'User-agent':c.ANDROID_FIREFOX}, retries=False)
+        
+        if page.status in c.GOOD_STATUS_LIST:
             soup = BeautifulSoup(page.data, features='lxml')
             # print(soup.prettify)
-            logging.debug(str(url).split("/")[2].split(".")[1])
-            cp.createFile(str(url).split("/")[2].split(".")[1],filename, str(soup.prettify))
+            logging.info("Creating Additional Site: [ "+str(url).split("/")[2].split(".")[1]+" ]")
+            print("Path: [ %s ]" % str(c.defaultpath+filename.rsplit('/', 1)[0]))
+            print("Filename: [ %s ]" % filename.split('/')[1])
+            cp.createFile(c.defaultpath+filename.rsplit('/', 1)[0],filename, str(soup.prettify))
             
         else:
             logging.info("This page [ %s ] cannot be crawled." % url)
@@ -78,26 +86,73 @@ def queryAdditionalSite(con,url,filename):
         logging.error("Wrong URL Format: [ %s ]" % url)
         return False
 
+def divDiver(soup):
+    for div in soup.find_all('div'):
+        divDiver(div)
+        insertA(div)
+
+def insertA(soup):
+    for a in soup.find_all('a'):
+        if not( '#' in str(a.get('href'))):
+            if not (str(a.get('href')) in aHrefList):
+                print(a.get('href'))
+                aHrefList.append(a.get('href'))
+
 def querySite(con,url):
     if matchurlPattern(url):
         logging.info("Correct URL Format: [ %s ]" % url)
         # Disable retries to prevent flooding the site
+        
         page = con.request('GET',url,headers={'User-agent':c.ANDROID_FIREFOX}, retries=False)
-        if page.status == 200:
+        # while page.status in c.REDIRECT_STATUS_LIST:
+        #     pageURL = page.geturl()
+        #     print("URL "+str(pageURL))
+        #     page = con.request('GET',pageURL,headers={'User-agent':c.ANDROID_FIREFOX}, retries=False)
+        print("Page Status"+str(page.status))
+        if page.status in c.GOOD_STATUS_LIST:
             soup = BeautifulSoup(page.data, features='lxml')
             # print(soup.prettify)
             logging.debug(str(url).split("/")[2].split(".")[1])
-            cp.createFile(str(url).split("/")[2].split(".")[1], str(str(url).split("/")[2].split(".")[1]+".html"), str(soup.prettify))
-            for link in soup.find_all('script'):
-                logging.debug(link.get('src'))
-                if not (str(link.get('src')).startswith("None")):
-                    if not (str(link.get('src')).startswith("http")):
-                        logging.info("Checking in progress"+str(link.get('src')[-1]))
-                        if not (str(link.get('src')[-1] == "/")):
+            c.defaultpath=str(url).split("/")[2].split(".")[1]
+            cp.createFile(c.defaultpath, str(str(url).split("/")[2].split(".")[1]+".html"), str(soup.prettify))
+            divDiver(soup)
+            for href in aHrefList:
+                if not (r.check_robot(href,headers=c.ANDROID_CHROME)):
+                    if not (str(href).startswith("None")):
+                        if not (str(href).startswith("http")):
                             ext = tldextract.extract(c.defaultURL)
-                            logging.info("https://" + str(ext.registered_domain)+ str(link.get('src')))
-                            # queryAdditionalSite(con,"https://"+ str(ext.registered_domain)+ str(link.get('src')),str(link.get('src').strip('/')))
-                            c.urlList.append("https://"+ str(ext.registered_domain)+ str(link.get('href')))
+                            print("href1: [ %s ]" % str("https://"+str(ext.registered_domain)+str(href)))
+                            queryAdditionalSite(con,"https://"+str(ext.registered_domain)+str(href), str(href))
+                            # queryAdditionalSite(con,href, href)
+                        else:
+                            print("href2: [ %s ]" % str(href))
+                            queryAdditionalSite(con,href, href)
+            # for div in soup.find_all('div'):
+            #     for a in div.find_all('a'):
+            #         print(a.get('href'))
+
+            # print('FML')
+            # for link in soup.find_all('div'):
+            #     print(str(link.find('a')['href']))
+                # print(link.get('href'))
+                # if not (r.check_robot(link.get('href'),headers=c.ANDROID_CHROME)):
+                #     # print(link.get('href'))
+                #     logging.debug(link.get('href'))
+                #     if not (str(link.get('href')).startswith("None")):
+                #         # print(link.get('href'))
+                #         if not (str(link.get('href')).startswith("http")):
+                #             # print(link.get('href'))
+                #             print (str(link.get('href')))
+                #             logging.info("Checking in progress"+str(link.get('href')))
+                #             # if not (str(link.get('href')[-1] == "/")):
+                #             print(link.get('href'))
+                #             ext = tldextract.extract(c.defaultURL)
+                #             logging.info("All if Condition works"+"https://" + str(ext.registered_domain)+ str(link.get('href')))
+                            
+                #             print("https://"+str(ext.registered_domain)+str(link.get('href')))
+                #             queryAdditionalSite(con,"https://"+str(ext.registered_domain)+str(link.get('href')), str(link.get('href')))
+                                # queryAdditionalSite(con,"https://"+ str(ext.registered_domain)+ str(link.get('href'),str(link.get('href'))))
+                                # c.urlList.append("https://"+ str(ext.registered_domain)+ str(link.get('href')))
         else:
             logging.info("This page [ %s ] cannot be crawled." % url)
             return False
@@ -115,21 +170,23 @@ def init_PoolManager():
 def main():
     logging.basicConfig(filename='logs/'+str(datetime.now().strftime("%d%m%Y")),level=logging.DEBUG)
     con = init_PoolManager()
-    r.get_robot("http://www.google.com/robots.txt")
-    r.check_robot('http://www.google.com/js/',headers=c.ANDROID_CHROME)
-    # c.defaultURL="https://www.google.com/qwertyuiop"
+    r.get_robot("https://www.google.com/robots.txt")
+    # r.check_robot('http://www.google.com/js/',headers=c.ANDROID_CHROME)
+    c.defaultURL="https://www.google.com/"
     # querySite(con, "www.google.com")
-    # querySite(con, "https://www.google.com/")
+    querySite(con, "https://www.google.com/")
+
+    # cp.deletePath("y8https")
     
-def get_module_logger(mod_name):
-  logger = logging.getLogger(mod_name)
-  handler = logging.StreamHandler()
-  formatter = logging.Formatter(
-        '%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
-  handler.setFormatter(formatter)
-  logger.addHandler(handler)
-  logger.setLevel(logging.DEBUG)
-  return logger
+# def get_module_logger(mod_name):
+#   logger = logging.getLogger(mod_name)
+#   handler = logging.StreamHandler()
+#   formatter = logging.Formatter(
+#         '%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+#   handler.setFormatter(formatter)
+#   logger.addHandler(handler)
+#   logger.setLevel(logging.DEBUG)
+#   return logger
 
 if __name__ == "__main__":
     main()
