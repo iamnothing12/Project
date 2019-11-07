@@ -1,0 +1,319 @@
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.miniclip.com:443
+DEBUG:urllib3.connectionpool:https://www.miniclip.com:443 "GET /robots.txt HTTP/1.1" 200 719
+INFO:root:Correct URL Format: [ https://www.miniclip.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.miniclip.com:443
+DEBUG:urllib3.connectionpool:https://www.miniclip.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:miniclip
+INFO:root:User-agent: *
+INFO:root:/portal/
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://miniclip.com/portal/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): miniclip.com:443
+DEBUG:urllib3.connectionpool:https://miniclip.com:443 "GET /portal/ HTTP/1.1" 301 240
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+INFO:root:This page [ https://miniclip.com/portal/ ] cannot be crawled.
+INFO:root:User-agent: *
+INFO:root:https://app.adjust.com/68ql9pq_9jfnzre?campaign=miniclip_mobile_web
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://app.adjust.com/68ql9pq_9jfnzre?campaign=miniclip_mobile_web ]
+INFO:root:User-agent: *
+INFO:root:https://m.miniclip.com/game/quickfire-pool-instant
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://m.miniclip.com/game/quickfire-pool-instant ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): m.miniclip.com:443
+DEBUG:urllib3.connectionpool:https://m.miniclip.com:443 "GET /game/quickfire-pool-instant HTTP/1.1" 200 None
+INFO:root:Creating Additional Site: [ miniclip ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.basketballstars&app_name=Basketball-Stars&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.basketballstars&app_name=Basketball-Stars&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:https://app.adjust.com/55v4f5h_gp02f7s?campaign=carrom-pool_miniclip_mobile-web
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://app.adjust.com/55v4f5h_gp02f7s?campaign=carrom-pool_miniclip_mobile-web ]
+INFO:root:User-agent: *
+INFO:root:https://app.adjust.com/swyenj7_92byrx0?campaign=FSK_miniclip-mobile-web
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://app.adjust.com/swyenj7_92byrx0?campaign=FSK_miniclip-mobile-web ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=games.onebutton.golfbattle&app_name=Golf-Battle&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=games.onebutton.golfbattle&app_name=Golf-Battle&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:https://app.adjust.com/eggdbu
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://app.adjust.com/eggdbu ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.adjust.com:443
+DEBUG:urllib3.connectionpool:https://app.adjust.com:443 "GET /eggdbu HTTP/1.1" 302 151
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+INFO:root:This page [ https://app.adjust.com/eggdbu ] cannot be crawled.
+INFO:root:User-agent: *
+INFO:root:https://app.adjust.com/calltb
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://app.adjust.com/calltb ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:Resetting dropped connection: app.adjust.com
+DEBUG:urllib3.connectionpool:https://app.adjust.com:443 "GET /calltb HTTP/1.1" 302 150
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+INFO:root:This page [ https://app.adjust.com/calltb ] cannot be crawled.
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=uk.co.yakuto.DartsOfFury&app_name=Darts-of-Fury&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=uk.co.yakuto.DartsOfFury&app_name=Darts-of-Fury&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.playsportgames.mmm3&app_name=Motorsport-Manager-3&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.playsportgames.mmm3&app_name=Motorsport-Manager-3&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.agar.io&app_name=Agar.io&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.agar.io&app_name=Agar.io&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.motionvolt.flipbounce&app_name=Flip-Master&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.motionvolt.flipbounce&app_name=Flip-Master&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.tencent.warwings2&app_name=War-Wings&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.tencent.warwings2&app_name=War-Wings&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.soccerstars&app_name=Soccer-Stars&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.soccerstars&app_name=Soccer-Stars&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.bowmasters&app_name=Bowmasters&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.bowmasters&app_name=Bowmasters&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.pnixgames.bowlingking&app_name=Bowling-King&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.pnixgames.bowlingking&app_name=Bowling-King&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.archery&app_name=Archery-King&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.archery&app_name=Archery-King&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.plagueinc&app_name=Plague-Inc.&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.plagueinc&app_name=Plague-Inc.&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.diep.io&app_name=diep.io&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.diep.io&app_name=diep.io&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.motionvolt.flipdiving&app_name=Flip-Diving&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.motionvolt.flipdiving&app_name=Flip-Diving&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.hockeystars&app_name=Hockey-Stars&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.hockeystars&app_name=Hockey-Stars&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.dudeperfect&app_name=Dude-Perfect&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.dudeperfect&app_name=Dude-Perfect&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/appstore?platform=android&id=com.miniclip.railrush&app_name=Rail-Rush&store_type=G
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+ERROR:root:Wrong URL Format: [ https://miniclip.com/appstore?platform=android&id=com.miniclip.railrush&app_name=Rail-Rush&store_type=G ]
+INFO:root:User-agent: *
+INFO:root:/terms
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://miniclip.com/terms ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:https://miniclip.com:443 "GET /terms HTTP/1.1" 301 238
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+INFO:root:This page [ https://miniclip.com/terms ] cannot be crawled.
+INFO:root:User-agent: *
+INFO:root:/privacy
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://miniclip.com/privacy ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:https://miniclip.com:443 "GET /privacy HTTP/1.1" 301 240
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+INFO:root:This page [ https://miniclip.com/privacy ] cannot be crawled.
+INFO:root:User-agent: *
+INFO:root:/cookies
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://miniclip.com/cookies ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:https://miniclip.com:443 "GET /cookies HTTP/1.1" 301 240
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+INFO:root:This page [ https://miniclip.com/cookies ] cannot be crawled.
+INFO:root:User-agent: *
+INFO:root:https://www.miniclip.com/
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://www.miniclip.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:https://www.miniclip.com:443 "GET / HTTP/1.1" 200 None
+INFO:root:Creating Additional Site: [ miniclip ]
+INFO:root:User-agent: *
+INFO:root:/
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://miniclip.com/ ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:https://miniclip.com:443 "GET / HTTP/1.1" 301 233
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+INFO:root:This page [ https://miniclip.com/ ] cannot be crawled.
+INFO:root:User-agent: *
+INFO:root:/portal
+INFO:root:/*.txt$
+INFO:root:/*.ini$
+INFO:root:/*.inc$
+INFO:root:/*.xml$
+INFO:root:/games/*.htm$
+INFO:root:/games/*.html$
+INFO:root:Correct URL Format: [ https://miniclip.com/portal ]
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+DEBUG:urllib3.connectionpool:https://miniclip.com:443 "GET /portal HTTP/1.1" 301 239
+DEBUG:urllib3.util.retry:Converted retries value: False -> Retry(total=False, connect=None, read=None, redirect=0, status=None)
+INFO:root:This page [ https://miniclip.com/portal ] cannot be crawled.

@@ -74,9 +74,9 @@ def queryAdditionalSite(con,url,filename):
             soup = BeautifulSoup(page.data, features='lxml')
             # print(soup.prettify)
             logging.info("Creating Additional Site: [ "+str(url).split("/")[2].split(".")[1]+" ]")
-            print("Path: [ %s ]" % str(c.defaultpath+filename.rsplit('/', 1)[0]))
+            print("Path: [ %s ]" % str(c.defaultPath+filename.rsplit('/', 1)[0]))
             print("Filename: [ %s ]" % filename.split('/')[1])
-            cp.createFile(c.defaultpath+filename.rsplit('/', 1)[0],filename, str(soup.prettify))
+            cp.createFile(c.defaultPath+filename.rsplit('/', 1)[0],filename, str(soup.prettify))
             
         else:
             logging.info("This page [ %s ] cannot be crawled." % url)
@@ -113,8 +113,8 @@ def querySite(con,url):
             soup = BeautifulSoup(page.data, features='lxml')
             # print(soup.prettify)
             logging.debug(str(url).split("/")[2].split(".")[1])
-            c.defaultpath=str(url).split("/")[2].split(".")[1]
-            cp.createFile(c.defaultpath, str(str(url).split("/")[2].split(".")[1]+".html"), str(soup.prettify))
+            c.defaultPath=str(url).split("/")[2].split(".")[1]
+            cp.createFile(c.defaultPath, str(str(url).split("/")[2].split(".")[1]+".html"), str(soup.prettify))
             divDiver(soup)
             for href in aHrefList:
                 if not (r.check_robot(href,headers=c.ANDROID_CHROME)):

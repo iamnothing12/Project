@@ -138,6 +138,8 @@ PARAM = 'param' # Defines a parameter for an object
 
 #Attributes
 DOWNLOAD = 'download' # Specifies that the target will be downloaded when a user clicks on the hyperlink
+SRC = 'src'
+SRCSET = 'srcset'
 HREF = 'href' # Specifies the URL of the page the link goes to
 HREFLANG = 'hreflang' # Specifies the language of the linked document
 MEDIA = 'media' # Specifies what media/device the linked document is optimized for
@@ -194,7 +196,7 @@ WINDOWS_EDGE = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 14) AppleWeb
 #Custom Parameters
 urlList = []
 defaultURL = ""
-defaultpath = ""
+defaultPath = ""
 
 #STATUS CODE
 # GOOD STATUS
