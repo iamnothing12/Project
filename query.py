@@ -16,24 +16,36 @@ def init_PoolManager():
     urllib3.contrib.pyopenssl.inject_into_urllib3()
     return urllib3.PoolManager(cert_reqs='CERT_REQUIRED',ca_certs=certifi.where())
 
-def findDiv(soup):
+def check_link_contains(soup, tag):
+    if '#' in str(soup.get(tag)) or \
+        'none' in str(soup.get(tag).lower()):
+            return False
+    return False
+
+def append_list(list,soup, tag):
+    if str(soup.get(tag)).startswith('//'):
+        list.append('https:' + soup.get(tag))
+    elif str(soup.get(tag)).startswith('/'):
+        list.append(c.defaulturl + soup.get(tag))
+    else:
+        list.append(soup.get(tag))
+
+def find_div(soup):
     for div in soup.find_all(c.DIV):
-        # findDiv(div)
         insertA(div)
         insertImg(div)
 
 def insertA(soup):
     for a in soup.find_all(c.HYPERLINK_A):
-        # print(a.get('href'))
-        if not( '#' in str(a.get(c.HREF))):
-            if  not ('none' in str(a.get(c.HREF)).lower()):
-                if not (str(a.get(c.HREF)) in aHrefList):
-                    if str(a.get(c.HREF)).startswith('//'):
-                        aHrefList.append('https:'+a.get(c.HREF))
-                    elif str(a.get(c.HREF)).startswith('/'):
-                            aHrefList.append(c.defaulturl+a.get(c.HREF))
-                    else:
-                        aHrefList.append(a.get(c.HREF))
+        if check_link_contains(a, c.HREF):
+            if not (str(a.get(c.HREF)) in aHrefList):
+                append_list(aHrefList,a,c.HREF)
+                # if str(a.get(c.HREF)).startswith('//'):
+                #     aHrefList.append('https:'+a.get(c.HREF))
+                # elif str(a.get(c.HREF)).startswith('/'):
+                #         aHrefList.append(c.defaulturl+a.get(c.HREF))
+                # else:
+                #     aHrefList.append(a.get(c.HREF))
                     # print(a.get('href'))
                     # aHrefList.append(a.get(c.HREF))
 
@@ -59,13 +71,6 @@ def insertImg(soup):
                             imgsrcsetList.append(img.get(c.SRCSET))
 
 
-# def insertSrc(soup):
-#     for img in soup.find_all('img'):
-#         print(img.get('src'))
-#         if not( '#' in str(im.get('src'))):
-#             if not (str(img.get('src')) in aHrefList):
-#                 print(img.get('src'))
-#                 imgsrcList.append(a.get('src'))
 
 def queryPage(con, url):
     print(url)

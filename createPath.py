@@ -34,7 +34,7 @@ def createFile(path,filename,content):
     if not checkPath(path):
         createPath(path)
     try:
-        with open(path+"/"+filename, "w+") as f:
+        with open(path+"/"+filename, "w+", encoding='utf-8') as f:
             f.write(content)
             # os.utime(path, None)
     except OSError as e:
