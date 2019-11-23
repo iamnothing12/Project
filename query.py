@@ -101,7 +101,7 @@ def queryPage(con, url):
         insert_a(soup)
         print("Div Href: %i" % len(aHrefList))
         for line in aHrefList:
-            print(line)
+            # print(line)
             pagelinks = con.request('GET', url, headers={'User-agent': c.WINDOWS_CHROME}, redirect=True)
             if pagelinks.status in c.GOOD_STATUS_LIST:
                 extractlink = tldextract.extract(line)
@@ -128,11 +128,26 @@ def queryPage(con, url):
                     # striplink = str(line).lstrip(str("https://" + str(extractlink.subdomain) + str(extractlink.registered_domain) + str(extractlink.suffix)))
                 print("Strip Link: %s" % striplink)
                 print("Default Path: %s" % c.defaultPath)
-                fullpath = str(c.defaultPath + striplink)
+                pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
+                fullpath = str(c.defaultPath + pathstrip)
                 print("Full Path: %s"% fullpath)
-                # print("File name: %s" % str(str(str(line).split("/")[2].split(".")[1]+".html")))
-                souplink = BeautifulSoup(pagelinks.data, features='lxml')
-                cp.createFile(fullpath,str(str(line).split("/")[2].split(".")[1]+".html"), str(souplink.prettify()))
+                print("Line: %s "% line)
+                url_list = striplink.split("/")
+                value = ""
+                if len(striplink) > 1:
+                    souplink = BeautifulSoup(pagelinks.data, features='lxml')
+                    if str(striplink).endswith("/") :
+                        value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 2]))
+                        print("File name: %s" % value)
+                    else:
+                        value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 1]))
+                        print("File names: %s" % value)
+                    if "." in value:
+                        cp.createFile(fullpath, str(value), str(souplink.prettify()))
+                    else:
+                        cp.createFile(fullpath, str(str(value)+".html"), str(souplink.prettify()))
+
+
         # #
         # print("IMG Src: %i" % len(imgsrcList))
         # for line1 in imgsrcList:
