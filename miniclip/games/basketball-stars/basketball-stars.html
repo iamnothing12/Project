@@ -14,7 +14,7 @@
   <link href="https://www.facebook.com" rel="dns-prefetch"/>
   <link as="image" href="//static.miniclipcdn.com/layout/icons/default-game-icon.png" rel="preload"/>
   <title>
-   Games at Miniclip.com - Play Free Online Games
+   Basketball Stars - A free Basketball Game
   </title>
   <script>
    // IE9 fix
@@ -22,9 +22,10 @@
             var console = { trace:function(){}, info:function(){}, log : function(){}, warn : function(){}, error : function(){}, time : function(){}, timeEnd : function(){} }
         }
         /* page tagging */
-        var site_tag_location = "H";
+        var site_tag_location = "G";
   </script>
-  <meta content="Play Free Online Games, fun games, puzzle games, action games, sports games, flash games, adventure games, multiplayer games and more" name="description"/>
+  <meta content="Play Basketball Stars - Show your skills, moves and fakes to juke out your opponent and shoot for the basket! " name="description"/>
+  <meta content="Basketball Stars" name="keywords"/>
   <link href="/brand/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="/brand/favicons/icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
   <link href="/brand/favicons/icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
@@ -79,20 +80,33 @@
     node.parentNode.insertBefore(gads, node);
 	googletag.cmd.push(function() {
 	    
-                        gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_HP_FloorAd_1x1', [1, 1], 'dfp-ci-bottom-fixed').addService(googletag.pubads()));
-        
+                            googletag.defineSlot('/116850162/Miniclip.com_GP_NativeAd_1x1', [1, 1], 'dfp-ci-after-game').addService(googletag.pubads());
+            
         gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_1x1', [[1,1]], 'dfp-takeover').addService(googletag.pubads()));
-        gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_728x90_HomePage_ATF', [[728, 90]], 'dfp-leaderboard').addService(googletag.pubads()));
-        gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_300x250_HomePage_ATF', [[300, 250]], 'dfp-mpu').addService(googletag.pubads()));
-        
+        gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_728x90_GameplayPage_ATF', [[728, 90], [970, 90]], 'dfp-leaderboard').addService(googletag.pubads()));
+        gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_728x90_GameplayPage_BTF', [[728, 90], [970, 90]], 'dfp-leaderboard-below').addService(googletag.pubads()));
+        gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_728x90_GameplayPage_BTF', [[728, 90], [970, 90]], 'dfp-leaderboard-footer').addService(googletag.pubads()));
+
+                        gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_300x250_GameplayPage_ATF', [[300, 250]], 'dfp-mpu').addService(googletag.pubads()));
+                                gptAdSlots.push(googletag.defineSlot('/116850162/Miniclip.com_300x250_GameplayPage_BTF', [300, 250], 'dfp-mpu-2').addService(googletag.pubads()));
+                                                
 		// Gamepage
-						googletag.pubads().setTargeting('gName', 'homepage');
+					googletag.pubads().setTargeting('gCat', 'category_1293');
+			googletag.pubads().setTargeting('gName', 'game_4486');
+			googletag.pubads().setTargeting('gCat', 'category_1293');
+			
+				
+				googletag.pubads().setTargeting('gAATF', 'gaatf_Y');	
+							
+							googletag.pubads().setTargeting('gDemo1', 'demo1_1');
+				googletag.pubads().setTargeting('gDemo2', 'demo2_1');
+					
 				
 
 			
 		googletag.pubads().setTargeting('gChannel', 'channel_1');
 		googletag.pubads().setTargeting('gLanguage', 'language_en');
-		googletag.pubads().setTargeting('gPageType', 'pagetype_homepage');	
+		googletag.pubads().setTargeting('gPageType', 'pagetype_gamepage');	
 		
         googletag.pubads().collapseEmptyDivs();
 		googletag.pubads().enableSingleRequest();
@@ -133,7 +147,7 @@
         "cdn_path": "//static.miniclipcdn.com/",
         "environment": "production",
         "features": {"awards":true,"challenges":true,"ads":true,"ads-mpu":true,"ads-mpu2":true,"ads-leaderboard":true,"ads-takeover":true,"ads-skyscraper-left":true,"ads-skyscraper-right":true,"ads-video":true,"apollo":true,"cooladata-tracking":true,"friends":true,"leaderboards":true,"login":true,"npapi":true,"offers":true,"push-ads":true,"recaptcha":true,"search":true,"sweepstakes":true,"tracking-manager":true,"xplore":true,"payments":true,"one-signal":true,"throttling":true,"notifications":false},
-        "modules": {"homepage":[]},
+        "modules": [],
         "kvs": {"profile":{"requires_privacy_consents":false,"show_policy_update":true,"policy_version":1,"is_guest":true},"privacy_consents":[{"id":"ta","name":"consent_t_ads_name","description":"consent_t_ads_description"}]}    }
 
     MCore._queue = [];
@@ -143,7 +157,7 @@
   </script>
   <script>
    // Pass on any backend data
-    var mc_apvd = "W10=";
+    var mc_apvd = "eyJnYW1lSWQiOiI0NDg2IiwiZ2FtZU5hbWUiOiJCYXNrZXRiYWxsIFN0YXJzIiwiZ2FtZVRlY2giOiJXIn0=";
 
     (function(m,n,c,l,i,p,t){m[c]=m[c]||function(){2===arguments.length&&
         (m[c].q=m[c].q||[]).push(arguments)};m.MCApolloPageView=m[c];
@@ -152,19 +166,28 @@
     (window,document,'Apollo','//apollo.miniclip.com/v1/js','miniclip.com');
   </script>
   <meta content="NMuJU--WAcA9_LIhC7cW4JEtcL8wpDfpiFJKqLqoaiY" name="google-site-verification"/>
-  <link href="https://www.miniclip.com/games/en/" rel="canonical"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/en/" rel="canonical"/>
   <link href="https://www.miniclip.com/games/en/feed.xml" rel="alternate" title="RSS 2.0" type="application/rss+xml"/>
   <link href="//static.miniclipcdn.com/opensearch.xml" rel="search" title="Miniclip Search" type="application/opensearchdescription+xml"/>
   <link crossorigin="anonymous" href="//static.miniclipcdn.com/bundle/games.4f74570585ffb3c1131a.css?1411" integrity="sha256-ZlAlp/RnXZI0Tx6Jm4muVIcZrNM0GMdYteu37fX+BBw=" rel="stylesheet" type="text/css"/>
   <link href="//static.miniclipcdn.com/styles/css/games.css?1411" rel="stylesheet" type="text/css"/>
+  <link href="//static.miniclipcdn.com/styles/css/credits.css?1411" rel="stylesheet" type="text/css"/>
   <meta content="Miniclip" property="og:site_name"/>
   <meta content="786690137" property="fb:admins"/>
-  <meta content="Games at Miniclip.com - Play Free Online Games" property="og:title"/>
+  <meta content="Basketball Stars - A free Basketball Game" property="og:title"/>
   <meta content="@miniclip" name="twitter:site"/>
-  <meta content="https://www.miniclip.com" property="og:url"/>
-  <meta content="https://www.miniclip.com/images/bg_h1.png" property="og:image"/>
-  <meta content="Miniclip is the world's largest independent online games site with over 600 games. The site is updated at least twice a week...so you can get your gaming fix whenever you want it." property="og:description"/>
-  <meta content="website" property="og:type"/>
+  <meta content="https://www.miniclip.com/games/basketball-stars/en/" property="og:url"/>
+  <meta content="https://www.miniclip.com/content/game-icons/medium/BasketballStars_150_110.jpg" property="og:image"/>
+  <meta content="Show your skills, moves and fakes to juke out your opponent and shoot for the basket! " property="og:description"/>
+  <meta content="game" property="og:type"/>
+  <meta content="Show your skills, moves and fakes to juke out your opponent and shoot for the basket! " name="twitter:description"/>
+  <meta content="app" name="twitter:card"/>
+  <meta content="Basketball Stars" name="twitter:app:name:iphone"/>
+  <meta content="976173170" name="twitter:app:id:iphone"/>
+  <meta content="Basketball Stars" name="twitter:app:name:ipad"/>
+  <meta content="976173170" name="twitter:app:id:ipad"/>
+  <meta content="Basketball Stars" name="twitter:app:name:googleplay"/>
+  <meta content="com.miniclip.basketballstars" name="twitter:app:id:googleplay"/>
   <link href="https://plus.google.com/118375337016817078846/" rel="publisher"/>
   <style type="text/css">
    .featured-scroller .scroller-nav .slick-list .slick-track { 
@@ -182,6 +205,8 @@
 .games-list a[href*="playerunknowns-battlegrounds"] .hot.blip {
     display: none
 }
+  </style>
+  <style type="text/css">
   </style>
   <meta content="origin-when-cross-origin" name="referrer"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -210,23 +235,27 @@
   </script>
   <script crossorigin="anonymous" integrity="sha256-zqPzNNZmvyMldux0R51XneDv8p69fi3qydJgjQ7LAQE=" src="//static.miniclipcdn.com/bundle/games.4f74570585ffb3c1131a.js?1339" type="text/javascript">
   </script>
-  <link href="https://www.miniclip.com/games/en/" hreflang="en" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/de/" hreflang="de" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/fr/" hreflang="fr" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/es/" hreflang="es" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/pt/" hreflang="pt" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/it/" hreflang="it" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/kr/" hreflang="ko" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/jp/" hreflang="ja" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/br/" hreflang="pt-br" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/pl/" hreflang="pl" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/hu/" hreflang="hu" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/ro/" hreflang="ro" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/cs/" hreflang="zh" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/ru/" hreflang="ru" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/in/" hreflang="hi" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/se/" hreflang="sv" rel="alternate"/>
-  <link href="https://www.miniclip.com/games/tr/" hreflang="tk" rel="alternate"/>
+  <script src="//static.miniclipcdn.com/js/gamepage.js?1339" type="text/javascript">
+  </script>
+  <script src="//static.miniclipcdn.com/js/vam.js?1339" type="text/javascript">
+  </script>
+  <link href="https://www.miniclip.com/games/basketball-stars/en/" hreflang="en" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/de/" hreflang="de" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/fr/" hreflang="fr" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/es/" hreflang="es" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/pt/" hreflang="pt" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/it/" hreflang="it" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/kr/" hreflang="ko" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/jp/" hreflang="ja" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/br/" hreflang="pt-br" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/pl/" hreflang="pl" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/hu/" hreflang="hu" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/ro/" hreflang="ro" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/cs/" hreflang="zh" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/ru/" hreflang="ru" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/in/" hreflang="hi" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/se/" hreflang="sv" rel="alternate"/>
+  <link href="https://www.miniclip.com/games/basketball-stars/tr/" hreflang="tk" rel="alternate"/>
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script type="text/javascript">
@@ -243,7 +272,7 @@
             if (document.body.dataset.userId) {
                 $("iframe[src^='https://ad.doubleclick'], iframe[id^='google_ads_iframe']").each(function (i, el) {
                     if ($(el).width() > 1) {
-                        var gameName = "miniclip";
+                        var gameName = "basketball-stars";
                         MC.sendUserEvent('interstitial_ads', {
                             userId: document.body.dataset.userId,
                             game: gameName,
@@ -253,6 +282,9 @@
                 });
             }
         });
+  </script>
+  <script id="jsonLdSchema" type="application/ld+json">
+   {"@context":"https:\/\/schema.org","@type":"VideoGame","name":"Basketball Stars","dateModified":null,"dateCreated":null,"url":"https:\/\/www.miniclip.com\/basketball-stars","datePublished":null,"productionCompany":{"@type":"Organization","name":"Miniclip"},"aggregateRating":{"@type":"AggregateRating","ratingValue":4,"bestRating":"5","worstRating":"0","reviewCount":"62283"},"image":"https:\/\/static.miniclipcdn.com\/content\/game-icons\/medium\/BasketballStars_150_110.jpg","genre":"Basketball","applicationCategory":"Game","description":"Show your skills, moves and fakes to juke out your opponent and shoot for the basket! "}
   </script>
   <style>
    #site-container.with-campaign {
@@ -297,7 +329,7 @@
     }
   </style>
  </head>
- <body class="ks-active-awards ks-active-challenges ks-active-ads ks-active-ads-mpu ks-active-ads-mpu2 ks-active-ads-leaderboard ks-active-ads-takeover ks-active-ads-skyscraper-left ks-active-ads-skyscraper-right ks-active-ads-video ks-active-apollo ks-active-cooladata-tracking ks-active-friends ks-active-leaderboards ks-active-login ks-active-npapi ks-active-offers ks-active-push-ads ks-active-recaptcha ks-active-search ks-active-sweepstakes ks-active-tracking-manager ks-active-xplore ks-active-payments ks-active-one-signal ks-active-throttling ks-disabled-prevent-user-login-by-provider ks-disabled-activity-feed ks-disabled-friend-invites ks-disabled-notifications ks-disabled-player-search ks-disabled-point_system ks-disabled-random-game ks-disabled-teams control-page locale-sg lang-en browser-chrome os-windows" data-csrf="236d10372022a7effecf9bb36cddfd22" data-env="production" data-facebook-app-id="111411968896241" data-language-code="en" data-platform="miniclip" data-platformappid="111411968896241" data-script-version="1339">
+ <body class="ks-active-awards ks-active-challenges ks-active-ads ks-active-ads-mpu ks-active-ads-mpu2 ks-active-ads-leaderboard ks-active-ads-takeover ks-active-ads-skyscraper-left ks-active-ads-skyscraper-right ks-active-ads-video ks-active-apollo ks-active-cooladata-tracking ks-active-friends ks-active-leaderboards ks-active-login ks-active-npapi ks-active-offers ks-active-push-ads ks-active-recaptcha ks-active-search ks-active-sweepstakes ks-active-tracking-manager ks-active-xplore ks-active-payments ks-active-one-signal ks-active-throttling ks-disabled-prevent-user-login-by-provider ks-disabled-activity-feed ks-disabled-friend-invites ks-disabled-notifications ks-disabled-player-search ks-disabled-point_system ks-disabled-random-game ks-disabled-teams control-games game-id-4486 game-template-69 game-embed-39 locale-sg lang-en browser-chrome os-windows" data-csrf="236d10372022a7effecf9bb36cddfd22" data-env="production" data-facebook-app-id="111411968896241" data-facebook-game-app-id="111411968896241" data-language-code="en" data-platform="miniclip" data-platformappid="111411968896241" data-script-version="1339">
   <!-- Facebook Pixel Code -->
   <!-- End Facebook Pixel Code -->
   <script src="//static.miniclipcdn.com/js/mc.js?1339" type="text/javascript">
@@ -417,7 +449,7 @@
         In Your Language
        </li>
        <li>
-        <form action="/games/es/?force_language" id="change_language_es" method="POST">
+        <form action="/games/basketball-stars/es/?force_language" id="change_language_es" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_es').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/ES.png"/>
@@ -426,7 +458,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/fr/?force_language" id="change_language_fr" method="POST">
+        <form action="/games/basketball-stars/fr/?force_language" id="change_language_fr" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_fr').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/FR.png"/>
@@ -435,7 +467,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/in/?force_language" id="change_language_in" method="POST">
+        <form action="/games/basketball-stars/in/?force_language" id="change_language_in" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_in').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/IN.png"/>
@@ -444,7 +476,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/de/?force_language" id="change_language_de" method="POST">
+        <form action="/games/basketball-stars/de/?force_language" id="change_language_de" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_de').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/DE.png"/>
@@ -453,7 +485,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/ro/?force_language" id="change_language_ro" method="POST">
+        <form action="/games/basketball-stars/ro/?force_language" id="change_language_ro" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_ro').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/RO.png"/>
@@ -462,7 +494,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/br/?force_language" id="change_language_br" method="POST">
+        <form action="/games/basketball-stars/br/?force_language" id="change_language_br" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_br').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/BR.png"/>
@@ -471,7 +503,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/tr/?force_language" id="change_language_tr" method="POST">
+        <form action="/games/basketball-stars/tr/?force_language" id="change_language_tr" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_tr').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/TR.png"/>
@@ -480,7 +512,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/pl/?force_language" id="change_language_pl" method="POST">
+        <form action="/games/basketball-stars/pl/?force_language" id="change_language_pl" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_pl').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/PL.png"/>
@@ -489,7 +521,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/pt/?force_language" id="change_language_pt" method="POST">
+        <form action="/games/basketball-stars/pt/?force_language" id="change_language_pt" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_pt').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/PT.png"/>
@@ -498,7 +530,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/ru/?force_language" id="change_language_ru" method="POST">
+        <form action="/games/basketball-stars/ru/?force_language" id="change_language_ru" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_ru').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/RU.png"/>
@@ -507,7 +539,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/jp/?force_language" id="change_language_jp" method="POST">
+        <form action="/games/basketball-stars/jp/?force_language" id="change_language_jp" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_jp').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/JP.png"/>
@@ -516,7 +548,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/it/?force_language" id="change_language_it" method="POST">
+        <form action="/games/basketball-stars/it/?force_language" id="change_language_it" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_it').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/IT.png"/>
@@ -525,7 +557,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/hu/?force_language" id="change_language_hu" method="POST">
+        <form action="/games/basketball-stars/hu/?force_language" id="change_language_hu" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_hu').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/HU.png"/>
@@ -534,7 +566,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/se/?force_language" id="change_language_se" method="POST">
+        <form action="/games/basketball-stars/se/?force_language" id="change_language_se" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_se').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/SE.png"/>
@@ -543,7 +575,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/kr/?force_language" id="change_language_kr" method="POST">
+        <form action="/games/basketball-stars/kr/?force_language" id="change_language_kr" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_kr').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/KR.png"/>
@@ -552,7 +584,7 @@
         </form>
        </li>
        <li>
-        <form action="/games/cs/?force_language" id="change_language_cs" method="POST">
+        <form action="/games/basketball-stars/cs/?force_language" id="change_language_cs" method="POST">
          <input name="csrf" type="hidden" value="236d10372022a7effecf9bb36cddfd22"/>
          <a href="#" onclick="document.getElementById('change_language_cs').submit();" rel="nofollow">
           <img class="flag" data-src="//static.miniclipcdn.com/layout/flags/46x32/CS.png"/>
@@ -562,12 +594,19 @@
        </li>
       </ul>
      </nav>
-     <a class="button small greedy" href="/games/choose-your-language/?return_pre=/games&amp;return_post=">
+     <a class="button small greedy" href="/games/choose-your-language/?return_pre=/games/basketball-stars&amp;return_post=">
       More
      </a>
     </div>
     <nav class="menu rich greedy main-menu" role="navigation">
      <ul>
+      <li>
+       <a class="mc-icon button category home" href="/games/en/#t-n" title="Miniclip Homepage">
+        <span>
+         Miniclip Home
+        </span>
+       </a>
+      </li>
       <li>
        <a class="link-104 link-pool category button mc-icon" href="/games/8-ball-pool-multiplayer/#t-n">
         Pool
@@ -921,6 +960,10 @@
    <a class="header-action-slot" href="https://www.miniclip.com/games/black-friday-2019/#t-to" target="$target">
    </a>
    <div class="container">
+   </div>
+   <div class="container">
+    <iframe frameborder="0" height="0" id="fb-game-share" name="fb-game-share" src="/games/fbshare/111411968896241/" width="0">
+    </iframe>
     <section class="promo-mast" id="promo-mast">
      <div class="container-728x90" id="dfp-leaderboard">
       <script type="text/javascript">
@@ -933,140 +976,541 @@
       Advertisement
      </div>
     </section>
-   </div>
-   <div class="container">
-    <section class="homepage-first-row">
-     <div class="widget widget-size-2 box featured-scroller" id="widget-975">
-      <div class="scroller-preview slick-slider" id="scroller-preview-975">
-       <article>
-        <a href="/games/black-friday-2019/en/#t-l-gs1">
-         <img alt="Black Friday 2019" src="//static.miniclipcdn.com/images/big-images/blackfriday_444x287.jpg"/>
-        </a>
-       </article>
-       <article>
-        <a href="/games/sketchfulio/en/#t-l-gs1">
-         <img alt="Sketchful.io" data-lazy="//static.miniclipcdn.com/images/big-images/SKETCHFUL_444x287.jpg" src="//static.miniclipcdn.com/layout/icons/default-444x287.png"/>
-        </a>
-       </article>
-       <article>
-        <a href="/games/stacky-zoo/en/#t-l-gs1">
-         <img alt="Stacky Zoo" data-lazy="//static.miniclipcdn.com/images/big-images/Stacky-Zoo-444x287.jpg" src="//static.miniclipcdn.com/layout/icons/default-444x287.png"/>
-        </a>
-       </article>
-       <article>
-        <a href="/games/8-ball-pool-multiplayer/en/#t-l-gs1">
-         <img alt="8 Ball Pool" data-lazy="//static.miniclipcdn.com/images/big-images/8BP-PushAd-Generic-444x287.png" src="//static.miniclipcdn.com/layout/icons/default-444x287.png"/>
-        </a>
-       </article>
-       <article>
-        <a href="/games/crowdy-city/en/#t-l-gs1">
-         <img alt="Crowdy City" data-lazy="//static.miniclipcdn.com/images/big-images/crowdycity_444x287-1-.jpg" src="//static.miniclipcdn.com/layout/icons/default-444x287.png"/>
-        </a>
-       </article>
+    <div class="box neutral" id="smartphone-promo">
+     <a class="button-appstore android" href="https://www.miniclip.com/iphone/appstore.php?id=com.miniclip.basketballstars&amp;platform=android&amp;src=web&amp;app_name=Basketball-Stars&amp;store_type=G" target="_blank">
+      Get it for Android
+     </a>
+     <a class="button-appstore apple" href="https://www.miniclip.com/iphone/appstore.php?id=976173170&amp;src=web&amp;app_name=Basketball-Stars&amp;store_type=G" target="_blank">
+      Get it for iOS
+     </a>
+     <a class="link" href="https://www.miniclip.com/iphone/appstore.php?id=976173170&amp;src=web&amp;app_name=Basketball-Stars&amp;store_type=G">
+      <img alt="Basketball Stars" height="48" src="//static.miniclipcdn.com/content/images/smartphone/icons/homepage_small/BasketballStars512.png" width="48"/>
+      <h2>
+       Get
+       <strong>
+        Basketball Stars
+       </strong>
+       on mobile
+      </h2>
+     </a>
+    </div>
+    <div class="body-overlay" style="display:none;">
+    </div>
+    <div class="leaderboard-modal" style="display:none;">
+     <a class="button-close" href="#" onclick="MC.Leaderboard.hide();">
+      <span class="screen-reader">
+       Return To Game
+      </span>
+     </a>
+     <header>
+      <a class="game-icon game-id-4486 big" href="/games/basketball-stars/en/#t-u-h" title="">
+       <div class="icon-wrapper">
+        <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/BasketballStars_150_110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Basketball Stars" width="83"/>
+       </div>
+      </a>
+      <h2>
+       <a href="#">
+        Basketball Stars Leaderboard
+       </a>
+      </h2>
+      <select id="leaderboard_period">
+       <option value="month">
+        Monthly
+       </option>
+       <option value="week">
+        Weekly
+       </option>
+      </select>
+      <div class="column-right">
+       <a class="button cool" href="#" id="show-all-levels">
+        All Levels
+       </a>
       </div>
-      <nav class="scroller-nav slick-slider" id="scroller-nav-975">
-       <div>
-        <div class="notification blip offset hot">
-         New!
-        </div>
-        <div class="icon-wrapper">
-         <img height="63" src="//static3.miniclipcdn.com/content/game-icons/medium/blackfriday_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Black Friday 2019" width="83"/>
+     </header>
+     <section>
+      <div class="all-levels-section" style="display:none">
+       <div class="levels-list loader" id="levels-list-content">
+        <div class="loader">
         </div>
        </div>
-       <div>
-        <div class="notification blip offset hot">
-         New!
-        </div>
-        <div class="icon-wrapper">
-         <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/SKETCHFUL_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Sketchful.io" width="83"/>
-        </div>
-       </div>
-       <div>
-        <div class="icon-wrapper">
-         <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/Stacky-Zoo-icon-150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Stacky Zoo" width="83"/>
-        </div>
-       </div>
-       <div>
-        <div class="icon-wrapper">
-         <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/8-Ball-Pool_26-02-2015.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play 8 Ball Pool" width="83"/>
-        </div>
-       </div>
-       <div>
-        <div class="notification blip offset hot">
-         New!
-        </div>
-        <div class="icon-wrapper">
-         <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/crowdycity_150x110.png" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Crowdy City" width="83"/>
+      </div>
+      <div class="single-level-section">
+       <nav class="tab-bar greedy">
+        <ul>
+         <li>
+          <a class="button cool selected" data-nav="global" href="#">
+           World
+          </a>
+         </li>
+         <li>
+          <a class="button cool" data-nav="top" href="#">
+           All Time Top 25
+          </a>
+         </li>
+        </ul>
+       </nav>
+       <!-- leaderboards content -->
+       <div class="highscores loader" id="highscores-tab-content">
+        <div class="loader">
         </div>
        </div>
-      </nav>
-     </div>
-     <section class="widget box widget-category widget-category-1201 widget-976">
-      <header>
-       <a class="button category greedy cat-1201" href="/games/genre-1201/hot-games/en/#t-w-c" title="More Hot Games Games">
-        Hot Games
-       </a>
-      </header>
-      <ul class="games-list inner">
-       <li>
-        <a class="game-icon game-id-4559 big" href="/games/diepio/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static2.miniclipcdn.com/content/game-icons/medium/DIP-MIN-Icons_150x110.png">
-           <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/DIP-MIN-Icons_150x110.png" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Diep.io" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Diep.io" width="83"/>
-         </div>
-         <span class="meta">
-          Diep.io
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-2471 big" href="/games/8-ball-pool-multiplayer/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/8-Ball-Pool_26-02-2015.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/8-Ball-Pool_26-02-2015.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play 8 Ball Pool" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play 8 Ball Pool" width="83"/>
-         </div>
-         <span class="meta">
-          8 Ball Pool
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4801 big" href="/games/flip-master/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/MIN-Large_Icon_150x110.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/MIN-Large_Icon_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Flip Master" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Flip Master" width="83"/>
-         </div>
-         <span class="meta">
-          Flip Master
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-3169 big" href="/games/tanki-online/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/tanki-online_150_110_20150529.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/tanki-online_150_110_20150529.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Tanki Online" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Tanki Online" width="83"/>
-         </div>
-         <span class="meta">
-          Tanki Online
-         </span>
-        </a>
-       </li>
-      </ul>
-      <footer class="overhang">
-       <a class="button fun greedy action" href="/games/genre-1201/hot-games/en/#t-w-c">
-        More Hot Games
-       </a>
-      </footer>
+      </div>
+      <a class="button hot greedy" href="#" onclick="MC.Leaderboard.hide();">
+       Return To Game
+      </a>
+      <div class="countdown footnote">
+       Scores reset in:
+       <span id="leaderboard-clearing-time">
+       </span>
+      </div>
+      <!-- hidden loader div -->
+      <div id="loader-holder">
+       <div class="loader">
+       </div>
+      </div>
      </section>
+    </div>
+   </div>
+   <div id="game-content" style="width:1160px; margin-left:auto; margin-right:auto; margin-top:75px">
+    <section class="box" id="game-container">
+     <!-- Game Mode: visible -->
+     <div class="game-embed-wrapper">
+      <header class="pretty game">
+       <nav class="breadcrumbs">
+        <a href="/games/en/#t-bc-4486">
+         Games
+        </a>
+        ›
+        <a href="/games/genre-1293/basketball/en/#t-bc-4486">
+         Basketball
+        </a>
+        ›
+        <h2>
+         Basketball Stars
+        </h2>
+        <div class="to-video-player-container video-walkthrough">
+         <a class="button orange small to-video-player video-player" href="#game-tabs" rel="nofollow">
+          Walkthrough
+         </a>
+        </div>
+       </nav>
+       <!-- <span class="users-online tooltip" data-tip="Users Online playing Basketball Stars" data-online="1007"></span> -->
+      </header>
+      <header class="pretty social">
+       <div class="like-facebook" id="like-button">
+        <fb:like href="https://www.miniclip.com/games/basketball-stars/en/" layout="button_count" show_faces="false" width="100">
+        </fb:like>
+       </div>
+      </header>
+      <link href="//static.miniclipcdn.com/js/mcloader/mcloader.css?1411" rel="stylesheet" type="text/css"/>
+      <script src="//static.miniclipcdn.com/js/mcloader/mcloader.js?1339" type="text/javascript">
+      </script>
+      <div id="no-flash-notification" style="display: none;">
+       <div class="no-flash-notice">
+        <div class="content">
+         <div class="enable-screen">
+          <div class="notice-text">
+           <span>
+            Flash Player needs to be enabled to play
+           </span>
+           <span class="game-name">
+            Basketball Stars
+           </span>
+          </div>
+          <a class="notice-btn button cool" href="https://get.adobe.com/flashplayer/" onclick="$('.fallback-help').fadeIn();" target="_blank" title="Enable Flash">
+           <span class="loading" style="display:none">
+            <img src="/images/loading/waiting.svg"/>
+           </span>
+           <span class="msg">
+            Enable Flash
+           </span>
+          </a>
+         </div>
+        </div>
+        <div class="fallback-help">
+         That didn't work?
+         <a href="https://support.miniclip.com/hc/en-us/articles/203746596-How-to-Install-Flash" target="_blank">
+          Go here for more help.
+         </a>
+        </div>
+       </div>
+      </div>
+      <!-- proxy -->
+      <div id="flashCommsWrapper" style="position:absolute;top:0px;left:-1px;">
+       <div id="flashCommsWrapperInner">
+       </div>
+      </div>
+      <script type="text/javascript">
+       var flashvars				= {};
+	var params					= {};
+	params.menu					= "false";
+	params.allowScriptAccess	= "always";
+	params.id					= "flashComms";
+	var attributes				= {};
+
+	
+	swfobject.embedSWF("/swfcontent/components/fblbproxy.swf?mc_gamename=Basketball+Stars&mc_hsname=4486&mc_iconBig=BasketballStars_150_110medicon.jpg&mc_icon=BasketballStars_70x59smallicon.png&mc_negativescore=0&mc_players_site=1&mc_scoreistime=0&mc_lowscore=0&mc_width=650&mc_height=650&mc_lang=en&mc_webmaster=0&mc_playerbutton=0&mc_v2=1&loggedin=0&mc_loggedin=0&mc_uid=0&mc_sessid=712ba67131f5274056aadcd5d8562f5c&mc_shockwave=0&mc_gameUrl=%2Fgames%2Fbasketball-stars%2Fen%2F&mc_ua=f7120ce&mc_geo=us-west-2&mc_geoCode=SG&vid=&vtype=ima&m_vid=0&mc_preroll_check=1&channel=miniclip.preroll&m_channel=miniclip.midroll&s_content=0&mc_plat_id=2&mc_extra=enable_personalized_ads%3D1&mc_image_cdn_path=https%3A%2F%2Favatars.miniclip.com%2F&login_allowed=1&dfp_video_url=https%253A%252F%252Fpubads.g.doubleclick.net%252Fgampad%252Fads%253Fsz%253D600x400%2526iu%253D%252F116850162%252FMiniclip.com_Preroll%2526ciu_szs%2526impl%253Ds%2526gdfp_req%253D1%2526env%253Dvp%2526output%253Dxml_vast2%2526unviewed_position_start%253D1%2526cust_params%253D%2526npa%253D0%2526cust_params%253DgCat%25253Dcategory_1293%252526gName%25253Dgame_4486%252526width%25253D650%252526height%25253D650%252526page_domain%25253Dgames%252526gAATF%25253Dgaatf_Y%252526gLanguage%25253Dlanguage_en%252526gPageType%25253Dpagetype_gamepage%252526gDemo1%25253Ddemo1_1%252526gDemo2%25253Ddemo2_1%252526gPageUrl%25253Dhttps%2525253A%2525252F%2525252Fwww.miniclip.com%2525252Fgames%2525252Fbasketball-stars%2525252Fen%2525252F%2526url%253D&fn=%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fgame-files%2Fwebgl_v6%2Fgame.html%3Fdomain%3Dminiclip.com", "flashCommsWrapperInner", "1", "1", "10.0.0", false, flashvars, params, attributes);
+
+	
+$(document).ready(function () {
+	$('#no-flash-notification .game-error-mask').hover(function () {
+		$(this).css('cursor','pointer');
+	});
+
+	$('#no-flash-notification .game-error-mask').click(function () {
+		getFlash();
+	});
+});
+      </script>
+      <style>
+       #gm-wrap {
+        margin: 0 auto;
+    }
+      </style>
+      <script type="text/javascript">
+       window.msEdge = false;
+
+    if ( navigator.appName == 'Netscape' ) {
+        ua = navigator.appVersion;
+
+        if (ua.indexOf(' Trident/') > -1 || ua.indexOf(' Edge/') > -1) {
+            window.msEdge = true;
+
+            var edgeMessage = document.createElement("div");
+            edgeMessage.innerHTML = 'Currently some of our games may not work on Internet Explorer 11 and Edge. If you are experiencing problems playing our games, we recommend the use of a different browser such as <a href="https://www.google.com/chrome/">Chrome</a> or <a href="https://www.mozilla.org/firefox">Firefox</a>.';
+            edgeMessage.setAttribute("class", "notification warning edge");
+            edgeMessage.setAttribute('style', 'width: ' + jQuery("#game-container").width() + 'px');
+
+            jQuery("#game-container").append(edgeMessage);
+
+            setTimeout(function() {
+                jQuery(".notification.warning.edge").fadeOut(1000)
+            }, 10000);
+        }
+    }
+
+    /*
+     * We must discard the subddomain parts to match the requested iframe urls, as in webgl game the domain
+     * will be passed to the iframe which then will try to reset its own domain to ours. The default
+     * apps.fb.miniclip.com domain is not a valid value for resetting the iframe domain and it would prevent it
+     * from doing cross domain requests.
+     */
+    document.domain = 'miniclip.com';
+
+    var mc_api = {"swfCallback" : swfCallbackHandler};
+    var _callbacks = {};
+
+    var noticeIDs = {
+        "GAME_READY":"gamemanager_game_ready",
+        "READY":"gamemanager_ready",
+        "GAME_DISABLE":"game_disable",
+        "GAME_ENABLE":"game_enable"
+    }
+
+    function swfCallbackHandler(data)
+    {
+        switch(data["noticeID"])
+        {
+            case noticeIDs.GAME_READY:
+                showGame();
+                break;
+            case noticeIDs.GAME_DISABLE:
+                showServices();
+                break;
+            case noticeIDs.GAME_ENABLE:
+                showGame();
+                break;
+            default:
+        };
+
+        try
+        {
+            if (jQuery.isFunction(_callbacks[0])) {
+                _callbacks[0](data);
+            }
+        }
+        catch(err)
+        {
+            console.log(err);
+        }
+    }
+
+    function onJsproxyReady()
+    {
+        if(!this.services)
+        {
+            this.services = document.getElementById("game-embed");
+        }
+
+        
+        var qdata = "game_id=4486&rating=4&height=650&game_url_key=basketball-stars&plugin_type=&name=Basketball+Stars&keywords=Basketball+Stars&is_webmaster_game=1&main_category_id=1293&is_download_game=0&short_description=Show+your+skills%2C+moves+and+fakes+to+juke+out+your+opponent+and+shoot+for+the+basket%21+&short_name=Basketball+Stars&width=650&template_id=69&use_cdn=0&use_cdn_gamemgr=0&bytes_to_preload=&demographics=1%2C1%2CU&game_filename=%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fgame-files%2Fwebgl_v6%2Fgame.html%3Fdomain%3Dminiclip.com&description=%3Ch3%3EPlay+your+friends+or+take+on+the+world+in+Basketball+Stars%21%3C%2Fh3%3E%0A%3Cp%3EThe+world%E2%80%99s+best+multiplayer+Basketball+game+on+mobile%2C+from+the+creators+of+multiple+smash-hit+online+sports+games%21%0ADribble%2C+shoot%2C+score%2C+WIN%21+Grab+the+ball+and+take+on+the+world+with+BASKETBALL+STARS.%0A%3Cbr%2F%3E%3Cbr%2F%3E%0APlay+fast-paced%2C+authentic+1v1+multiplayer+basketball%21+Show+your+skills%2C+moves+and+fakes+to+juke+out+your+opponent+and+shoot+for+the+basket%21+On+defense%2C+stay+in+the+face+of+the+attacker%2C+steal+the+ball%2C+and+time+your+leaps+to+block+their+shots%21+All+in+REAL-TIME%21%0A%3Cbr%2F%3E%3Cbr%2F%3E%0A%3Cb%3EREALISTIC+3D+GRAPHICS%3C%2Fb%3E%3Cbr%2F%3E%0ABasketball+on+mobile+has+never+looked+this+good%3A+fully+customisable+3D+players+and+a+variety+of+environments+to+play+in%21%0A%3Cbr%2F%3E%3Cbr%2F%3E%0A%3Cb%3ECOMPETE+1-ON-1+IN+TWO+AWESOME+MULTIPLAYER+GAME+MODES%3C%2Fb%3E%3Cbr%2F%3E%0ATest+your+dueling+instincts+in+1v1+Matches%2C+or+race+to+shoot+hoops+in+time-based+1v1+Shootouts.%0A%3Cbr%2F%3E%3Cbr%2F%3E%0A%3Cb%3EINCREDIBLE+REWARDS+AND+HUNDREDS+OF+UNIQUE+ITEMS%3C%2Fb%3E%3Cbr%2F%3E%0APlaying+like+an+all-star%3F+Enter+higher-ranked+matches+with+bigger+stakes%2C+and+unlock+special+basketballs+and+unique+wearables+to+grow+your+power+and+style.%0A%3Cbr%2F%3E%3Cbr%2F%3E%0A%3Cb%3ELEVEL+UP%3C%2Fb%3E%3Cbr%2F%3E%0AStart+out+on+the+Underdog+court+and+play+your+way+up+to+the+top.+Gain+access+to+more+exclusive+courts+and+compete+with+the+best+Basketball+Stars+players+out+there%21%0A%3Cbr%2F%3E%3Cbr%2F%3E%0A%3Cb%3EKEY+FEATURES%3C%2Fb%3E%3Cbr%2F%3E%0A2+different+online+multiplayer+game+modes%3Cbr%2F%3E%0A300%2B+customisation+items+%3D+thousands+of+unique+looks%21%3Cbr%2F%3E%0A40%2B+unlockable+basketballs%3Cbr%2F%3E%0ADribble%2C+feint%2C+shoot%2C+steal%2C+block+and+get+powerful+bonuses+off+the+backboard%0AFree+to+play%21%3C%2Fp%3E%0A%3Cul%3E%0A%3Cli%3ETrue+1-on-1+basketball+gameplay%3C%2Fli%3E%0A%3Cli%3ERealistic+3D+graphics%3C%2Fli%3E%0A%3Cli%3EEasy+to+pick-up%2C+challenging+to+master%3C%2Fli%3E%0A%3C%2Ful%3E%0A%3Cbr+%2F%3E%0A&developer_id=&hs_low_score_is_better=0&hs_max_score=0&hs_negative_score_allowed=0&hs_players_enabled=1&hs_score_is_time=0&improvement_mode_enabled=0&series_id=0&itunes_id=0&credits_enabled=0&preroll_video_enabled=&preroll_video_enabled_webmasters=0&midroll_video_enabled=0&really_short_name=Basketball&custom_css=&embed_id=39&show_new_indicator=0&show_sponsored_indicator=0&show_updated_indicator=0&globally_visible=1&show_ads=0&help_url=http%3A%2F%2Fsupport.miniclip.com&game_guide_url=&fan_page_url=&fb_show_awards=1&social_text=&game_image_group_id=5824&iframe_token_required=0&release_date=&game_tech=W&big_image=BasketballStars_444x287.jpg&mc_show_awards_tab=1&preroll_video_disable_first_time_player=1&scrollable=0&use_http_get=0&preload_game=1&is_mmo=0&show_third_party_gdpr=0&template_file=gamepageiframe.php&embed_view_path=html-object&game_manager=&status=visible&is_in_list=1&is_playable=1&smartphone_game_name=Basketball+Stars&has_tracker=&seo_date=&facebook_icon=&rating_count=62283&rating_sum=264585&mc_webmaster=0&disabled=&googleId=0&mc_gamename=Basketball%2BStars&mc_hsname=4486&mc_iconBig=BasketballStars_150_110medicon.jpg&mc_icon=BasketballStars_70x59smallicon.png&mc_negativescore=0&mc_players_site=1&mc_scoreistime=0&mc_lowscore=0&mc_width=650&mc_height=650&mc_lang=en&mc_playerbutton=0&mc_v2=1&loggedin=0&mc_loggedin=0&mc_uid=0&mc_sessid=712ba67131f5274056aadcd5d8562f5c&mc_shockwave=0&mc_gameUrl=%252Fgames%252Fbasketball-stars%252Fen%252F&mc_ua=f7120ce&mc_geo=us-west-2&mc_geoCode=SG&vid=&vtype=ima&m_vid=0&mc_preroll_check=1&channel=miniclip.preroll&m_channel=miniclip.midroll&s_content=0&mc_plat_id=2&mc_extra=enable_personalized_ads%3D1&mc_image_cdn_path=https%3A%2F%2Favatars.miniclip.com%2F&login_allowed=1&dfp_video_url=https%253A%252F%252Fpubads.g.doubleclick.net%252Fgampad%252Fads%253Fsz%253D600x400%2526iu%253D%252F116850162%252FMiniclip.com_Preroll%2526ciu_szs%2526impl%253Ds%2526gdfp_req%253D1%2526env%253Dvp%2526output%253Dxml_vast2%2526unviewed_position_start%253D1%2526cust_params%253D%2526npa%253D0%2526cust_params%253DgCat%25253Dcategory_1293%252526gName%25253Dgame_4486%252526width%25253D650%252526height%25253D650%252526page_domain%25253Dgames%252526gAATF%25253Dgaatf_Y%252526gLanguage%25253Dlanguage_en%252526gPageType%25253Dpagetype_gamepage%252526gDemo1%25253Ddemo1_1%252526gDemo2%25253Ddemo2_1%252526gPageUrl%25253Dhttps%2525253A%2525252F%2525252Fwww.miniclip.com%2525252Fgames%2525252Fbasketball-stars%2525252Fen%2525252F%2526url%253D&fn=%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fgame-files%2Fwebgl_v6%2Fgame.html%3Fdomain%3Dminiclip.com";
+
+        if (window.msEdge == false) {
+            var gimport = document.createElement("object");
+        }
+        else {
+            /* If we're on MS Edge or IE11, load the game in a iFrame instead of using web components */
+            var gimport = document.createElement("iframe");
+            gimport.setAttribute('src',  "//www.miniclip.com/games/basketball-stars/game-files/webgl_v6/game.html?domain=miniclip.com?cdn_url=%2F%2Fstatic.miniclipcdn.com%2Fwebgl%2F&miniclip_api_js=mc_api.js%3F5&swf_object_js=swfobject.js%3F5&jsproxy=JSproxy.swf%3F5&gameloader=gameloader.swf%3F5"+"&domain="+document.domain);
+        }
+
+        gimport.setAttribute('data', "//www.miniclip.com/games/basketball-stars/game-files/webgl_v6/game.html?domain=miniclip.com?cdn_url=%2F%2Fstatic.miniclipcdn.com%2Fwebgl%2F&miniclip_api_js=mc_api.js%3F5&swf_object_js=swfobject.js%3F5&jsproxy=JSproxy.swf%3F5&gameloader=gameloader.swf%3F5"+"&domain="+document.domain+"&"+qdata);
+
+        gimport.id = "gimport";
+        jQuery("#gm-wrap").append(gimport);
+
+        jQuery("#gimport").css("height", 0);
+        jQuery("#gimport").css("width", 0);
+    }
+
+    function callAPI(method_name, argsObject)
+    {
+        if(this.services && this.services["onApiRequest"])
+        {
+            this.services["onApiRequest"](method_name, argsObject);
+        }
+        else
+        {
+            console.log(" services not found (root)");
+        }
+    }
+
+    function showServices()
+    {
+        if(this.staticMode != true)
+        {
+            jQuery("#game-embed").css("position","relative");
+            jQuery("#game-embed").css("height","650");
+            jQuery("#game-embed").css("width","650");
+            jQuery("#game-embed").css("left", 0);
+        }
+
+        jQuery("#gimport").css("height",0);
+        jQuery("#gimport").css("width",0);
+
+    }
+
+    function showGame()
+    {
+        jQuery("#game-embed").css("position", "absolute");
+        jQuery("#game-embed").css("left", -999999);
+
+        jQuery("#gimport").css("height","650");
+        jQuery("#gimport").css("width","650");
+
+        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+            jQuery("#gm-wrap").mouseenter(function(e) {
+                document.getElementById("gimport").focus();
+            });
+        }
+    }
+
+    function registerAPICallback(callback_function)
+    {
+        _callbacks[0] = callback_function;
+    }
+
+    if ( typeof adMiniclip == 'undefined' )
+    {
+        var adMiniclip = null;
+    }
+
+    if (typeof quantSegs == 'undefined' )
+    {
+        var quantSegs = null;
+    }
+
+    var game_flashvars = {"mc_gamename":"Basketball Stars","mc_hsname":"4486","mc_iconBig":"BasketballStars_150_110medicon.jpg","mc_icon":"BasketballStars_70x59smallicon.png","mc_negativescore":"0","mc_players_site":"1","mc_scoreistime":"0","mc_lowscore":"0","mc_width":"650","mc_height":"650","mc_lang":"en","mc_webmaster":"0","mc_playerbutton":"0","mc_v2":"1","loggedin":"0","mc_loggedin":"0","mc_uid":"0","mc_sessid":"712ba67131f5274056aadcd5d8562f5c","mc_shockwave":"0","mc_gameUrl":"\/games\/basketball-stars\/en\/","mc_ua":"f7120ce","mc_geo":"us-west-2","mc_geoCode":"SG","vid":"","vtype":"ima","m_vid":"0","mc_preroll_check":"1","channel":"miniclip.preroll","m_channel":"miniclip.midroll","s_content":"0","mc_plat_id":"2","mc_extra":"enable_personalized_ads=1","mc_image_cdn_path":"https:\/\/avatars.miniclip.com\/","login_allowed":"1","dfp_video_url":"https%3A%2F%2Fpubads.g.doubleclick.net%2Fgampad%2Fads%3Fsz%3D600x400%26iu%3D%2F116850162%2FMiniclip.com_Preroll%26ciu_szs%26impl%3Ds%26gdfp_req%3D1%26env%3Dvp%26output%3Dxml_vast2%26unviewed_position_start%3D1%26cust_params%3D%26npa%3D0%26cust_params%3DgCat%253Dcategory_1293%2526gName%253Dgame_4486%2526width%253D650%2526height%253D650%2526page_domain%253Dgames%2526gAATF%253Dgaatf_Y%2526gLanguage%253Dlanguage_en%2526gPageType%253Dpagetype_gamepage%2526gDemo1%253Ddemo1_1%2526gDemo2%253Ddemo2_1%2526gPageUrl%253Dhttps%25253A%25252F%25252Fwww.miniclip.com%25252Fgames%25252Fbasketball-stars%25252Fen%25252F%26url%3D","fn":"\/\/www.miniclip.com\/games\/basketball-stars\/game-files\/webgl_v6\/game.html?domain=miniclip.com"};
+    game_flashvars.adMiniclipVideo = adMiniclip;
+    game_flashvars.quantSegs = quantSegs;
+
+    var params = {"base":"\/games\/basketball-stars\/en\/"};
+
+    var attributes = {};
+    var playerVersion = swfobject.getFlashPlayerVersion();
+
+    // if flash is not installed
+    if (playerVersion.major == 0)
+    {
+        // set plugin url
+        attributes.codebase = "https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0";
+        params.pluginurl    = "https://www.adobe.com/go/getflashplayer";
+        params.pluginspage  = "https://www.adobe.com/go/getflashplayer";
+        // display flash plugin required error
+        showFlashError(650,650);
+    }
+    else
+    {
+        var version = "11.5.0";
+        var width = "650";
+        var height = "650";
+
+        var file_name = "//static.miniclipcdn.com/webgl/gameloader.swf";
+
+        // modifications to the default game_flashvars required to turn game manager into services proxy mode;
+        delete game_flashvars["mc_gameUrl"];
+        game_flashvars["fn"] = "JSProxy.swf";
+        game_flashvars["bin"] = "0";
+        game_flashvars["amfhost"] = "amf-us-west-2";
+
+        if ((playerVersion.major == 11 && playerVersion.minor < 5) || (playerVersion.major < 11))
+        {
+            params = {
+                "menu" : "false",
+                "allowScriptAccess" : "always",
+                "id" : "test"
+            };
+        }
+        params.allowScriptAccess = "always";
+
+        swfobject.embedSWF(
+            file_name,
+            "game-embed",
+            width,
+            height,
+            version,
+            "/swfcontent/expressInstall.swf",
+            game_flashvars,
+            params,
+            attributes
+        );
+    }
+      </script>
+      <div id="gm-wrap">
+       <div id="game-embed" style="width:650px">
+       </div>
+      </div>
+     </div>
+     <!-- /.game-embed-content -->
+     <div class="game-toolbar clearfix">
+      <div class="toolbar-social">
+       <ul>
+        <li>
+         <a class="mc-icon tooltip drawer-open-login heart-empty tooltip-" data-game-id="4486" data-is-fav="no" data-tip="Login to add Basketball Stars to your favourite games" data-user-id="" href="#" id="favorite-toggle" rel="nofollow" style="z-index: 20;">
+         </a>
+         <div class="toolbox toolbox-share-favorites" id="share-favorites">
+          <!--<a class="button-close" rel="nofollow" href="#"></a>-->
+          Share your favorite with your friends!
+         </div>
+        </li>
+        <li>
+         <div class="game-rating">
+          <div class="rate-item">
+           <ul class="star-rating active-rating" data-initial-rating="4" data-product-id="4486" data-product-type-id="2">
+            <li class="star-1" data-rate="1">
+            </li>
+            <li class="star-2" data-rate="2">
+            </li>
+            <li class="star-3" data-rate="3">
+            </li>
+            <li class="star-4" data-rate="4">
+            </li>
+            <li class="star-5" data-rate="5">
+            </li>
+           </ul>
+           <div class="rated-feedback">
+            <div class="rating-message">
+            </div>
+           </div>
+          </div>
+          <div class="mc-icon toolbox">
+           <a class="button-close" href="#" rel="nofollow">
+           </a>
+           <p>
+            Share your rating with your friends!
+           </p>
+           <div class="hovermenu-dropdown">
+            <i class="fas fa-share-square hovermenu-dropbtn">
+            </i>
+            <div class="hovermenu-dropdown-content">
+             <a class="mc-icon tooltip twitter" href="https://twitter.com/intent/tweet?text=I+just+rated+%5BTHE_TINYTITLE%5D+on+Miniclip.+%40miniclip&amp;url=https%3A%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fen%2F%3Futm_source%3Dgame-page%26utm_medium%3Dshare-ratings-twitter%26utm_campaign%3Dsocial-ratings-share&amp;related=miniclip" rel="nofollow" target="_blank">
+              <span>
+               Share on Twitter
+              </span>
+             </a>
+             <a class="mc-icon tooltip facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fen%2F%3Futm_source%3Dgame-page%26utm_medium%3Dshare-ratings-facebook%26utm_campaign%3Dsocial-ratings-share&amp;t=Basketball Stars" rel="nofollow" target="_blank">
+              <span>
+               Share on Facebook
+              </span>
+             </a>
+             <a class="mc-icon tooltip google-plus" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fen%2F%3Futm_source%3Dgame-page%26utm_medium%3Dshare-ratings-google-plus%26utm_campaign%3Dsocial-ratings-share" rel="nofollow" target="_blank">
+              <span>
+               Share on Google+
+              </span>
+             </a>
+             <a class="mc-icon tooltip email" href="mailto:?subject=I%20just%20rated%20%5BTHE_TITLE%5D%20on%20Miniclip.com%21&amp;body=Hey%21%20I%20just%20rated%20%5BTHE_TITLE%5D%20on%20Miniclip.com%21%20Check%20it%20out%3A%20%5BTHE%20PERMALINK%5D" rel="nofollow" target="_blank">
+              <span>
+               Share by Email
+              </span>
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </li>
+        <li>
+         <div class="hovermenu-dropdown">
+          <i class="fas fa-share-square hovermenu-dropbtn">
+          </i>
+          <div class="hovermenu-dropdown-content">
+           <a class="mc-icon tooltip twitter" href="https://twitter.com/intent/tweet?text=Beat+my+score+on+Basketball+Stars%20@miniclip&amp;url=https%3A%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fen%2F%3Futm_source%3Dgame-page%26utm_medium%3Dshare-button-twitter%26utm_campaign%3Dsocial--game-share&amp;related=miniclip" rel="nofollow" target="_blank">
+            <span>
+             Twitter
+            </span>
+           </a>
+           <a class="mc-icon tooltip facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fen%2F%3Futm_source%3Dgame-page%26utm_medium%3Dshare-button-facebook%26utm_campaign%3Dsocial--game-share&amp;t=Basketball Stars" rel="nofollow" target="_blank">
+            <span>
+             Facebook
+            </span>
+           </a>
+           <a class="mc-icon tooltip google-plus" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fen%2F%3Futm_source%3Dgame-page%26utm_medium%3Dshare-button-google-plus%26utm_campaign%3Dsocial--game-share" rel="nofollow" target="_blank">
+            <span>
+             Google+
+            </span>
+           </a>
+           <a class="mc-icon tooltip email" href="mailto:?subject=I'm%20playing%20Basketball Stars%20on%20Miniclip.com!&amp;body=Beat%20my%20score%20on%20Basketball%20Stars.%20Check%20it%20out:%20https%3A%2F%2Fwww.miniclip.com%2Fgames%2Fbasketball-stars%2Fen%2F%3Futm_source%3Dgame-page%26utm_medium%3Dshare-button-email%26utm_campaign%3Dsocial--game-share" rel="nofollow" target="_blank">
+            <span>
+             Email
+            </span>
+           </a>
+          </div>
+         </div>
+        </li>
+        <li class="focus-mode">
+         <a class="mc-icon tooltip fullscreen" data-tip="Remove distractions - play in Focus mode" href="/games/basketball-stars/en/focus/">
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="toolbar-tags">
+       <a class="game-tag" href="/games/tag/android/en">
+        android
+       </a>
+       <a class="game-tag" href="/games/tag/basketball/en">
+        basketball
+       </a>
+       <a class="game-tag" href="/games/tag/iphone/en">
+        iphone
+       </a>
+       <div class="hovermenu-dropdown">
+        <span class="more-tags hovermenu-dropbtn">
+         2 more
+         <i class="fas fa-chevron-down more-tags-icon">
+         </i>
+        </span>
+        <div class="hovermenu-dropdown-content">
+         <a href="/games/tag/sports/en">
+          sports
+         </a>
+         <a href="/games/tag/webgl/en">
+          webgl
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="secondary">
      <section class="widget box widget-mpu" id="mpu-unit-1">
       <div class="container-300x250" id="dfp-mpu">
        <script type="text/javascript">
@@ -1089,467 +1533,7 @@
        </a>
       </footer>
      </div>
-    </section>
-    <div style="clear:both">
-    </div>
-    <div>
-     <!-- <last_played_games> -->
-     <!-- </last_played_games> -->
-     <!-- <game_recomendation> -->
-     <!-- </game_recomendation> -->
-    </div>
-    <section class="primary">
-     <section class="widget box widget-top-ten widget-0">
-      <header>
-       <a class="cat-6 button category greedy" href="/games/genre-6/top-10/en/">
-        Top 10 Web Games
-       </a>
-      </header>
-      <ol>
-       <li class="counter-1">
-        <a class="tooltip" data-tip="Play 8 Ball Pool against other players online!" data-tip-gameicon="//static.miniclipcdn.com/content/game-icons/medium/8-Ball-Pool_26-02-2015.jpg" data-tip-position="top" href="/games/8-ball-pool-multiplayer/en/#t-w-t" title="Play 8 Ball Pool">
-         <span>
-          1
-         </span>
-         8 Ball Pool
-        </a>
-       </li>
-       <li class="counter-2">
-        <a class="tooltip" data-tip="The viral sensation! Eat cells smaller than you and don't get eaten by the bigger ones!" data-tip-gameicon="//static3.miniclipcdn.com/content/game-icons/medium/Agar.io_150x110_20150709.jpg" data-tip-position="top" href="/games/agar-io/en/#t-w-t" title="Play Agar.io">
-         <span>
-          2
-         </span>
-         Agar.io
-        </a>
-       </li>
-       <li class="counter-3">
-        <a class="tooltip" data-tip="Master the trampoline with Frontflips, Backflips, Gainers, Layouts, Jumps and Bounces on your backyard, gym or circus trampolines and train to be the Master of Trampoline!" data-tip-gameicon="//static.miniclipcdn.com/content/game-icons/medium/MIN-Large_Icon_150x110.jpg" data-tip-position="top" href="/games/flip-master/en/#t-w-t" title="Play Flip Master">
-         <span>
-          3
-         </span>
-         Flip Master
-        </a>
-       </li>
-       <li class="counter-4">
-        <a class="tooltip" data-tip="Krunker.io Multiplayer First Person Shooter set in a pixel universe. Jump in and survive! " data-tip-gameicon="//static2.miniclipcdn.com/content/game-icons/medium/krunker_150x110.jpg" data-tip-position="top" href="/games/krunkerio/en/#t-w-t" title="Play Krunker.io">
-         <span>
-          4
-         </span>
-         Krunker.io
-        </a>
-       </li>
-       <li class="counter-5">
-        <a class="tooltip" data-tip="Real-time online multiplayer game" data-tip-gameicon="//static.miniclipcdn.com/content/game-icons/medium/SRS_Icon_150x110.png" data-tip-position="top" href="/games/soccer-stars-mobile/en/#t-w-t" title="Play Soccer Stars Mobile">
-         <span>
-          5
-         </span>
-         Soccer Stars Mobile
-        </a>
-       </li>
-       <li class="counter-6">
-        <a class="tooltip" data-tip="It's a Short Life! With so many dumb ways to die!" data-tip-gameicon="//static2.miniclipcdn.com/content/game-icons/medium/shortride_150x110.jpg" data-tip-position="top" href="/games/short-ride/en/#t-w-t" title="Play Short Ride">
-         <span>
-          6
-         </span>
-         Short Ride
-        </a>
-       </li>
-       <li class="counter-7">
-        <a class="tooltip" data-tip="Pocket as many pool balls as you can before the time runs out!" data-tip-gameicon="//static2.miniclipcdn.com/content/game-icons/medium/Instant_150.jpg" data-tip-position="top" href="/games/quickfire-pool-instant/en/#t-w-t" title="Play Quick Fire Pool Instant">
-         <span>
-          7
-         </span>
-         Quick Fire Pool Instant
-        </a>
-       </li>
-       <li class="counter-8">
-        <a class="tooltip" data-tip="Our Hero continues the battle with more missions, more enemies and bigger artillery." data-tip-gameicon="//static3.miniclipcdn.com/content/game-icons/medium/Commando2new.jpg" data-tip-position="top" href="/games/commando-2/en/#t-w-t" title="Play Commando 2">
-         <span>
-          8
-         </span>
-         Commando 2
-        </a>
-       </li>
-       <li class="counter-9">
-        <a class="tooltip" data-tip="Are you up the challenge of clearing all the bubbles?" data-tip-gameicon="//static.miniclipcdn.com/content/game-icons/medium/bubbletroublemedicon.jpg" data-tip-position="top" href="/games/bubble-trouble/en/#t-w-t" title="Play Bubble Trouble">
-         <span>
-          9
-         </span>
-         Bubble Trouble
-        </a>
-       </li>
-       <li class="counter-10">
-        <a class="tooltip" data-tip="A free multiplayer tank game with real-time PvP-battles!" data-tip-gameicon="//static.miniclipcdn.com/content/game-icons/medium/tanki-online_150_110_20150529.jpg" data-tip-position="top" href="/games/tanki-online/en/#t-w-t" title="Play Tanki Online">
-         <span>
-          10
-         </span>
-         Tanki Online
-        </a>
-       </li>
-      </ol>
-     </section>
-     <section class="widget box widget-category widget-category-13 widget-813">
-      <header>
-       <a class="button category greedy cat-13" href="/games/genre-13/action/en/#t-w-c" title="More Action Games">
-        Action
-       </a>
-      </header>
-      <ul class="games-list inner">
-       <li>
-        <a class="game-icon game-id-4975 big" href="/games/krunkerio/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static2.miniclipcdn.com/content/game-icons/medium/krunker_150x110.jpg">
-           <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/krunker_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Krunker.io" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Krunker.io" width="83"/>
-         </div>
-         <span class="meta">
-          Krunker.io
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-1902 big" href="/games/commando-2/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static3.miniclipcdn.com/content/game-icons/medium/Commando2new.jpg">
-           <img height="63" src="//static3.miniclipcdn.com/content/game-icons/medium/Commando2new.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Commando 2" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Commando 2" width="83"/>
-         </div>
-         <span class="meta">
-          Commando2
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-3507 big" href="/games/rail-rush/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/railrush.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/railrush.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Rail Rush" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Rail Rush" width="83"/>
-         </div>
-         <span class="meta">
-          Rail Rush
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4136 big" href="/games/superhot/en/#t-w-c" title="">
-         <div class="notification blip offset positive">
-          Updated
-         </div>
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/superhot.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/superhot.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play SuperHOT" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play SuperHOT" width="83"/>
-         </div>
-         <span class="meta">
-          SuperHOT
-         </span>
-        </a>
-       </li>
-      </ul>
-      <footer class="overhang">
-       <a class="button fun greedy action" href="/games/genre-13/action/en/#t-w-c">
-        More Action Games
-       </a>
-      </footer>
-     </section>
-     <div class="widget box widget-push-ads hp-single-1 widget-813" data-refresh="10000" data-type="hp-single-1">
-      <a href="">
-       <img/>
-      </a>
-      <footer class="overhang">
-       <a class="button hot action" href="">
-        Play
-       </a>
-      </footer>
-     </div>
-     <div class="widget box widget-push-ads hp-double widget-813 widget-size-2" data-refresh="10000" data-type="hp-double">
-      <a href="">
-       <img/>
-      </a>
-      <footer class="overhang">
-       <a class="button hot action" href="">
-        Play
-       </a>
-      </footer>
-     </div>
-     <section class="widget box widget-category widget-category-2 widget-821">
-      <header>
-       <a class="button category greedy cat-2" href="/games/genre-2/multiplayer/en/#t-w-c" title="More Multiplayer Games">
-        Multiplayer
-       </a>
-      </header>
-      <ul class="games-list inner">
-       <li>
-        <a class="game-icon game-id-2471 big" href="/games/8-ball-pool-multiplayer/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/8-Ball-Pool_26-02-2015.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/8-Ball-Pool_26-02-2015.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play 8 Ball Pool" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play 8 Ball Pool" width="83"/>
-         </div>
-         <span class="meta">
-          8 Ball Pool
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-5060 big" href="/games/lordz-conquest/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/Lordz2_150x110.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/Lordz2_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Lordz2.io" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Lordz2.io" width="83"/>
-         </div>
-         <span class="meta">
-          Lordz2.io
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-2067 big" href="/games/ourworld/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/OW_Halloween_21061021_150X110.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/OW_Halloween_21061021_150X110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play OurWorld" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play OurWorld" width="83"/>
-         </div>
-         <span class="meta">
-          OurWorld
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-3169 big" href="/games/tanki-online/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/tanki-online_150_110_20150529.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/tanki-online_150_110_20150529.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Tanki Online" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Tanki Online" width="83"/>
-         </div>
-         <span class="meta">
-          Tanki Online
-         </span>
-        </a>
-       </li>
-      </ul>
-      <footer class="overhang">
-       <a class="button fun greedy action" href="/games/genre-2/multiplayer/en/#t-w-c">
-        More Multiplayer
-       </a>
-      </footer>
-     </section>
-     <section class="widget box widget-category widget-category-3 widget-958">
-      <header>
-       <a class="button category greedy cat-3" href="/games/genre-3/sports/en/#t-w-c" title="More Sports Games">
-        Sports
-       </a>
-      </header>
-      <ul class="games-list inner">
-       <li>
-        <a class="game-icon game-id-5006 big" href="/games/golf-battle/en/#t-w-c" title="">
-         <div class="notification blip offset hot">
-          New!
-         </div>
-         <div class="icon-wrapper">
-          <noscript data-src="//static3.miniclipcdn.com/content/game-icons/medium/Golf_Icon_150x110.jpg">
-           <img height="63" src="//static3.miniclipcdn.com/content/game-icons/medium/Golf_Icon_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Golf Battle" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Golf Battle" width="83"/>
-         </div>
-         <span class="meta">
-          Golf Battle
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4138 big" href="/games/soccer-stars-mobile/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/SRS_Icon_150x110.png">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/SRS_Icon_150x110.png" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Soccer Stars" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Soccer Stars" width="83"/>
-         </div>
-         <span class="meta">
-          Soccer Stars
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4825 big" href="/games/football-strike/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/FBS-MIN-Icon_150x110.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/FBS-MIN-Icon_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Football Strike" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Football Strike" width="83"/>
-         </div>
-         <span class="meta">
-          FootballStrike
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4486 big" href="/games/basketball-stars/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/BasketballStars_150_110.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/BasketballStars_150_110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Basketball Stars" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Basketball Stars" width="83"/>
-         </div>
-         <span class="meta">
-          Basketball
-         </span>
-        </a>
-       </li>
-      </ul>
-      <footer class="overhang">
-       <a class="button fun greedy action" href="/games/genre-3/sports/en/#t-w-c">
-        More Sports Games
-       </a>
-      </footer>
-     </section>
-     <section class="widget box widget-category widget-category-1320 widget-812">
-      <header>
-       <a class="button category greedy cat-1320" href="/games/genre-1320/io/en/#t-w-c" title="More IO Games">
-        IO
-       </a>
-      </header>
-      <ul class="games-list inner">
-       <li>
-        <a class="game-icon game-id-5060 big" href="/games/lordz-conquest/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/Lordz2_150x110.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/Lordz2_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Lordz2.io" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Lordz2.io" width="83"/>
-         </div>
-         <span class="meta">
-          Lordz2.io
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4349 big" href="/games/agar-io/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static3.miniclipcdn.com/content/game-icons/medium/Agar.io_150x110_20150709.jpg">
-           <img height="63" src="//static3.miniclipcdn.com/content/game-icons/medium/Agar.io_150x110_20150709.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Agar.io" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Agar.io" width="83"/>
-         </div>
-         <span class="meta">
-          Agar.io
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4559 big" href="/games/diepio/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static2.miniclipcdn.com/content/game-icons/medium/DIP-MIN-Icons_150x110.png">
-           <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/DIP-MIN-Icons_150x110.png" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Diep.io" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Diep.io" width="83"/>
-         </div>
-         <span class="meta">
-          Diep.io
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-5066 big" href="/games/nugget-royale/en/#t-w-c" title="">
-         <div class="notification blip offset positive">
-          Updated
-         </div>
-         <div class="icon-wrapper">
-          <noscript data-src="//static2.miniclipcdn.com/content/game-icons/medium/nugget_150x110.jpg">
-           <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/nugget_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Nugget Royale" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Nugget Royale" width="83"/>
-         </div>
-         <span class="meta">
-          Nugget Royale
-         </span>
-        </a>
-       </li>
-      </ul>
-      <footer class="overhang">
-       <a class="button fun greedy action" href="/games/genre-1320/io/en/#t-w-c">
-        More IO Games
-       </a>
-      </footer>
-     </section>
-     <section class="widget box widget-category widget-category-1 widget-978">
-      <header>
-       <a class="button category greedy cat-1" href="/games/genre-1/puzzle/en/#t-w-c" title="More Puzzle Games">
-        Puzzle
-       </a>
-      </header>
-      <ul class="games-list inner">
-       <li>
-        <a class="game-icon game-id-5061 big" href="/games/stacky-zoo/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static2.miniclipcdn.com/content/game-icons/medium/Stacky-Zoo-icon-150x110.jpg">
-           <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/Stacky-Zoo-icon-150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Stacky Zoo" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Stacky Zoo" width="83"/>
-         </div>
-         <span class="meta">
-          Stacky Zoo
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-1445 big" href="/games/bubble-trouble/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/bubbletroublemedicon.jpg">
-           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/bubbletroublemedicon.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Bubble Trouble" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Bubble Trouble" width="83"/>
-         </div>
-         <span class="meta">
-          BubbleTrouble
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4890 big" href="/games/bloxorz/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static2.miniclipcdn.com/content/game-icons/medium/Bloxorz_150x110_anim_3.gif">
-           <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/Bloxorz_150x110_anim_3.gif" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Bloxorz" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Bloxorz" width="83"/>
-         </div>
-         <span class="meta">
-          Bloxorz
-         </span>
-        </a>
-       </li>
-       <li>
-        <a class="game-icon game-id-4924 big" href="/games/coloruid-2/en/#t-w-c" title="">
-         <div class="icon-wrapper">
-          <noscript data-src="//static3.miniclipcdn.com/content/game-icons/medium/coloruid_2_150x110.jpg">
-           <img height="63" src="//static3.miniclipcdn.com/content/game-icons/medium/coloruid_2_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Coloruid 2" width="83"/>
-          </noscript>
-          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Coloruid 2" width="83"/>
-         </div>
-         <span class="meta">
-          Coloruid 2
-         </span>
-        </a>
-       </li>
-      </ul>
-      <footer class="overhang">
-       <a class="button fun greedy action" href="/games/genre-1/puzzle/en/#t-w-c">
-        More Puzzle Games
-       </a>
-      </footer>
-     </section>
-    </section>
-    <section class="secondary">
-     <div class="widget box no-chrome widget-top-smartphone-games tab-wrapper widget-822" data-cookie="top-smartphone" data-current-tab="appleiphone">
+     <div class="widget box no-chrome widget-top-smartphone-games tab-wrapper widget-930" data-cookie="top-smartphone" data-current-tab="appleiphone">
       <nav class="tab-bar greedy">
        <ul>
         <li>
@@ -1685,19 +1669,441 @@
        </footer>
       </div>
      </div>
-     <div class="widget box widget-push-ads hp-sidebar widget-822" data-refresh="10000" data-type="hp-sidebar">
-      <a href="">
-       <img/>
+    </section>
+   </div>
+   <div class="container">
+    <div id="dfp-ci-after-game" style="display: none;">
+    </div>
+   </div>
+   <div class="container">
+    <div class="more-games">
+     <div class="box featured-game cool">
+      <div class="inner">
+       <a class="game-icon game-id-5062 big" href="/games/crowdy-city/en/#t-g-f" title="">
+        <div class="notification blip offset hot">
+         New!
+        </div>
+        <div class="icon-wrapper">
+         <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/crowdycity_150x110.png" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Crowdy City" width="83"/>
+        </div>
+       </a>
+       <h3>
+        <a href="/games/crowdy-city/en/#t-g-f">
+         Crowdy City
+        </a>
+       </h3>
+       <p>
+        Own the City with your Friends! Convert civilians to your crowd, eat up smaller crowds than you and avoid the bigger ones! It's a Crowdy Crowd City!
+       </p>
+      </div>
+     </div>
+     <div class="box recommended-games">
+      <header class="pretty small positive">
+       <h2>
+        Recommended Games
+       </h2>
+      </header>
+      <ul class="games-list inner">
+       <li>
+        <a class="game-icon game-id-4701 big" href="/games/dunkers/en/#t-g-rg" title="">
+         <div class="icon-wrapper">
+          <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/Dunkers150x110.png" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Dunkers" width="83"/>
+         </div>
+         <span class="meta">
+          Dunkers
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-2391 big" href="/games/urban-basketball/en/#t-g-rg" title="">
+         <div class="icon-wrapper">
+          <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/urbanbasketball.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Urban Basketball" width="83"/>
+         </div>
+         <span class="meta">
+          Basketball
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-5041 big" href="/games/bouncy-dunk/en/#t-g-rg" title="">
+         <div class="notification blip offset hot">
+          New!
+         </div>
+         <div class="icon-wrapper">
+          <img height="63" src="//static3.miniclipcdn.com/content/game-icons/medium/Bouncy_Dunk-150x110.png" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Bouncy Dunk" width="83"/>
+         </div>
+         <span class="meta">
+          Bouncy Dunk
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="box latest-games">
+      <header class="pretty small cool">
+       <h2>
+        Latest Games
+       </h2>
+      </header>
+      <ul class="games-list inner">
+       <li>
+        <a class="game-icon game-id-5098 big" href="/games/black-friday-2019/en/#t-g-l" title="">
+         <div class="notification blip offset hot">
+          New!
+         </div>
+         <div class="icon-wrapper">
+          <img height="63" src="//static3.miniclipcdn.com/content/game-icons/medium/blackfriday_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Black Friday 2019" width="83"/>
+         </div>
+         <span class="meta">
+          Black Friday 2
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-5093 big" href="/games/sketchfulio/en/#t-g-l" title="">
+         <div class="notification blip offset hot">
+          New!
+         </div>
+         <div class="icon-wrapper">
+          <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/SKETCHFUL_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Sketchful.io" width="83"/>
+         </div>
+         <span class="meta">
+          Sketchful.io
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-5061 big" href="/games/stacky-zoo/en/#t-g-l" title="">
+         <div class="icon-wrapper">
+          <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/Stacky-Zoo-icon-150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Stacky Zoo" width="83"/>
+         </div>
+         <span class="meta">
+          Stacky Zoo
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <section class="promo-mast" id="promo-mast">
+     <div class="container-728x90" id="dfp-leaderboard-below">
+      <script type="text/javascript">
+       googletag.cmd.push(function () {
+						googletag.display('dfp-leaderboard-below');
+					});
+      </script>
+     </div>
+     <div class="promo-text">
+      Advertisement
+     </div>
+    </section>
+    <section class="primary">
+     <div class="tab-wrapper">
+      <nav class="tab-bar" id="game-tabs">
+       <ul>
+        <li>
+         <a class="mc-icon button cool info" data-panel="info" href="#" rel="nofollow">
+          Info
+         </a>
+        </li>
+        <li class="video-walkthrough">
+         <a class="mc-icon button cool video-player" data-panel="video-walkthrough" href="#">
+          Video
+         </a>
+        </li>
+        <li>
+         <a class="mc-icon button cool awards" data-panel="awards" href="#" rel="nofollow">
+          Awards
+         </a>
+        </li>
+       </ul>
+      </nav>
+      <div class="box tab-content panel greedy roomy panel-info">
+       <div class="tab-stuff tab-content-controls">
+        <ul class="game-controls clear">
+         <li>
+          <img alt="left mouse button" src="//static.miniclipcdn.com/images/icons/game-controls/icon_c_mouseleft.png"/>
+          Dribble, feint, shoot, steal, block
+         </li>
+        </ul>
+       </div>
+       <p class="game-description">
+       </p>
+       <h3>
+        Play your friends or take on the world in Basketball Stars!
+       </h3>
+       <br/>
+       <p>
+        The world’s best multiplayer Basketball game on mobile, from the creators of multiple smash-hit online sports games!
+        <br/>
+        Dribble, shoot, score, WIN! Grab the ball and take on the world with BASKETBALL STARS.
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        Play fast-paced, authentic 1v1 multiplayer basketball! Show your skills, moves and fakes to juke out your opponent and shoot for the basket! On defense, stay in the face of the attacker, steal the ball, and time your leaps to block their shots! All in REAL-TIME!
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <b>
+         REALISTIC 3D GRAPHICS
+        </b>
+        <br/>
+        <br/>
+        Basketball on mobile has never looked this good: fully customisable 3D players and a variety of environments to play in!
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <b>
+         COMPETE 1-ON-1 IN TWO AWESOME MULTIPLAYER GAME MODES
+        </b>
+        <br/>
+        <br/>
+        Test your dueling instincts in 1v1 Matches, or race to shoot hoops in time-based 1v1 Shootouts.
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <b>
+         INCREDIBLE REWARDS AND HUNDREDS OF UNIQUE ITEMS
+        </b>
+        <br/>
+        <br/>
+        Playing like an all-star? Enter higher-ranked matches with bigger stakes, and unlock special basketballs and unique wearables to grow your power and style.
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <b>
+         LEVEL UP
+        </b>
+        <br/>
+        <br/>
+        Start out on the Underdog court and play your way up to the top. Gain access to more exclusive courts and compete with the best Basketball Stars players out there!
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <b>
+         KEY FEATURES
+        </b>
+        <br/>
+        <br/>
+        2 different online multiplayer game modes
+        <br/>
+        <br/>
+        300+ customisation items = thousands of unique looks!
+        <br/>
+        <br/>
+        40+ unlockable basketballs
+        <br/>
+        <br/>
+        Dribble, feint, shoot, steal, block and get powerful bonuses off the backboard
+        <br/>
+        Free to play!
+       </p>
+       <br/>
+       <ul>
+        <br/>
+        <li>
+         True 1-on-1 basketball gameplay
+        </li>
+        <br/>
+        <li>
+         Realistic 3D graphics
+        </li>
+        <br/>
+        <li>
+         Easy to pick-up, challenging to master
+        </li>
+        <br/>
+       </ul>
+       <br/>
+       <br/>
+       <br/>
+       <p>
+        By clicking
+        <em>
+         "Add Basketball Stars to Your Website"
+        </em>
+        , you agree to the
+        <a href="/terms#webmaster-terms">
+         Webmaster Terms and Conditions
+        </a>
+        .
+       </p>
+       <a class="mc-icon button cool webmasters" href="/webmasters/basketball-stars/en/">
+        Add Basketball Stars to Your Website
+       </a>
+       <a class="mc-icon button help" href="http://support.miniclip.com" target="_blank">
+        Help
+       </a>
+      </div>
+      <div class="box tab-content panel greedy roomy panel-awards">
+       <div class="tab-stuff tab-content-awards">
+        <p>
+         There are
+         <strong>
+          1
+         </strong>
+         awards in
+         <strong>
+          Basketball Stars
+         </strong>
+         .
+         <a class="button cool small" href="/user/all-awards/en/" rel="nofollow">
+          View All Awards
+         </a>
+        </p>
+        <ul class="game-awards">
+         <li class="disabled">
+          <img alt="Basketball Stars" class="tooltip" data-tip="&lt;strong&gt;Basketball Stars&lt;/strong&gt; - Play Basketball Stars Attacker Defender mode on the underground court and score 5,000 points." height="50" src="//static.miniclipcdn.com/images/awards/store/5896_50.png" width="50"/>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="box tab-content panel greedy roomy panel-video-walkthrough video-walkthrough">
+       <div class="tab-stuff" id="walkthrough-player-container">
+        <h3>
+         Video Walkthrough
+        </h3>
+        <a class="mc-icon button cool small back-to-game video-player" href="#site-header" rel="nofollow">
+         Back to Game
+        </a>
+        <div id="videoContainer">
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="secondary">
+     <section class="widget box widget-mpu" id="mpu-unit-2">
+      <div class="container-300x250" id="dfp-mpu-2">
+       <script type="text/javascript">
+        googletag.cmd.push(function() {
+				googletag.display('dfp-mpu-2');
+			});
+       </script>
+      </div>
+      <p>
+       Advertisement
+      </p>
+     </section>
+     <div class="widget box widget-fail-safe widget-push-ads hidden">
+      <a href="/games/8-ball-pool-multiplayer/#t-p-1-44-H" target="_self">
+       <img data-src="//static.miniclipcdn.com/images/big-images/8ballpool_480x360.jpg" src="//static.miniclipcdn.com/images/big-images/8ballpool_480x360.jpg"/>
       </a>
       <footer class="overhang">
-       <a class="button hot action" href="">
+       <a class="button hot action" href="/games/8-ball-pool-multiplayer/#t-p-1-44-H" target="_self">
         Play
        </a>
       </footer>
      </div>
-     <div class="widget box widget-html widget-size-1 widget-955">
-      <iframe frameborder="0" height="287" src="https://www.miniclip.com/images/widgets/video-widgets/video_widget_hb2v2.html" width="320">
-      </iframe>
+     <section class="widget box widget-category widget-category-2 widget-895">
+      <header>
+       <a class="button category greedy cat-2" href="/games/genre-2/multiplayer/en/#t-w-c" title="More Multiplayer Games">
+        Multiplayer
+       </a>
+      </header>
+      <ul class="games-list inner">
+       <li>
+        <a class="game-icon game-id-2471 big" href="/games/8-ball-pool-multiplayer/en/#t-w-c" title="">
+         <div class="icon-wrapper">
+          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/8-Ball-Pool_26-02-2015.jpg">
+           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/8-Ball-Pool_26-02-2015.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play 8 Ball Pool" width="83"/>
+          </noscript>
+          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play 8 Ball Pool" width="83"/>
+         </div>
+         <span class="meta">
+          8 Ball Pool
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-5060 big" href="/games/lordz-conquest/en/#t-w-c" title="">
+         <div class="icon-wrapper">
+          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/Lordz2_150x110.jpg">
+           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/Lordz2_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Lordz2.io" width="83"/>
+          </noscript>
+          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Lordz2.io" width="83"/>
+         </div>
+         <span class="meta">
+          Lordz2.io
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-2067 big" href="/games/ourworld/en/#t-w-c" title="">
+         <div class="icon-wrapper">
+          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/OW_Halloween_21061021_150X110.jpg">
+           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/OW_Halloween_21061021_150X110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play OurWorld" width="83"/>
+          </noscript>
+          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play OurWorld" width="83"/>
+         </div>
+         <span class="meta">
+          OurWorld
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-3169 big" href="/games/tanki-online/en/#t-w-c" title="">
+         <div class="icon-wrapper">
+          <noscript data-src="//static.miniclipcdn.com/content/game-icons/medium/tanki-online_150_110_20150529.jpg">
+           <img height="63" src="//static.miniclipcdn.com/content/game-icons/medium/tanki-online_150_110_20150529.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Tanki Online" width="83"/>
+          </noscript>
+          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Tanki Online" width="83"/>
+         </div>
+         <span class="meta">
+          Tanki Online
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-5051 big" href="/games/killstreak-tv/en/#t-w-c" title="">
+         <div class="icon-wrapper">
+          <noscript data-src="//static2.miniclipcdn.com/content/game-icons/medium/killstreak-150x110.png">
+           <img height="63" src="//static2.miniclipcdn.com/content/game-icons/medium/killstreak-150x110.png" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Killstreak.tv" width="83"/>
+          </noscript>
+          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Killstreak.tv" width="83"/>
+         </div>
+         <span class="meta">
+          Killstreak.tv
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="game-icon game-id-4945 big" href="/games/donut-vs-donut/en/#t-w-c" title="">
+         <div class="icon-wrapper">
+          <noscript data-src="//static3.miniclipcdn.com/content/game-icons/medium/dvd_150x110.jpg">
+           <img height="63" src="//static3.miniclipcdn.com/content/game-icons/medium/dvd_150x110.jpg" style="background-image: url(//static.miniclipcdn.com/layout/icons/default-game-icon.png); background-size: cover;" title="Play Donut Vs Donut" width="83"/>
+          </noscript>
+          <img class="placeholder" height="63" src="//static.miniclipcdn.com/layout/icons/default-game-icon.png" title="Play Donut Vs Donut" width="83"/>
+         </div>
+         <span class="meta">
+          Donut Vs Donut
+         </span>
+        </a>
+       </li>
+      </ul>
+      <footer class="overhang">
+       <a class="button fun greedy action" href="/games/genre-2/multiplayer/en/#t-w-c">
+        More Multiplayer
+       </a>
+      </footer>
+     </section>
+    </section>
+    <section class="promo-mast" id="promo-mast">
+     <div class="container-728x90" id="dfp-leaderboard-footer">
+      <script type="text/javascript">
+       googletag.cmd.push(function () {
+						googletag.display('dfp-leaderboard-footer');
+					});
+      </script>
+     </div>
+     <div class="promo-text">
+      Advertisement
      </div>
     </section>
    </div>
@@ -1788,36 +2194,6 @@
       </ul>
      </nav>
     </section>
-    <section class="description">
-     <div class="column">
-      <h3>
-       Games at Miniclip
-      </h3>
-      <p>
-       Welcome to Miniclip.com, the leading online games site, where you can play a huge range of free online games including action games, sports games, puzzle games, games for girls, mobile games, iPhone games, Android games, Windows Phone, games for kids, flash games and many more.
-      </p>
-      <h3>
-       Player Games and Achievements
-      </h3>
-      <p>
-       On Miniclip you can play games to compile games statistics such as high scores, and rankings on your own player page and can receive awards for playing games. You can also create your own Miniclip avatar with clothing and accessories to represent you in our fun Miniclip games. You can play single player games or play advanced massive multiplayer games with other players from around the world.
-      </p>
-     </div>
-     <div class="column">
-      <h3>
-       Join the Fun
-      </h3>
-      <p>
-       Sign up free to get all the benefits of registered games players such as, high scores, your own avatar, statistics, awards and much, much more.
-      </p>
-      <h3>
-       Play Mobile Games for free Online and on the Go!
-      </h3>
-      <p>
-       You can play select versions of mobile games for free online right at Miniclip.com without the need to own a mobile phone. If you have a mobile phone you can try the games for free on Miniclip and then download them to your iPhone, Android or Windows Phone to play on the go.
-      </p>
-     </div>
-    </section>
     <section>
      <nav class="menu legal">
       <ul>
@@ -1873,7 +2249,7 @@
    $(document).ready(function () {
         do_page_tagging();
     });
-        var push_ads = {"hp-sidebar":[{"push_ad_id":"4538","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_BlackFriday_321x287.jpg","token":"hp-sidebar","push_ad_type_id":"184","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4528","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_PoolPass_321x287.jpg","token":"hp-sidebar","push_ad_type_id":"184","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4490","url":"\/games\/head-ball-2\/","image_file":"HB2-PushAd_321x287.jpg","token":"hp-sidebar","push_ad_type_id":"184","is_tracked":"0","keep_visible":"0"}],"hp-single-1":[{"push_ad_id":"4536","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_BlackFriday_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4488","url":"\/games\/head-ball-2\/","image_file":"HB2-PushAd_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4479","url":"\/games\/golf-battle\/","image_file":"GFB-MIN-Push_Ads_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4428","url":"\/games\/darts-of-fury\/","image_file":"DOF-PushAd_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4526","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_PoolPass_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"}],"hp-double":[{"push_ad_id":"4527","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_PoolPass_444x287.jpg","token":"hp-double","push_ad_type_id":"183","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4537","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_BlackFriday_444x287.jpg","token":"hp-double","push_ad_type_id":"183","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4489","url":"\/games\/head-ball-2\/","image_file":"HB2-PushAd_444x287.jpg","token":"hp-double","push_ad_type_id":"183","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4480","url":"\/games\/golf-battle\/","image_file":"GFB-MIN-Push_Ads_444x287.jpg","token":"hp-double","push_ad_type_id":"183","is_tracked":"0","keep_visible":"0"}],"cat-side-1":[{"push_ad_id":"4180","url":"\/games\/motorsport-manager-mobile-3\/","image_file":"MotorsportManager3_321x287.jpg","token":"cat-side-1","push_ad_type_id":"187","is_tracked":"0","keep_visible":"0"}],"cat-side-2":[{"push_ad_id":"3775","url":"\/games\/brutesio\/","image_file":"brutes-ad_321x287.jpg","token":"cat-side-2","push_ad_type_id":"188","is_tracked":"0","keep_visible":"0"}],"fb-banner":[{"push_ad_id":"3602","url":"https:\/\/apps.facebook.com\/livepool\/","image_file":"fb_banner_pool_750x90.png","token":"fb-banner","push_ad_type_id":"141","is_tracked":"0","keep_visible":"1"}],"filler-768x90":[{"push_ad_id":"1932","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"Pool-Promo-Mobile-FREE--766x88-.jpg","token":"filler-768x90","push_ad_type_id":"62","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"1940","url":"\/games\/motocross-nitro\/","image_file":"Motocross-Nitro-banner-766x88.jpg","token":"filler-768x90","push_ad_type_id":"62","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"1994","url":"\/games\/tanki-online\/","image_file":"766x88_play.jpg","token":"filler-768x90","push_ad_type_id":"62","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"1950","url":"\/games\/mini-pets\/","image_file":"766x88.jpg","token":"filler-768x90","push_ad_type_id":"62","is_tracked":"0","keep_visible":"0"}],"push-small":[{"push_ad_id":"3475","url":"\/games\/genre-1301\/2-player\/","image_file":"2player_218x78_20140908.jpg","token":"push-small","push_ad_type_id":"1","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"3911","url":"games\/clicker-heroes\/","image_file":"clickerheroes_218x78.jpg","token":"push-small","push_ad_type_id":"1","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"3941","url":"\/games\/age-of-speed-underworld\/","image_file":"ageofspeed_218x78.jpg","token":"push-small","push_ad_type_id":"1","is_tracked":"0","keep_visible":"0"}],"hp-single-2":[{"push_ad_id":"4459","url":"\/games\/golf-battle\/","image_file":"GFB-MIN-Push_Ads_216x287.jpg","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"},{"push_ad_id":"4091","url":"\/games\/basketball-stars\/","image_file":"BowlingKings_216-287.jpg","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"},{"push_ad_id":"4456","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-PushAd-Generic-216x287.png","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"},{"push_ad_id":"4458","url":"\/games\/football-strike\/","image_file":"FBS-MIN-Push_Ads_216x287.jpg","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"},{"push_ad_id":"4457","url":"\/games\/agar-io\/","image_file":"AGR-MIN-PushAd-216x287.png","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"}],"filler-300x250":[{"push_ad_id":"3692","url":"\/games\/supercar-showdown\/","image_file":"supercar_298x248_20141204.jpg","token":"filler-300x250","push_ad_type_id":"64","is_tracked":"0","keep_visible":"0"}],"homepagelarge2":[{"push_ad_id":"3622","url":"\/games\/genre-1299\/platinum\/","image_file":"Platinum_218x262_2.jpg","token":"homepagelarge2","push_ad_type_id":"90","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"3917","url":"\/games\/clicker-heroes\/","image_file":"clickerheroes_218x262.jpg","token":"homepagelarge2","push_ad_type_id":"90","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"3901","url":"\/games\/spurt\/","image_file":"spurt_218x262_20150223.jpg","token":"homepagelarge2","push_ad_type_id":"90","is_tracked":"0","keep_visible":"0"}],"HPLarge":[{"push_ad_id":"3634","url":"\/games\/tanki-online\/","image_file":"tanki_218x262_20140516.jpg","token":"HPLarge","push_ad_type_id":"36","is_tracked":"0","keep_visible":"0"}]};
+        var push_ads = {"hp-sidebar":[{"push_ad_id":"4538","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_BlackFriday_321x287.jpg","token":"hp-sidebar","push_ad_type_id":"184","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4490","url":"\/games\/head-ball-2\/","image_file":"HB2-PushAd_321x287.jpg","token":"hp-sidebar","push_ad_type_id":"184","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4528","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_PoolPass_321x287.jpg","token":"hp-sidebar","push_ad_type_id":"184","is_tracked":"0","keep_visible":"0"}],"hp-single-1":[{"push_ad_id":"4536","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_BlackFriday_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4479","url":"\/games\/golf-battle\/","image_file":"GFB-MIN-Push_Ads_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4488","url":"\/games\/head-ball-2\/","image_file":"HB2-PushAd_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4526","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_PoolPass_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4428","url":"\/games\/darts-of-fury\/","image_file":"DOF-PushAd_216x287.jpg","token":"hp-single-1","push_ad_type_id":"181","is_tracked":"0","keep_visible":"0"}],"hp-double":[{"push_ad_id":"4527","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_PoolPass_444x287.jpg","token":"hp-double","push_ad_type_id":"183","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4489","url":"\/games\/head-ball-2\/","image_file":"HB2-PushAd_444x287.jpg","token":"hp-double","push_ad_type_id":"183","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4537","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-MIN-PushAd_BlackFriday_444x287.jpg","token":"hp-double","push_ad_type_id":"183","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"4480","url":"\/games\/golf-battle\/","image_file":"GFB-MIN-Push_Ads_444x287.jpg","token":"hp-double","push_ad_type_id":"183","is_tracked":"0","keep_visible":"0"}],"cat-side-1":[{"push_ad_id":"4180","url":"\/games\/motorsport-manager-mobile-3\/","image_file":"MotorsportManager3_321x287.jpg","token":"cat-side-1","push_ad_type_id":"187","is_tracked":"0","keep_visible":"0"}],"cat-side-2":[{"push_ad_id":"3775","url":"\/games\/brutesio\/","image_file":"brutes-ad_321x287.jpg","token":"cat-side-2","push_ad_type_id":"188","is_tracked":"0","keep_visible":"0"}],"fb-banner":[{"push_ad_id":"3602","url":"https:\/\/apps.facebook.com\/livepool\/","image_file":"fb_banner_pool_750x90.png","token":"fb-banner","push_ad_type_id":"141","is_tracked":"0","keep_visible":"1"}],"homepagelarge2":[{"push_ad_id":"3917","url":"\/games\/clicker-heroes\/","image_file":"clickerheroes_218x262.jpg","token":"homepagelarge2","push_ad_type_id":"90","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"3901","url":"\/games\/spurt\/","image_file":"spurt_218x262_20150223.jpg","token":"homepagelarge2","push_ad_type_id":"90","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"3622","url":"\/games\/genre-1299\/platinum\/","image_file":"Platinum_218x262_2.jpg","token":"homepagelarge2","push_ad_type_id":"90","is_tracked":"0","keep_visible":"0"}],"hp-single-2":[{"push_ad_id":"4457","url":"\/games\/agar-io\/","image_file":"AGR-MIN-PushAd-216x287.png","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"},{"push_ad_id":"4456","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"8BP-PushAd-Generic-216x287.png","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"},{"push_ad_id":"4459","url":"\/games\/golf-battle\/","image_file":"GFB-MIN-Push_Ads_216x287.jpg","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"},{"push_ad_id":"4458","url":"\/games\/football-strike\/","image_file":"FBS-MIN-Push_Ads_216x287.jpg","token":"hp-single-2","push_ad_type_id":"182","is_tracked":"1","keep_visible":"0"}],"HPLarge":[{"push_ad_id":"3634","url":"\/games\/tanki-online\/","image_file":"tanki_218x262_20140516.jpg","token":"HPLarge","push_ad_type_id":"36","is_tracked":"0","keep_visible":"0"}],"filler-300x250":[{"push_ad_id":"3692","url":"\/games\/supercar-showdown\/","image_file":"supercar_298x248_20141204.jpg","token":"filler-300x250","push_ad_type_id":"64","is_tracked":"0","keep_visible":"0"}],"push-small":[{"push_ad_id":"3911","url":"games\/clicker-heroes\/","image_file":"clickerheroes_218x78.jpg","token":"push-small","push_ad_type_id":"1","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"3941","url":"\/games\/age-of-speed-underworld\/","image_file":"ageofspeed_218x78.jpg","token":"push-small","push_ad_type_id":"1","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"3475","url":"\/games\/genre-1301\/2-player\/","image_file":"2player_218x78_20140908.jpg","token":"push-small","push_ad_type_id":"1","is_tracked":"0","keep_visible":"0"}],"filler-768x90":[{"push_ad_id":"1950","url":"\/games\/mini-pets\/","image_file":"766x88.jpg","token":"filler-768x90","push_ad_type_id":"62","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"1994","url":"\/games\/tanki-online\/","image_file":"766x88_play.jpg","token":"filler-768x90","push_ad_type_id":"62","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"1940","url":"\/games\/motocross-nitro\/","image_file":"Motocross-Nitro-banner-766x88.jpg","token":"filler-768x90","push_ad_type_id":"62","is_tracked":"0","keep_visible":"0"},{"push_ad_id":"1932","url":"\/games\/8-ball-pool-multiplayer\/","image_file":"Pool-Promo-Mobile-FREE--766x88-.jpg","token":"filler-768x90","push_ad_type_id":"62","is_tracked":"0","keep_visible":"0"}]};
     
     //show signup form
   </script>
@@ -1886,7 +2262,7 @@
   <script type="text/javascript">
   </script>
   <!-- 
-	ab = 2
+	ab = 1
 	h = prod-website-site-i-06a03348017bd3cfb
 	q's = 0
 	c's = 0
@@ -1919,13 +2295,127 @@
         }
     });
   </script>
+  <script type="text/javascript">
+   /* disable default browser scroll down when pressing spacebar */
+	(function() {
+		jQuery(document).ready(function() {
+			if (jQuery("#game-embed").length > 0) {
+				jQuery(document).on("keydown", function (e) {
+					/* space and arrow keys */
+					var keys_to_disable = [32, 37, 38, 39, 40];
+					if (jQuery.inArray(e.which, keys_to_disable) > -1 && e.target == document.body) {
+						e.preventDefault();
+					}
+				});
+			}
+
+            /* if the sidebar was hidden by custom css, the game container width should be adjusted */
+            if (jQuery('.secondary').is(":hidden")) {
+                var minimum_witdh = 1010;
+                var sidebar_width = 337;
+                var new_width = minimum_witdh;
+
+                var current_width = jQuery('#game-content').width();
+
+                if (current_width - sidebar_width > minimum_witdh) {
+                    new_width = current_width - sidebar_width;
+                }
+
+                jQuery('#game-content').width(new_width);
+            } else {
+                //Only give the ~150px if it is visible the right Ads
+                jQuery("#game-content #game-container").css("margin-right","142px")
+            }
+        });
+	})();
+
+	var object_id = 4486;
+	var user_id = 0;
+	var game_data = new Object();
+	game_data.game_id = 4486;
+		game_data.is_visible = 1;
+	game_data.is_internal = 0;
+  </script>
   <script>
-   MCore.ready(function(){
-        MCore.Log.debug("Init Game Scroller");
-        var scrollerNav = "scroller-nav-975";
-        var scrollerPreview = "scroller-preview-975";
-        new GameScroller({ navElm: scrollerNav, previewElm: scrollerPreview });
-    })
+   jQuery(function(){
+		$('.leaderboard-modal').on('click', '.tab-bar a', function(e){
+			var nav = $(this).data('nav');
+
+			if (nav != '') {
+				$('.tab-bar a.button').removeClass( 'selected' );
+				$(this).addClass( 'selected' );
+
+				if (nav === 'custom') {
+					MC.Leaderboard.changeSelection(nav, 'default', $(this).data('leaderboard-id'));
+				} else {
+					MC.Leaderboard.changeSelection(nav);
+				}
+			}
+			e.preventDefault();
+		});
+		$('#leaderboard_period').change(function(){
+			MC.Leaderboard.changeSelection(null, $(this).val());
+		});
+		// show tooltips
+		$('.highscores').on('mouseenter', '.friend-ajax-button', function(){
+			if ($(this).find('button').hasClass('remove-friend')){
+				var text = 'Remove Friend';
+			} else if ($(this).find('button').hasClass('unblock')) {
+				var text = 'Unblock';
+			} else {
+				var text = 'Add Friend';
+			}
+			$(this).parent().parent().find('.toolbox').html(text).fadeIn(200);
+		});
+		$('.highscores').on('mouseleave', '.friend-ajax-button', function(){
+			$(this).parent().parent().find('.toolbox').fadeOut(200);
+		});
+
+		$('#show-all-levels').on('click', function(e){
+            MC.Leaderboard.showLevels();
+        })
+	});
+  </script>
+  <script>
+   var playerInstance;
+
+    var settings = {
+        container: "videoContainer",
+        gameId: "4486",
+        publisherId: "50869bf2795744c58ada033ba5376da9",
+        width: "100%",
+        height: "480px",
+        title: "Basketball Stars",
+        langCode: "en-us",
+        autoplay: "no",
+        onError: function (data) {
+            jQuery('.video-walkthrough').hide();
+        },
+        onReady:function(player){
+            playerInstance = player;
+            jQuery('.video-walkthrough').show();
+        }
+    };
+    (function(i,s,o,g,r,a,m){
+        i['FamobiWalk']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)};i[r].l=1*new Date();a=s.createElement(o);m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', '//video-static.vooxe.com/libs/gd/gd.js', 'gdPlayer');
+    gdPlayer(settings);
+
+    function play() {
+        if (playerInstance!=null) {
+            playerInstance.play(0);
+        }
+    }
+    function pause() {
+        if (playerInstance!=null) {
+            playerInstance.pause();
+        }
+    }
+    function setvolume() {
+        if (playerInstance!=null) {
+            playerInstance.setVolume(0.5);
+        }
+    }
   </script>
   <script>
    var translate = {"hide":"Hide","show":"Show","full_categories_list":"Full Categories List","all_games_and_categories":"All Games and Categories","show_more_results":"Show More Results &rsaquo;","no_comments":"No comments","report":"Report","comment_like_failed":"Sorry, the comment like failed. Please try again later.","comment_reporting_failed":"Sorry, the comment reporting failed.","the_word_is_not_allowed":"The word %s is not in our list of allowed words.","remove_red_messages":"Please edit your message to remove the words highlighted in red, these are not allowed.","enter_the_link":"Enter the link url","search_free_games":"You love free games? We <strong>LOVE<\/strong> free games! All Miniclip games have a free version you can play right here on the website.","password_reset_error_email":"<strong>Oops!<\/strong> You haven't entered an email address!","password_reset_error_username":"<strong>Sorry<\/strong> - That doesn't appear to be a valid email address.","password_reset_success":"We've got your reset request. If the email address you provided exists you should be getting an email with instructions on what to do next.","confirm_focus_mode":"Switch to Focus mode to concentrate on the game. This will restart your current game. Do you want to continue?","add_to_favorites":"Add to your favorite games","remove_from_favorites":"Remove from your favorite games","comment_autocomplete_placeholder":"Start typing to get suggestions","new":"New","next":"next","prev":"previous","warning":"Warning!","facebook_popup_warning":"The Facebook login dialog window may get blocked by your browser.<br>If it does, please allow pop-ups and then retry.<br><br>","retry":"Retry","cancel":"Cancel","email_registered":"This email is already registered, enter password to sign in.","email_not_registered":"This email is not registered yet, enter password to continue to registration.","caps_lock_on":"Warning: Caps lock is on.","password_min_length":"Password must be at least %s characters long.","password_max_length":"Password must be at most %s characters long.","password_confirmation_match":"Confirmation password must match your entered password.","nickname_length_limits":"Nickname length should be between %s and %s characters.","nickname_not_registered":"This nickname is not registered yet.","dob_day_numeric":"The day of your date of birth cannot contain alpha characters, only numeric (0-9).<br>","dob_day_digits":"The day of your date of birth cannot contain more than two digits.<br>","dob_day_limits":"The day of your date of birth must be between 1 and 31.<br>","dob_month_invalid":"The month of your date of birth is not valid.<br>","dob_year_numeric":"The year of your date of birth cannot contain alpha characters, only numeric (0-9).<br>","dob_year_contain_4digits":"The year of your date of birth must contain four digits (%s).<br>","dob_year_lower":"The year of your date of birth cannot be lower than %s.<br>","dob_year_higher":"The year of your date of birth cannot be higher than %s.<br>","dob_date_future":"Your date of birth must be in the past.<br>","dob_invalid":"Invalid date of birth.<br>","error":"Error!","correct_errors":"Please correct errors before proceeding.<br>","btn_play_now":"Play now","consent_t_ads_name":"Targeted Advertising","consent_t_ads_description":"Allow sharing my personal information with Miniclip's partners, to receive personalized advertising","consent_t_mkt_name":"Marketing","consent_t_mkt_description":"Allow using my personal information for marketing products and services"};
@@ -1946,7 +2436,7 @@
   </noscript>
   <script defer="defer" src="//static.miniclipcdn.com/js/core.js?1339" type="text/javascript">
   </script>
-  <script async="async" defer="defer" src="//static.miniclipcdn.com/js/throttle.js?1339" type="text/javascript">
+  <script src="//static.miniclipcdn.com/js/throttle.js?1339" type="text/javascript">
   </script>
   <script defer="defer" src="//static.miniclipcdn.com/js/modal.js?1339" type="text/javascript">
   </script>
@@ -1956,10 +2446,24 @@
   </script>
   <script async="async" defer="defer" src="//static.miniclipcdn.com/js/allowed-widget-mpu.js?1339" type="text/javascript">
   </script>
+  <script async="async" defer="defer" src="//static.miniclipcdn.com/js/favorites.js?1339" type="text/javascript">
+  </script>
+  <script async="async" defer="defer" src="//static.miniclipcdn.com/js/rating.js?1339" type="text/javascript">
+  </script>
+  <script async="async" defer="defer" src="//static.miniclipcdn.com/js/phrases.js?1339" type="text/javascript">
+  </script>
+  <script async="async" defer="defer" src="//static.miniclipcdn.com/js/autocomplete.js?1339" type="text/javascript">
+  </script>
+  <script async="async" defer="defer" src="//static.miniclipcdn.com/js/share.js?1339" type="text/javascript">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js?1339" type="text/javascript">
+  </script>
+  <script src="//static.miniclipcdn.com/js/games/game-frame.js?1339" type="text/javascript">
+  </script>
   <div id="dfp-ci-bottom-fixed" style="display: none;">
   </div>
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f246896502","applicationID":"96810364","transactionName":"MVFRZktRWhJVAkVYVwgbcEdKRFsMGxFQVl1JXFxfXEBVBlE=","queueTime":0,"applicationTime":22,"atts":"HRZSEANLSRw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f246896502","applicationID":"96810364","transactionName":"MVFRZktRWhJVAkVYVwgbcEdKRFsMGwRcU10CG1RXTQ==","queueTime":0,"applicationTime":66,"atts":"HRZSEANLSRw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>
