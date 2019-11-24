@@ -8,12 +8,10 @@ import certifi
 import config as c
 import createPath as cp
 import robot as r
-aHrefList = []
-imgsrcList = []
-imgsrcsetList = []
-iframesrcList = []
-scriptsrcList = []
-spansrcList = []
+
+urlList = []
+pathdict = {}
+tempsoup =""
 
 
 def init_PoolManager():
@@ -33,11 +31,55 @@ def append_list(list, soup, tag):
     if len(soup.get(tag)) > 1:
         if str(soup.get(tag)).startswith('//'):
             list.append('https:' + soup.get(tag))
+            # pathdict[soup.get(tag)] = \
+            extract_path(str(soup.get(tag)).strip("//"))
         elif str(soup.get(tag)).startswith('/'):
             list.append(c.defaultURL + soup.get(tag))
+            extract_path(str(soup.get(tag)).strip("/"))
         else:
             list.append(soup.get(tag))
+            extract_path(str(soup.get(tag)))
 
+def extract_path(url):
+    extractlink = tldextract.extract(url)
+    print("url:" +str(url))
+    print("Extracted Link: " + str(extractlink))
+    domainPath= str( str(extractlink.subdomain) + "/" + str(extractlink.registered_domain).replace(".","/"))
+    print("Domain: [ " + domainPath + " ] ")
+    striplink = str(url).lstrip(str(extractlink.subdomain))
+    striplink = str(striplink).lstrip(".")
+    striplink = str(striplink).lstrip(str(extractlink.registered_domain))
+    print("Clean Stripped: "+str(striplink))
+    if len(striplink) > 1:
+        print("Status: " + str(str(striplink).endswith("/")))
+        url_list = striplink.split("/")
+        if str(striplink).endswith("/"):
+            value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 2]))
+            print("File name: %s" % value)
+        else:
+            value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 1]))
+            print("File names: %s" % value)
+        pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
+        fullstrip = pathstrip.strip(value)
+        fullpath = str(c.defaultPath + fullstrip)
+        print("Full Path: %s" % fullpath)
+        if not str(url) in pathdict:
+            pathdict[str(url)] = {}
+        pathdict[str(url)][str(fullpath)] = value
+
+    #     pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
+    #     fullstrip = pathstrip.strip(value)
+    #     fullpath = str(c.defaultPath + fullstrip)
+    #     print("Full Path: %s" % fullpath)
+    #     print("Line: %s " % line)
+    #     if "." in value:
+    #         cp.createFile(fullpath, str(value), str(souplink.prettify()))
+    #         pathdict[line] = str(fullpath + value)
+    #     else:
+    #         cp.createFile(fullpath, str(str(value) + ".html"), str(souplink.prettify()))
+    #         pathdict[line] = str(fullpath + value + ".html")
+
+    # return 0
 
 def find_div(soup):
     for div in soup.find_all(c.DIV):
@@ -45,47 +87,50 @@ def find_div(soup):
         insert_img(div)
         find_iframe(div)
 
-
+def find_link(soup):
+    for link in soup.find_all(c.LINK):
+        if check_link_contains(link, c.HREF):
+            if not (str(link.get(c.HREF)) in urlList):
+                append_list(urlList, link, c.HREF)
 def find_script(soup):
     for script in soup.find_all(c.SCRIPT):
         if check_link_contains(script, c.SRC):
-            if not script.get(c.SRC) in scriptsrcList:
-                append_list(scriptsrcList, script, c.SRC)
+            if not script.get(c.SRC) in urlList:
+                append_list(urlList, script, c.SRC)
 
 
 def find_iframe(soup):
     for iframe in soup.find_all(c.IFRAME):
         if check_link_contains(iframe, c.SRC):
-            if not iframe.get(c.SRC) in iframesrcList:
-                append_list(iframesrcList, iframe, c.SRC)
+            if not iframe.get(c.SRC) in urlList:
+                append_list(urlList, iframe, c.SRC)
 
 
 def find_span(soup):
     for span in soup.find_all(c.SPAN):
         if check_link_contains(span, c.SRC):
-            if not span.get(c.SRC) in spansrcList:
-                append_list(spansrcList, span, c.SRC)
+            if not span.get(c.SRC) in urlList:
+                append_list(urlList, span, c.SRC)
 
 
 def insert_a(soup):
     for a in soup.find_all(c.HYPERLINK_A):
         if check_link_contains(a, c.HREF):
-            if not (str(a.get(c.HREF)) in aHrefList):
-                append_list(aHrefList, a, c.HREF)
+            if not (str(a.get(c.HREF)) in urlList):
+                append_list(urlList, a, c.HREF)
 
 
 def insert_img(soup):
     for img in soup.find_all(c.IMG):
         if check_link_contains(img, c.SRC):
-            if not (img.get(c.SRC) in imgsrcList):
-                append_list(imgsrcList, img, c.SRC)
+            if not (img.get(c.SRC) in urlList):
+                append_list(urlList, img, c.SRC)
         if check_link_contains(img, c.SRCSET):
-            if not (img.get(c.SRCSET) in imgsrcsetList):
-                append_list(imgsrcsetList, img, c.SRCSET)
+            if not (img.get(c.SRCSET) in urlList):
+                append_list(urlList, img, c.SRCSET)
 
-                # print (script.get('src'))
 
-def createPage():
+def createPage(line):
     pagelinks = con.request('GET', line, headers={'User-agent': c.WINDOWS_CHROME}, redirect=True)
     if pagelinks.status in c.GOOD_STATUS_LIST:
         extractlink = tldextract.extract(line)
@@ -112,10 +157,7 @@ def createPage():
             # striplink = str(line).lstrip(str("https://" + str(extractlink.subdomain) + str(extractlink.registered_domain) + str(extractlink.suffix)))
         print("Strip Link: %s" % striplink)
         print("Default Path: %s" % c.defaultPath)
-        pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
-        fullpath = str(c.defaultPath + pathstrip)
-        print("Full Path: %s" % fullpath)
-        print("Line: %s " % line)
+
         url_list = striplink.split("/")
         value = ""
         if len(striplink) > 1:
@@ -127,55 +169,55 @@ def createPage():
             else:
                 value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 1]))
                 print("File names: %s" % value)
+            pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
+            fullstrip = pathstrip.strip(value)
+            fullpath = str(c.defaultPath + fullstrip)
+            print("Full Path: %s" % fullpath)
+            print("Line: %s " % line)
             if "." in value:
                 cp.createFile(fullpath, str(value), str(souplink.prettify()))
+                pathdict[line]= str(fullpath + value)
             else:
                 cp.createFile(fullpath, str(str(value) + ".html"), str(souplink.prettify()))
+                pathdict[line] = str(fullpath + value+".html")
 
 
 def queryPage(con, url):
+
     print(url)
     page = con.request('GET', url, headers={'User-agent': c.WINDOWS_CHROME}, redirect=True)
+
     # opener = urllib3.request.build_opener()
     # f = opener.open(request)
     if page.status in c.GOOD_STATUS_LIST:
         print(page.status)
         soup = BeautifulSoup(page.data, features='lxml')
-        cp.createFile(c.defaultPath, str(str(url).split("/")[2].split(".")[1] + ".html"), str(soup.prettify()))
+        tempsoup = soup.prettify
         find_script(soup)
+        find_link(soup)
         find_div(soup)
         find_iframe(soup)
         find_span((soup))
         insert_a(soup)
-        print("Div Href: %i" % len(aHrefList))
-        for urlLine in aHrefList:
-            print("LINK : "+ urlLine)
-            createPage(urlLine)
+        print("Url Link: %i" % len(urlList))
+        for url in pathdict:
+            print(url)
+            for path in pathdict[str(url)]:
+                print(path)
+                print("TEST!!!!!!!: " + pathdict[str(url)][str(path)])
+        # for urlLine in urlList:
+        #     print("LINK : "+ urlLine)
+        #     createPage(urlLine)
+        # tempsoup = soup.prettify()
+        # for link,path in pathdict.items():
+        #     tempsoup = tempsoup.replace(str(link), str(path))
+        # cp.createFile(c.defaultPath, str(str(url).split("/")[2].split(".")[1] + ".html"), str(tempsoup))
 
-        # #
-        # print("IMG Src: %i" % len(imgsrcList))
-        # for line1 in imgsrcList:
-        #     print(line1)
-        # # #
-        # print("IMG Srcset: %i" % len(imgsrcsetList))
-        # for line2 in imgsrcsetList:
-        #     print(line2)
-        # print("Script: %i" % len(scriptsrcList))
-        # for line3 in scriptsrcList:
-        #     print(line3)
-        # print("IFRAME: %i" % len(iframesrcList))
-        # for line4 in iframesrcList:
-        #     print(line4)
-        # print("Span: %i" % len(spansrcList))
-        # for line5 in spansrcList:
-        #     print(line5)
 
     elif page.status in c.REDIRECT_STATUS_LIST:
         print(page.status)
-        # print(page.url)
     elif page.status in c.BAD_STATUS_LIST:
         print(page.status)
-        # print(page.url)
     elif page.status in c.SERVER_ERROR_STATUS_LIST:
         print(page.status)
 
