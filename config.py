@@ -195,7 +195,9 @@ WINDOWS_EDGE = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 14) AppleWeb
 
 #Custom Parameters
 urlList = []
+pathdict = {}
 defaultURL = ""
+domainName = ""
 defaultPath = ""
 
 #STATUS CODE

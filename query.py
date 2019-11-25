@@ -32,19 +32,25 @@ def append_list(list, soup, tag):
         if str(soup.get(tag)).startswith('//'):
             list.append('https:' + soup.get(tag))
             # pathdict[soup.get(tag)] = \
-            extract_path(str(soup.get(tag)).strip("//"))
+            extract_path(str(soup.get(tag)).replace("//","",1))
         elif str(soup.get(tag)).startswith('/'):
             list.append(c.defaultURL + soup.get(tag))
-            extract_path(str(soup.get(tag)).strip("/"))
+            extract_path(str(soup.get(tag)).replace("/","",1))
+        elif str(soup.get(tag)).startswith('http://'):
+            list.append(c.defaultURL + soup.get(tag))
+            extract_path(str(soup.get(tag)).replace("http://","",1))
+        elif str(soup.get(tag)).startswith('https://'):
+            list.append(c.defaultURL + soup.get(tag))
+            extract_path(str(soup.get(tag)).replace("https://","",1))
         else:
             list.append(soup.get(tag))
             extract_path(str(soup.get(tag)))
 
 def extract_path(url):
     extractlink = tldextract.extract(url)
-    print("url:" +str(url))
+    print("URL: " +str(url))
     print("Extracted Link: " + str(extractlink))
-    domainPath= str( str(extractlink.subdomain) + "/" + str(extractlink.registered_domain).replace(".","/"))
+    domainPath= str(str(extractlink.subdomain) + "/" + str(extractlink.registered_domain).replace(".", "/"))
     print("Domain: [ " + domainPath + " ] ")
     striplink = str(url).lstrip(str(extractlink.subdomain))
     striplink = str(striplink).lstrip(".")
@@ -58,28 +64,21 @@ def extract_path(url):
             print("File name: %s" % value)
         else:
             value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 1]))
-            print("File names: %s" % value)
+            print("File name: %s" % value)
         pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
         fullstrip = pathstrip.strip(value)
-        fullpath = str(c.defaultPath + fullstrip)
+        if str(fullstrip).startswith("/"):
+            fullpath = str(c.defaultPath + fullstrip)
+        else:
+            fullpath = str(c.defaultPath +"/"+ fullstrip)
         print("Full Path: %s" % fullpath)
         if not str(url) in pathdict:
             pathdict[str(url)] = {}
-        pathdict[str(url)][str(fullpath)] = value
+        if "." in value:
+            pathdict[str(url)][str(fullpath)] = value
+        else:
+            pathdict[str(url)][str(fullpath)] = str(value+".html")
 
-    #     pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
-    #     fullstrip = pathstrip.strip(value)
-    #     fullpath = str(c.defaultPath + fullstrip)
-    #     print("Full Path: %s" % fullpath)
-    #     print("Line: %s " % line)
-    #     if "." in value:
-    #         cp.createFile(fullpath, str(value), str(souplink.prettify()))
-    #         pathdict[line] = str(fullpath + value)
-    #     else:
-    #         cp.createFile(fullpath, str(str(value) + ".html"), str(souplink.prettify()))
-    #         pathdict[line] = str(fullpath + value + ".html")
-
-    # return 0
 
 def find_div(soup):
     for div in soup.find_all(c.DIV):
@@ -130,56 +129,73 @@ def insert_img(soup):
                 append_list(urlList, img, c.SRCSET)
 
 
-def createPage(line):
-    pagelinks = con.request('GET', line, headers={'User-agent': c.WINDOWS_CHROME}, redirect=True)
-    if pagelinks.status in c.GOOD_STATUS_LIST:
-        extractlink = tldextract.extract(line)
-        print("Extract link: %s" % extractlink.registered_domain)
-        print("Suffix: %s" % str(extractlink.suffix))
-        if str(line).startswith("http://"):
-            striplink = str(line).lstrip("http://")
-            striplink = str(striplink).lstrip(str(extractlink.subdomain))
-            striplink = str(striplink).lstrip(".")
-            striplink = str(striplink).lstrip(str(extractlink.registered_domain))
-            if striplink.startswith(extractlink.suffix):
-                striplink = str(striplink).lstrip(".")
-                striplink = str(striplink).lstrip(str(extractlink.suffix))
+def createPage(url, path):
+    updateurl = url
+    if not str(updateurl).startswith("http"):
+        if str(updateurl).startswith("//"):
+            updateurl = "https:"+str(url)
+        elif str(updateurl).startswith("/"):
+            updateurl = str(c.defaultURL)+str(updateurl)
         else:
-            striplink = str(line).lstrip("https://")
-            striplink = str(striplink).lstrip(str(extractlink.subdomain))
-            striplink = str(striplink).lstrip(".")
-            striplink = str(striplink).lstrip((str(extractlink.registered_domain)))
-            if striplink.startswith(extractlink.suffix):
-                striplink = str(striplink).lstrip(".")
-                striplink = str(striplink).lstrip(str(extractlink.suffix))
-            # if not striplink.endswith('/'):
-            #     print ("Ends With [/]: %s" %striplink.rsplit('/'))
-            # striplink = str(line).lstrip(str("https://" + str(extractlink.subdomain) + str(extractlink.registered_domain) + str(extractlink.suffix)))
-        print("Strip Link: %s" % striplink)
-        print("Default Path: %s" % c.defaultPath)
-
-        url_list = striplink.split("/")
-        value = ""
-        if len(striplink) > 1:
-            souplink = BeautifulSoup(pagelinks.data, features='lxml')
-            print("Status: " + str(str(striplink).endswith("/")))
-            if str(striplink).endswith("/"):
-                value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 2]))
-                print("File name: %s" % value)
-            else:
-                value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 1]))
-                print("File names: %s" % value)
-            pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
-            fullstrip = pathstrip.strip(value)
-            fullpath = str(c.defaultPath + fullstrip)
-            print("Full Path: %s" % fullpath)
-            print("Line: %s " % line)
-            if "." in value:
-                cp.createFile(fullpath, str(value), str(souplink.prettify()))
-                pathdict[line]= str(fullpath + value)
-            else:
-                cp.createFile(fullpath, str(str(value) + ".html"), str(souplink.prettify()))
-                pathdict[line] = str(fullpath + value+".html")
+            updateurl = str(c.defaultURL) +"/" +str(updateurl)
+    print(updateurl)
+    page_con = con.request('GET', updateurl, headers={'User-agent':c.WINDOWS_CHROME}, redirect=True)
+    if page_con.status in c.GOOD_STATUS_LIST:
+        souplink = BeautifulSoup(page_con.data, features='lxml')
+        cp.createFile(path, pathdict[url][path], str(souplink.prettify()))
+        # if "." in pathdict[url][path]:
+        #     cp.createFile(path, pathdict[url][path], str(souplink.prettify()))
+        # else:
+        #     cp.createFile(path, str(pathdict[url][path]+ ".html"), str(souplink.prettify()))
+    # pagelinks = con.request('GET', line, headers={'User-agent': c.WINDOWS_CHROME}, redirect=True)
+    # if pagelinks.status in c.GOOD_STATUS_LIST:
+    #     extractlink = tldextract.extract(line)
+    #     print("Extract link: %s" % extractlink.registered_domain)
+    #     print("Suffix: %s" % str(extractlink.suffix))
+    #     if str(line).startswith("http://"):
+    #         striplink = str(line).lstrip("http://")
+    #         striplink = str(striplink).lstrip(str(extractlink.subdomain))
+    #         striplink = str(striplink).lstrip(".")
+    #         striplink = str(striplink).lstrip(str(extractlink.registered_domain))
+    #         if striplink.startswith(extractlink.suffix):
+    #             striplink = str(striplink).lstrip(".")
+    #             striplink = str(striplink).lstrip(str(extractlink.suffix))
+    #     else:
+    #         striplink = str(line).lstrip("https://")
+    #         striplink = str(striplink).lstrip(str(extractlink.subdomain))
+    #         striplink = str(striplink).lstrip(".")
+    #         striplink = str(striplink).lstrip((str(extractlink.registered_domain)))
+    #         if striplink.startswith(extractlink.suffix):
+    #             striplink = str(striplink).lstrip(".")
+    #             striplink = str(striplink).lstrip(str(extractlink.suffix))
+    #         # if not striplink.endswith('/'):
+    #         #     print ("Ends With [/]: %s" %striplink.rsplit('/'))
+    #         # striplink = str(line).lstrip(str("https://" + str(extractlink.subdomain) + str(extractlink.registered_domain) + str(extractlink.suffix)))
+    #     print("Strip Link: %s" % striplink)
+    #     print("Default Path: %s" % c.defaultPath)
+    #
+    #     url_list = striplink.split("/")
+    #     value = ""
+    #     if len(striplink) > 1:
+    #         souplink = BeautifulSoup(pagelinks.data, features='lxml')
+    #         print("Status: " + str(str(striplink).endswith("/")))
+    #         if str(striplink).endswith("/"):
+    #             value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 2]))
+    #             print("File name: %s" % value)
+    #         else:
+    #             value = re.sub(r'[^\w!@#$%^&_+=,.;\'(){}[\]\-]', '', str(url_list[len(url_list) - 1]))
+    #             print("File names: %s" % value)
+    #         pathstrip = re.sub(r'[^\w!@#$%^&_+=,.;\'()/{}[\]\-]', '', str(striplink))
+    #         fullstrip = pathstrip.strip(value)
+    #         fullpath = str(c.defaultPath + fullstrip)
+    #         print("Full Path: %s" % fullpath)
+    #         print("Line: %s " % line)
+    #         if "." in value:
+    #             cp.createFile(fullpath, str(value), str(souplink.prettify()))
+    #             pathdict[line]= str(fullpath + value)
+    #         else:
+    #             cp.createFile(fullpath, str(str(value) + ".html"), str(souplink.prettify()))
+    #             pathdict[line] = str(fullpath + value+".html")
 
 
 def queryPage(con, url):
@@ -199,19 +215,28 @@ def queryPage(con, url):
         find_iframe(soup)
         find_span((soup))
         insert_a(soup)
+        # find_script(soup.head)
+        # find_link(soup.head)
         print("Url Link: %i" % len(urlList))
-        for url in pathdict:
-            print(url)
-            for path in pathdict[str(url)]:
-                print(path)
-                print("TEST!!!!!!!: " + pathdict[str(url)][str(path)])
+        for urlLine in pathdict:
+            print(urlLine)
+            for path in pathdict[str(urlLine)]:
+                print("Path: " + path)
+                print("FileName: " + pathdict[str(urlLine)][str(path)])
+                createPage(urlLine,path)
+                if str(urlLine) in str(tempsoup):
+                    tempsoup = str(tempsoup).replace(urlLine,str(str(path)+str(pathdict[str(urlLine)][str(path)])))
+            print("Url Link: %i" % len(urlList))
+            print("Replace Link: %s" %urlLine,str(str(path)+str(pathdict[str(urlLine)][str(path)])))
+        # print("TEMPSOUP: "+str(tempsoup))
         # for urlLine in urlList:
         #     print("LINK : "+ urlLine)
         #     createPage(urlLine)
         # tempsoup = soup.prettify()
         # for link,path in pathdict.items():
         #     tempsoup = tempsoup.replace(str(link), str(path))
-        # cp.createFile(c.defaultPath, str(str(url).split("/")[2].split(".")[1] + ".html"), str(tempsoup))
+        print("Default Filename: "+str(str(url).split("/")[2].split(".")[1] + ".html"))
+        cp.createFile(c.defaultPath, str(str(url).split("/")[2].split(".")[1] + ".html"), str(tempsoup))
 
 
     elif page.status in c.REDIRECT_STATUS_LIST:
