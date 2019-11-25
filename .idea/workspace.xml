@@ -15,7 +15,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/GitHubDesktop.exe" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -74,6 +74,8 @@
       <workItem from="1574515866959" duration="3670000" />
       <workItem from="1574590784045" duration="11237000" />
       <workItem from="1574647567890" duration="21587000" />
+      <workItem from="1574682910774" duration="481000" />
+      <workItem from="1574683431224" duration="9844000" />
     </task>
     <servers />
   </component>

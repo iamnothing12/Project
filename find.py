@@ -16,25 +16,26 @@ def check_link_contains(soup, tag):
 # Add url to list (Not needed actually)
 def append_list(soup, tag):
     if len(soup.get(tag)) > 1:
-        if str(soup.get(tag)).startswith('//'):
-            c.urlList.append('https:' + soup.get(tag))
-            print("[//]: [ " +str(soup.get(tag))+ " ]")
-        elif str(soup.get(tag)).startswith('/'):
-            c.urlList.append(c.defaultURL + soup.get(tag))
-            print("[/]: [ " + str(soup.get(tag)) + " ]")
-        elif str(soup.get(tag)).startswith('http://'):
-            c.urlList.append(soup.get(tag))
-            print("[http://]: [ " + str(soup.get(tag)) + " ]")
-        elif str(soup.get(tag)).startswith('https://'):
-            c.urlList.append(soup.get(tag))
-            print("[https://]: [ " + str(soup.get(tag)) + " ]")
-        else:
-            c.urlList.append(soup.get(tag))
-            print("[everything else]: [ " + str(soup.get(tag)) + " ]")
-        print("SRC: [ %s ]" % soup.get(tag))
-        local_path(soup.get(tag))
-        global count
-        count += 1
+        c.urlList.append(str(soup.get(tag)))
+        # if str(soup.get(tag)).startswith('//'):
+        #     c.urlList.append('https:' + soup.get(tag))
+        #     # print("[//]: [ " +str(soup.get(tag))+ " ]")
+        # elif str(soup.get(tag)).startswith('/'):
+        #     c.urlList.append(c.defaultURL + soup.get(tag))
+        #     # print("[/]: [ " + str(soup.get(tag)) + " ]")
+        # elif str(soup.get(tag)).startswith('http://'):
+        #     c.urlList.append(soup.get(tag))
+        #     # print("[http://]: [ " + str(soup.get(tag)) + " ]")
+        # elif str(soup.get(tag)).startswith('https://'):
+        #     c.urlList.append(soup.get(tag))
+        #     # print("[https://]: [ " + str(soup.get(tag)) + " ]")
+        # else:
+        #     c.urlList.append(soup.get(tag))
+            # print("[everything else]: [ " + str(soup.get(tag)) + " ]")
+        # print("SRC: [ %s ]" % soup.get(tag))
+        # local_path(soup.get(tag))
+        # global count
+        # count += 1
 
 #Format Link Path to local
 def local_path(url):
@@ -86,8 +87,6 @@ def extract_path(url,tempurl):
 
 
 def extract_filename(url,tempurl,filterurl, type):
-    global local_count
-    local_count += 1
     if type == 0:
         # print("Type0: [ " +str(type)+" ] Path: [ "+ c.defaultPath+ " ] Filename: [ "+str(filterurl).strip("/")+" ]")
         c.pathdict[url][tempurl][c.defaultPath] = str(str(filterurl).strip("/"))+".html"
@@ -173,16 +172,13 @@ def find_all_link(soup):
 
 def display_link():
     global total_count
-    global local_count
-    global count
+
     for clean in c.pathdict:
         for temp in c.pathdict[clean]:
             for path in c.pathdict[clean][temp]:
                 print("Link: [ "+str(c.pathdict[clean][temp][path])+" ]")
                 total_count+=1
-    print("Total Count Link: [ "+str(total_count)+" ]")
-    print("Local Count Link: [ " +str(local_count)+ " ] ")
-    print("Count Link: [ " + str(count) + " ] ")
+    print("Total Link: [ " + str(total_count) + " ]")
     # for link in c.urlList:
     #     print("Link: [ "+str(link)+" ]")
-    print("Total Link: [ "+str(len(c.urlList))+" ]")
+    print("Total URL Link: [ "+str(len(c.urlList))+" ]")
