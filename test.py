@@ -110,7 +110,14 @@ def query_main(con):
         for link in c.pathdict:
             for templink in c.pathdict[link]:
                 for path in c.pathdict[link][templink]:
-                    count+=1
+                    for file in c.pathdict[link][templink][path]:
+                        request_page = con.request('GET', str(c.defaultURL), headers={'User-agent': c.WINDOWS_CHROME},
+                                                   redirect=True)
+                        if request_page.status in c.GOOD_STATUS_LIST:
+                            souplink = BeautifulSoup(request_page.data, features='lxml')
+                            cp.createFile(path, file, str(souplink.prettify()))
+                            if link in tempsoup:
+                            count+=1
         print("Total Link: [ " + str(count) + " ] ")
 # Main call
 con = init_pool_manager()
