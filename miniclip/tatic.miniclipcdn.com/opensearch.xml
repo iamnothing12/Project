@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+ <body>
+  <opensearchdescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+   <shortname>
+    Miniclip
+   </shortname>
+   <description>
+    Miniclip Search
+   </description>
+   <url method="get" template="http://www.miniclip.com/games/search/en/?query={searchTerms}" type="text/html">
+   </url>
+   <image height="16" width="16">
+    https://static.miniclipcdn.com/favicon.ico
+   </image>
+   <inputencoding>
+    UTF-8
+   </inputencoding>
+   <moz:searchform>
+    http://www.miniclip.com/games/search/en/
+   </moz:searchform>
+  </opensearchdescription>
+ </body>
+</html>

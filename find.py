@@ -5,6 +5,7 @@ import re
 count = 0
 local_count = 0
 total_count = 0
+
 #Error Url Checking
 def check_link_contains(soup, tag):
     if '#' in str(soup.get(tag)) or \
@@ -17,25 +18,7 @@ def check_link_contains(soup, tag):
 def append_list(soup, tag):
     if len(soup.get(tag)) > 1:
         c.urlList.append(str(soup.get(tag)))
-        # if str(soup.get(tag)).startswith('//'):
-        #     c.urlList.append('https:' + soup.get(tag))
-        #     # print("[//]: [ " +str(soup.get(tag))+ " ]")
-        # elif str(soup.get(tag)).startswith('/'):
-        #     c.urlList.append(c.defaultURL + soup.get(tag))
-        #     # print("[/]: [ " + str(soup.get(tag)) + " ]")
-        # elif str(soup.get(tag)).startswith('http://'):
-        #     c.urlList.append(soup.get(tag))
-        #     # print("[http://]: [ " + str(soup.get(tag)) + " ]")
-        # elif str(soup.get(tag)).startswith('https://'):
-        #     c.urlList.append(soup.get(tag))
-        #     # print("[https://]: [ " + str(soup.get(tag)) + " ]")
-        # else:
-        #     c.urlList.append(soup.get(tag))
-            # print("[everything else]: [ " + str(soup.get(tag)) + " ]")
-        # print("SRC: [ %s ]" % soup.get(tag))
-        # local_path(soup.get(tag))
-        # global count
-        # count += 1
+
 
 #Format Link Path to local
 def local_path(url):
@@ -55,7 +38,9 @@ def local_path(url):
 
 #Extract path
 def extract_path(url,tempurl):
-    filterurl = tempurl
+    #filterurl = tempurl
+    filterurl = re.sub(r'[^\w!@#$%^&_+=,/.;\'(){}[\]\-]', '', str(tempurl))
+    print("Filter: "+filterurl)
     # print("Clean Url: [ "+ url + " ]")
     # print("Extracting Url: [ "+ tempurl+" ]")
     ext = tldextract.extract(url)
@@ -80,10 +65,16 @@ def extract_path(url,tempurl):
         if str(filterurl).endswith("/") and str(filterurl).count("/") == 2: #Determine start and end only contain /something/ will be converted to filename in the default folder
             # print("Count 2: [ " +str(filterurl) + " ] ")
             extract_filename(url, tempurl, filterurl, 0)
-        elif str(filterurl).endswith("/") :
-            extract_filename(url, tempurl, filterurl, 1)
+        elif str(filterurl).endswith("/"):
+            if str(filterurl).startswith("/"):
+                extract_filename(url, tempurl, filterurl, 1)
+            else:
+                extract_filename(url, tempurl, "/"+filterurl, 1)
         else:
-            extract_filename(url, tempurl, filterurl, 2)
+            if str(filterurl).startswith("/"):
+                extract_filename(url, tempurl, filterurl, 2)
+            else:
+                extract_filename(url, tempurl, "/" + filterurl, 2)
 
 
 def extract_filename(url,tempurl,filterurl, type):

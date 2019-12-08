@@ -1,0 +1,146 @@
+Default Path:  google
+Domain name:  www.google.com
+File name:  google.html
+Status: [200]
+Link: [ https://www.google.com/ ]
+very bad
+Path: 
+Filename: 
+Link: [ https://mail.google.com/mail/?tab=wm&ogbl ]
+Temp Query:tab=wm&ogbl
+Path: il.google.com/mail/
+Filename: 
+Link: [ https://www.google.com.sg/imghp?hl=en&tab=wi&ogbl ]
+Temp Query:hl=en&tab=wi&ogbl
+Path: .google.com.sg/
+Filename: mghp
+Link: [ https://www.google.com.sg/intl/en/about/products?tab=wh ]
+Temp Query:tab=wh
+Path: .google.com.sg/intl/en/about/
+Filename: products
+Link: [ https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/ ]
+Path: accounts.google.com/ServiceLoginhl=en&passive=true&continue=https//
+Filename: 
+Link: [ https://www.google.com/url?q=https://myaccount.google.com/privacycheckup%3Futm_source%3Dgoogle%26utm_medium%3Dhpp%26utm_campaign%3Dq4-pcu&source=hpp&id=19014994&ct=7&usg=AFQjCNER9RlzK--eGFpLgmNVtdBL2H3hdA ]
+Path: www.google.com/urlq=https/myaccount.google.com/
+Filename: privacycheckup%3Futm_source%3Dgoogle%26utm_medium%3Dhpp%26utm_campaign%3Dq4-pcu&source=hpp&id=19014994&ct=7&usg=AFQjCNER9RlzK--eGFpLgmNVtdBL2H3hdA
+Link: [ https://www.google.com/setprefs?sig=0_HeW3QbGP24Joh6Q5K8vurZknfQg%3D&hl=zh-CN&source=homepage&sa=X&ved=0ahUKEwipmK_GrqbmAhXJfX0KHY4HBCgQ2ZgBCA4 ]
+Temp Query:sig=0_HeW3QbGP24Joh6Q5K8vurZknfQg%3D&hl=zh-CN&source=homepage&sa=X&ved=0ahUKEwipmK_GrqbmAhXJfX0KHY4HBCgQ2ZgBCA4
+Path: /
+Filename: tprefs
+Link: [ https://www.google.com/setprefs?sig=0_HeW3QbGP24Joh6Q5K8vurZknfQg%3D&hl=ms&source=homepage&sa=X&ved=0ahUKEwipmK_GrqbmAhXJfX0KHY4HBCgQ2ZgBCA8 ]
+Temp Query:sig=0_HeW3QbGP24Joh6Q5K8vurZknfQg%3D&hl=ms&source=homepage&sa=X&ved=0ahUKEwipmK_GrqbmAhXJfX0KHY4HBCgQ2ZgBCA8
+Path: /
+Filename: tprefs
+Link: [ https://www.google.com/setprefs?sig=0_HeW3QbGP24Joh6Q5K8vurZknfQg%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwipmK_GrqbmAhXJfX0KHY4HBCgQ2ZgBCBA ]
+Temp Query:sig=0_HeW3QbGP24Joh6Q5K8vurZknfQg%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwipmK_GrqbmAhXJfX0KHY4HBCgQ2ZgBCBA
+Path: /
+Filename: 
+Link: [ https://policies.google.com/privacy?fg=1 ]
+Temp Query:fg=1
+Path: olicies.google.com/
+Filename: privacy
+Link: [ https://policies.google.com/terms?fg=1 ]
+Temp Query:fg=1
+Path: policies.google.com/
+Filename: terms
+Link: [ https://www.google.com/preferences?hl=en ]
+Temp Query:hl=en
+Path: /
+Filename: preferences
+Link: [ https://www.google.com/preferences?hl=en-SG&fg=1 ]
+Temp Query:hl=en-SG&fg=1
+Path: /
+Filename: preferences
+Link: [ /advanced_search?hl=en-SG&fg=1 ]
+Temp Query:hl=en-SG&fg=1
+Path: www.google.com/
+Filename: advanced_search
+Link: [ /history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1 ]
+Temp Query:utm_source=googlemenu&fg=1
+Path: www.google.com/history/privacyadvisor/search/
+Filename: auth
+Link: [ /history/optout?hl=en-SG&fg=1 ]
+Temp Query:hl=en-SG&fg=1
+Path: www.google.com/history/
+Filename: optout
+Link: [ //support.google.com/websearch/?p=ws_results_help&hl=en-SG&fg=1 ]
+Temp Query:p=ws_results_help&hl=en-SG&fg=1
+Path: ort.google.com/websearch/
+Filename: 
+Link: [ https://www.google.com/intl/en_sg/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1 ]
+Temp Query:subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1
+Path: /intl/en_sg/ads/
+Filename: 
+Link: [ https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1 ]
+Temp Query:subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1
+Path: /services/
+Filename: 
+Link: [ https://about.google/?utm_source=google-SG&utm_medium=referral&utm_campaign=hp-footer&fg=1 ]
+Temp Query:utm_source=google-SG&utm_medium=referral&utm_campaign=hp-footer&fg=1
+Path: bout.google/
+Filename: 
+Link: [ //google.com/search/howsearchworks/?fg=1 ]
+Temp Query:fg=1
+Path: /search/howsearchworks/
+Filename: 
+Link: [ https://www.google.com/images/hpp/shield_privacy_checkup_green_2x_web_96dp.png ]
+Path: /images/hpp/
+Filename: shield_privacy_checkup_green_2x_web_96dp.png
+Link: [ /images/branding/googlelogo/2x/googlelogo_color_272x92dp.png ]
+Path: www.google.com/images/branding/googlelogo/2x/
+Filename: googlelogo_color_272x92dp.png
+Link: [ /images/branding/googlelogo/1x/googlelogo_color_272x92dp.png 1x, /images/branding/googlelogo/2x/googlelogo_color_272x92dp.png 2x ]
+Path: www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png1x,/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
+Filename: googlelogo_color_272x92dp.png2x
+PATH: google
+Total Link: [ 24 ] 
+PATH: google/il.google.com/mail/
+PATH: google/.google.com.sg/
+PATH: google/.google.com.sg/intl/en/about/
+Path: https://www.google.com.sg/intl/en/about/products?tab=wh
+URL: https://www.google.com.sg/intl/en/about/products?tab=wh
+Dir Path: .google.com.sg/intl/en/about/
+Filename: products.html
+PATH: google/accounts.google.com/ServiceLoginhl=en&passive=true&continue=https//
+PATH: google/www.google.com/urlq=https/myaccount.google.com/
+PATH: google
+PATH: google
+PATH: google
+PATH: google/olicies.google.com/
+Path: https://policies.google.com/privacy?fg=1
+URL: https://policies.google.com/privacy?fg=1
+Dir Path: olicies.google.com/
+Filename: privacy.html
+PATH: google/policies.google.com/
+Path: https://policies.google.com/terms?fg=1
+URL: https://policies.google.com/terms?fg=1
+Dir Path: policies.google.com/
+Filename: terms.html
+PATH: google
+Path: https://www.google.com/preferences?hl=en
+URL: https://www.google.com/preferences?hl=en
+Dir Path: /
+Filename: preferences.html
+PATH: google
+PATH: google/www.google.com/
+PATH: google/ort.google.com/websearch/
+PATH: google
+PATH: google
+PATH: google/bout.google/
+PATH: google
+Path: //google.com/search/howsearchworks/?fg=1
+URL: https://google.com/search/howsearchworks/?fg=1
+Dir Path: /search/howsearchworks/
+Filename: .html
+PATH: google
+Path: https://www.google.com/images/hpp/shield_privacy_checkup_green_2x_web_96dp.png
+URL: https://www.google.com/images/hpp/shield_privacy_checkup_green_2x_web_96dp.png
+Dir Path: /images/hpp/
+Filename: shield_privacy_checkup_green_2x_web_96dp.png
+PATH: google/www.google.com/images/branding/googlelogo/2x/
+Path: /images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
+URL: https://www.google.com//images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
+Dir Path: www.google.com/images/branding/googlelogo/2x/
+Filename: googlelogo_color_272x92dp.png
+Total Link: [ 7 ] 

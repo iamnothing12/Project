@@ -199,6 +199,7 @@ pathdict = {}
 defaultURL = ""
 domainName = ""
 defaultPath = ""
+defaultFile = ""
 
 #STATUS CODE
 # GOOD STATUS
