@@ -1,0 +1,22 @@
+{
+  "name": "ninjabot",
+  "version": "1.0.0",
+  "description": "fyp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamnothing12/Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamnothing12/Project/issues"
+  },
+  "homepage": "https://github.com/iamnothing12/Project#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
