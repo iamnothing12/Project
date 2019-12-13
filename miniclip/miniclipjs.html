@@ -1,4 +1,4 @@
-// console.log('Hello, World!');
+<bound method Tag.prettify of <html><body><p>// console.log('Hello, World!');
 // // 1. Create a new XMLHttpRequest object
 // var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 // let xhr = new XMLHttpRequest();
@@ -36,10 +36,10 @@ xhr.onload = function() {
     console.log(`Error ${xhr.status}: ${xhr.statusText}`); // e.g. 404: Not Found
   } else { // show the result
     console.log(`Done, got ${xhr.responseText.length} bytes`); // responseText is the server
-    let headers = xhr.getAllResponseHeaders().split('\r\n').reduce((result, current) => {
+    let headers = xhr.getAllResponseHeaders().split('\r\n').reduce((result, current) =&gt; {
         let [name, value] = current.split(': ');
         result[name] = value;
-        return xhr.responseTex;
+        return result;
     }, {});
     console.log(headers);
     console.log(xhr.responseText);
@@ -61,3 +61,4 @@ xhr.onerror = function() {
     console.log("Request failed");
 };
 
+</p></body></html>>
