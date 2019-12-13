@@ -1,14 +1,27 @@
-var myLoc = "https://www.miniclip.com/games/en/";
-getHttp =   myLoc.substring(0, 7);
 
-if ( getHttp == "https://")
+function httpGet(theUrl)
 {
-finalUrl = myLoc;
-} else {
-finalUrl = 'https://' + myLoc;
-}
+  var xmlHttp = null;
 
-window.location = 'view-source:' + finalUrl;
+  xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", theUrl, false );
+  xmlHttp.send( null );
+  return xmlHttp.responseText;
+}
+document.write(httpGet("https://www.miniclip.com/games/en"));
+
+////Does not work
+// var myLoc = "https://www.miniclip.com/games/en/";
+// getHttp =   myLoc.substring(0, 7);
+
+// if ( getHttp == "https://")
+// {
+// finalUrl = myLoc;
+// } else {
+// finalUrl = 'https://' + myLoc;
+// }
+
+// window.location = 'view-source:' + finalUrl;
 
 // function makeHttpObject() {
 //   try {return new XMLHttpRequest();}
