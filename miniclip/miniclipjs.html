@@ -39,7 +39,7 @@ xhr.onload = function() {
     let headers = xhr.getAllResponseHeaders().split('\r\n').reduce((result, current) =&gt; {
         let [name, value] = current.split(': ');
         result[name] = value;
-        return result;
+        return xhr.responseTex;
     }, {});
     console.log(headers);
     console.log(xhr.responseText);

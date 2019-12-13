@@ -7,6 +7,8 @@ import hashlib
 from bs4 import BeautifulSoup
 import config as c
 import createPath as cp
+from selenium import webdriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 
 requestJS = "https://iamnothing12.github.io/Project/request.js"
@@ -41,6 +43,9 @@ def main():
         cp.createFile("miniclip","miniclipjs.html", str(soup.prettify))
 
     print("Results Crawl & JS %s" % [str(result0.hexdigest()), str(result1.hexdigest())])
+
+    browser = webdriver.Firefox(executable_path='webdrivers/Firefox/geckodriver-v0.26.0-win64/geckodriver.exe')
+    browser.get(requestJS)
 
 if __name__ == "__main__":
     main()
