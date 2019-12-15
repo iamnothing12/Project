@@ -24,7 +24,7 @@ def domain_stripper(url):
 
 
 def main():
-    domain_stripper("https://www.miniclip.com/games/en/")
+    domain_stripper("https://crossorigin.me/")
     # Create connection pool to use
     con = init_pool_manager()
 
@@ -36,13 +36,15 @@ def main():
         soup = BeautifulSoup(page0.data, features='lxml')
         result0 = hashlib.md5(str(soup).encode()) 
         cp.createFile("miniclip","miniclip.html", str(soup.prettify))
+    else:
+        print("page 0 failed"+str(page0.status))
 
     if page1.status in c.GOOD_STATUS_LIST:
         soup = BeautifulSoup(page1.data, features='lxml')
         result1 = hashlib.md5(str(soup.data).encode()) 
         cp.createFile("miniclip","miniclipjs.html", str(soup.prettify))
 
-    print("Results Crawl & JS %s" % [str(result0.hexdigest()), str(result1.hexdigest())])
+    # print("Results Crawl & JS %s" % [str(result0.hexdigest()), str(result1.hexdigest())])
 
     browser = webdriver.Firefox(executable_path='webdrivers/Firefox/geckodriver-v0.26.0-win64/geckodriver.exe')
     browser.get(requestJS)
