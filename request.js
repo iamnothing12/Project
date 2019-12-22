@@ -84,8 +84,8 @@ xhr.onload = function() {
     }, {});
     console.log(headers);
     console.log(xhr.responseText);
-    // return xhr.responseText;
-    return headers;
+    return xhr.responseText;
+    // return headers;
   }
 };
 

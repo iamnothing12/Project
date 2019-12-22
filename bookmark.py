@@ -11,7 +11,8 @@ from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 
-requestJS = "https://iamnothing12.github.io/Project/request.js"
+requestJS = "https://iamnothing12.github.io/Project/request.html"
+# requestJS = "request.html"
 # initialize ssl connection
 def init_pool_manager():
     urllib3.contrib.pyopenssl.inject_into_urllib3()
@@ -24,7 +25,7 @@ def domain_stripper(url):
 
 
 def main():
-    domain_stripper("https://crossorigin.me/")
+    domain_stripper("https://www.miniclip.com/games/en")
     # Create connection pool to use
     con = init_pool_manager()
 
