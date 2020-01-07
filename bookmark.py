@@ -11,10 +11,7 @@ import webbrowser
 from lxml import html
 import requests
 import time
-import os
-os.environ['DISPLAY'] = ':0'
-#Remove not working
-import pyautogui
+
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -39,53 +36,43 @@ def domain_stripper(url):
     urlsplit = str(url).replace("https://","").split("/")
     print(urlsplit)
 
-# def main():
-#     domain_stripper("https://www.miniclip.com/games/en/")
-
-#     opts = Options()
-#     opts.add_argument("User-agent=["+str(c.WINDOWS_CHROME)+"]")
-#     opts.add_argument('--ignore-certificate-errors')
-#     options.add_argument('--ignore-ssl-errors')
-#     chrome = webdriver.Chrome(chrome_options=opts,executable_path=c.CHROME_WINDOWS)
-#     try:
-#         chrome.get("https://www.miniclip.com/games/en/")
-#     finally:
-#         chrome.quit()
 
 def main():
+    content = ""
     domain_stripper("https://www.miniclip.com/games/en")
     #WebDriver code here...
     opts = Options()
     opts.add_argument("user-agent=["+str(c.WINDOWS_CHROME)+"]")
 
-    chrome = webdriver.Chrome(chrome_options=opts, executable_path=c.CHROME_WINDOWS)
+    # chrome = webdriver.Chrome(chrome_options=opts, executable_path=c.CHROME_WINDOWS)
+    chrome = webdriver.Chrome(options=opts, executable_path=c.CHROME_WINDOWS)
     try:
         
-        chrome.get("https://www.miniclip.com/games/en")
-        SCROLL_PAUSE_TIME = 0.5
-        count =0
-        while count < 5:
-            # Get scroll height
-            last_height = chrome.execute_script("return document.body.scrollHeight")
-            # Scroll down to bottom
-            chrome.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            # Wait to load page
-            time.sleep(SCROLL_PAUSE_TIME)
-            # Calculate new scroll height and compare with last scroll height
-            new_height = chrome.execute_script("return document.body.scrollHeight")
-            if new_height == last_height:
-                # try again (can be removed)
-                chrome.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                # Wait to load page
-                time.sleep(SCROLL_PAUSE_TIME)
-                # Calculate new scroll height and compare with last scroll height
-                new_height = chrome.execute_script("return document.body.scrollHeight")
-                # check if the page height has remained the same
-                if new_height == last_height:
-                    break
-                else:
-                    last_height = new_height
-                    continue
+        chrome.get("https://example.com/")
+        # SCROLL_PAUSE_TIME = 0.5
+        # count =0
+        # while count < 5:
+        #     # Get scroll height
+        #     last_height = chrome.execute_script("return document.body.scrollHeight")
+        #     # Scroll down to bottom
+        #     chrome.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        #     # Wait to load page
+        #     time.sleep(SCROLL_PAUSE_TIME)
+        #     # Calculate new scroll height and compare with last scroll height
+        #     new_height = chrome.execute_script("return document.body.scrollHeight")
+        #     if new_height == last_height:
+        #         # try again (can be removed)
+        #         chrome.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        #         # Wait to load page
+        #         time.sleep(SCROLL_PAUSE_TIME)
+        #         # Calculate new scroll height and compare with last scroll height
+        #         new_height = chrome.execute_script("return document.body.scrollHeight")
+        #         # check if the page height has remained the same
+        #         if new_height == last_height:
+        #             break
+        #         else:
+        #             last_height = new_height
+        #             continue
         
         # print("Cookies: [ %s ]" % request_cookies_browser)
         content = chrome.page_source
@@ -114,14 +101,24 @@ def main():
             #     os.makedirs(os.path.dirname(local_path))
             # with open(local_path, 'wb') as fp:
             #     fp.write(res.content)
-    
-        # open 'Save as...' to save html and assets
-        pyautogui.hotkey('ctrl', 's')
-        time.sleep(1)
-        pyautogui.typewrite('test/mehmeh.html')
-        pyautogui.hotkey('enter')
+
     finally:
+        print("QUITTED")
         chrome.quit()
+
+    soup0 = BeautifulSoup(content, features='lxml')
+    result0 = hashlib.md5(str(soup0).encode()) 
+    # # Create connection pool to use
+    con = init_pool_manager()
+    result1 = ""
+    page0 = con.request('GET', "https://example.com/",headers={'User-agent':c.WINDOWS_CHROME,'Content-Type': 'application/json','Cache-Control':'max-age=0'}, retries=False)
+    if page0.status in c.GOOD_STATUS_LIST:
+        soup = BeautifulSoup(page0.data, features='lxml')
+        result1 = hashlib.md5(str(soup).encode()) 
+    else:
+        print("FUCKING FAILED",page0.status)
+    print("Results Crawl & JS %s" % [str(result0.hexdigest()), str(result1.hexdigest())])
+
 #     # profile = webdriver.FirefoxProfile()
 #     # firefox = webdriver.Firefox(profile,executable_path=c.FIREFOX_WINDOWS)
 #     # firefox.get("https://www.miniclip.com/games/en/")
