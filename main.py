@@ -36,7 +36,21 @@ def domain_stripper(url):
     urlsplit = str(url).replace("https://","").split("/")
     print(urlsplit)
 
-
+def browser_options(bs_type, device, argument){
+    if "firefox" in bs_type:
+        print("Firefox Selected..")
+        if "window" in device:
+            print("Window Device Selected..")
+            if not argument in "":
+                print("Argument not provided exiting.")
+            else:
+                profile = webdriver.FirefoxProfile()
+                return webdriver.Firefox(profile,executable_path=c.FIREFOX_WINDOWS)
+    elif "chrome" in bs_type:
+        print("Chrome Selected..")
+    else:
+        print("Incorrect or Missing Browser Type..")
+}
 def main():
     content = ""
     domain_stripper("https://www.miniclip.com/games/en")
@@ -160,28 +174,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
-
-
-
-    # # Create connection pool to use
-    # con = init_pool_manager()
-
-    # page0 = con.request('GET',c.defaultURL,headers={'User-agent':c.WINDOWS_CHROME,'Content-Type': 'application/json','Cache-Control':'max-age=0'}, retries=False)
-    # page1 = con.request('GET',requestJS,headers={'User-agent':c.WINDOWS_CHROME}, retries=False)
-    # result0 = ""
-    # result1 = ""
-    # if page0.status in c.GOOD_STATUS_LIST:
-    #     soup = BeautifulSoup(page0.data, features='lxml')
-    #     result0 = hashlib.md5(str(soup).encode()) 
-    #     cp.createFile("miniclip","miniclip.html", str(soup.prettify))
-    # else:
-    #     print("page 0 failed"+str(page0.status))
-
-    # if page1.status in c.GOOD_STATUS_LIST:
-    #     soup = BeautifulSoup(page1.data, features='lxml')
-    #     result1 = hashlib.md5(str(soup.data).encode()) 
-    #     cp.createFile("miniclip","miniclipjs.html", str(soup.prettify))
-    
-    
-    # print("Results Crawl & JS %s" % [str(result0.hexdigest()), str(result1.hexdigest())])
